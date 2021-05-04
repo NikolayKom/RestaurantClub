@@ -36,6 +36,10 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="7XB-uy-hnt">
+                                    <rect key="frame" x="0.0" y="0.0" width="378" height="779"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" translatesAutoresizingMaskIntoConstraints="NO" id="vkd-NV-S84" customClass="MyCollectionViewCell" customModule="RestoranClub" customModuleProvider="target">
                                         <rect key="frame" x="8.5" y="0.0" width="361" height="96"/>
@@ -93,6 +97,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="7XB-uy-hnt" id="EHs-rr-q20"/>
                         <outlet property="citySearchBox" destination="z5k-Z9-mcM" id="wam-vp-9Tl"/>
                         <outlet property="mycollectionView" destination="3ds-sI-3nQ" id="dDP-WT-eFM"/>
                         <segue destination="EUm-Kb-dVv" kind="show" identifier="showViewController" id="ogC-ca-hgr"/>

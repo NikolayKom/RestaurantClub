@@ -3,7 +3,6 @@
 //  RestoranClub
 //
 //  Created by Николай on 04.05.2021.
-//  Copyright © 2021 Kreative Developer. All rights reserved.
 //
 
 import Foundation

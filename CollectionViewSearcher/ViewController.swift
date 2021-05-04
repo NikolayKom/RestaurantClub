@@ -1,8 +1,10 @@
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UIGestureRecognizerDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UIGestureRecognizerDelegate, UIAlertViewDelegate {
+    
     @IBOutlet weak var citySearchBox: UISearchBar!
     @IBOutlet weak var mycollectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let sessionConfiguration = URLSessionConfiguration.default
     let session = URLSession.shared
@@ -15,6 +17,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     let reuseIdentifier = "cell"
     
+
+    func setup() {
+        activityIndicator.hidesWhenStopped = true
+    }
     
 	
     var searchedCity = [String]()
@@ -22,7 +28,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        obtainRestorans()
+        activityIndicator.startAnimating()
 		citySearchBox.delegate = self
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.hideKeyboardOnSwipeDown))
                 swipeDown.delegate = self
@@ -30,8 +36,33 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 self.mycollectionView.addGestureRecognizer(swipeDown)
         
 	}
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        obtainRestorans()
+        
+    }
+    
+    private func checkInternetConnection() -> Bool {
+        guard Reachability.isConnectedToNetwork() == false else {
+            return true
+        }
+        
+        let alert = UIAlertController(title: "Error",
+                                      message: "Network connection failed",
+                                      preferredStyle: .alert)
+        alert.addAction(.init(title: "OK", style: .cancel, handler: nil))
+        alert.addAction(.init(title: "Update", style: .default, handler: { [weak self] _ in
+            self?.obtainRestorans()
+        }))
+        present(alert, animated: true, completion: nil)
+        return false
+    }
 	
     func obtainRestorans() {
+        
+        guard checkInternetConnection() else { return }
+        
         // check valid else return
         guard let url = URL(string: "http://198a42af6b14.ngrok.io/main_map_restaurants_api") else {
             return
@@ -98,6 +129,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.layer.masksToBounds = false
         cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
         cell.layer.cornerRadius = 10.0
+        
+        activityIndicator.stopAnimating()
         
         return cell
     }
