@@ -3,12 +3,18 @@
 import UIKit
 
 class RestoranViewController: UIViewController {
-    @IBOutlet var restoranName: UILabel!
+    @IBOutlet var restoranNameLabel: UILabel!
     
-    var restoranIndex: Int = 0
+    @IBOutlet weak var typeOfKitchenLabel: UILabel!
+    
+    @IBOutlet weak var discriptionRestoranLabel: UILabel!
+    
+    var restoranIndex: String = ""
+    var discriptionRestoran: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		restoranName.text = "\(restoranIndex)"
+		restoranNameLabel.text = "\(restoranIndex)"
+        discriptionRestoranLabel.text = "\(discriptionRestoran)"
 	}
 }

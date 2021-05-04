@@ -4,44 +4,69 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var citySearchBox: UISearchBar!
     @IBOutlet weak var mycollectionView: UICollectionView!
     
-    var indexSelected = 0
+    let sessionConfiguration = URLSessionConfiguration.default
+    let session = URLSession.shared
+    let decoder = JSONDecoder()
+    
+    var restorans: [Restoran]?
+    
+    var restoranSelected = ""
+    var descriptionRestoran = ""
     
     let reuseIdentifier = "cell"
-    var restoran = [
-		"La Defanse",
-		"Le Maison",
-		"Gewara",
-		"Wok and Wall",
-		"Grill",
-		"Megas",
-		"Yarche",
-		"Pomoyka",
-		"Green",
-        "Poke",
-        "Juniglo",
-        "Hilo"
-	]
+    
     
 	
     var searchedCity = [String]()
     var searching = false
-	
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        obtainRestorans()
 		citySearchBox.delegate = self
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.hideKeyboardOnSwipeDown))
                 swipeDown.delegate = self
         swipeDown.direction =  UISwipeGestureRecognizer.Direction.down
                 self.mycollectionView.addGestureRecognizer(swipeDown)
+        
 	}
 	
+    func obtainRestorans() {
+        // check valid else return
+        guard let url = URL(string: "http://198a42af6b14.ngrok.io/main_map_restaurants_api") else {
+            return
+        }
+        //data - we resive with request, response - codes
+        session.dataTask(with: url) { [weak self] (data, response, error) in
+            
+            guard let strongSelf = self else { return }
+            if error == nil, let parsData = data {
+                
+               let restoransResponse = try? strongSelf.decoder.decode(RestorantsResponse.self,
+                                                  from:parsData
+               )
+                
+                self?.restorans = restoransResponse?.restorants
+                DispatchQueue.main.async {
+                    strongSelf.mycollectionView.reloadData()
+                }
+
+                print("\(self!.restorans)")
+            } else {
+                print("error: \(error?.localizedDescription)")
+            }
+            
+        }.resume()
+        
+    }
+    
     func collectionView(
 		_ collectionView: UICollectionView,
 		numberOfItemsInSection section: Int
 	) -> Int {
-		return searching ? searchedCity.count : restoran.count
+        return searching ? searchedCity.count : restorans?.count ?? 0
     }
-    
+
     func collectionView(
 		_ collectionView: UICollectionView,
 		cellForItemAt indexPath: IndexPath
@@ -52,10 +77,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 			for: indexPath as IndexPath
 		) as! MyCollectionViewCell
 		
+        let restoran = restorans?[indexPath.item]
+        
         if searching {
             cell.myLabel.text = searchedCity[indexPath.item]
         } else {
-            cell.myLabel.text = restoran[indexPath.item]
+            cell.myLabel?.text = restoran?.restaurantName
+            cell.adressLabel?.text = restoran?.location
+            cell.avarageCheckLabel?.text = "\(restoran?.averageCheckRestaurant)"
         }
 
         cell.contentView.layer.cornerRadius = 2.0
@@ -79,7 +108,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 		_ collectionView: UICollectionView,
 		didSelectItemAt indexPath: IndexPath
 	) {
-        indexSelected = indexPath.item + 1
+        let restoran = restorans?[indexPath.item]
+        restoranSelected = restoran?.restaurantName ?? "0"
+        descriptionRestoran = restoran?.descriptionRestaurant ?? "0"
 		performSegue(withIdentifier: "showViewController", sender: nil)
     }
 	
@@ -89,7 +120,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 		_ searchBar: UISearchBar,
 		textDidChange searchText: String
 	) {
-        searchedCity = restoran.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
+ 
+ //       searchedCity = restoran.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
         searching = true
         mycollectionView.reloadData()
     }
@@ -106,7 +138,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 		sender: Any?
 	) {
         let destination: RestoranViewController = segue.destination as! RestoranViewController
-        destination.restoranIndex = indexSelected
+        destination.restoranIndex = restoranSelected
+        destination.discriptionRestoran = descriptionRestoran
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		87DD0C86262C882400342664 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD0C85262C882400342664 /* MyCollectionViewCell.swift */; };
+		9550129E2640F58100E17F1C /* Restorans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550129D2640F58100E17F1C /* Restorans.swift */; };
 		955A7A7C262B12D1000079BA /* RestoranViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A7A7B262B12D1000079BA /* RestoranViewController.swift */; };
-		9560AAC5262E8580007F9222 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9560AAC4262E8580007F9222 /* Data.swift */; };
 		E4EB4A1022E5DBF100019C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EB4A0F22E5DBF100019C8C /* AppDelegate.swift */; };
 		E4EB4A1222E5DBF100019C8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EB4A1122E5DBF100019C8C /* ViewController.swift */; };
 		E4EB4A1522E5DBF100019C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4EB4A1322E5DBF100019C8C /* Main.storyboard */; };
@@ -19,8 +19,8 @@
 
 /* Begin PBXFileReference section */
 		87DD0C85262C882400342664 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		9550129D2640F58100E17F1C /* Restorans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restorans.swift; sourceTree = "<group>"; };
 		955A7A7B262B12D1000079BA /* RestoranViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoranViewController.swift; sourceTree = "<group>"; };
-		9560AAC4262E8580007F9222 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E4EB4A0C22E5DBF100019C8C /* RestoranClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestoranClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EB4A0F22E5DBF100019C8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4EB4A1122E5DBF100019C8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 				E4EB4A1622E5DC0500019C8C /* Assets.xcassets */,
 				E4EB4A1822E5DC0500019C8C /* LaunchScreen.storyboard */,
 				E4EB4A1B22E5DC0500019C8C /* Info.plist */,
-				9560AAC4262E8580007F9222 /* Data.swift */,
+				9550129D2640F58100E17F1C /* Restorans.swift */,
 			);
 			path = CollectionViewSearcher;
 			sourceTree = "<group>";
@@ -145,9 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4EB4A1222E5DBF100019C8C /* ViewController.swift in Sources */,
-				9560AAC5262E8580007F9222 /* Data.swift in Sources */,
 				E4EB4A1022E5DBF100019C8C /* AppDelegate.swift in Sources */,
 				87DD0C86262C882400342664 /* MyCollectionViewCell.swift in Sources */,
+				9550129E2640F58100E17F1C /* Restorans.swift in Sources */,
 				955A7A7C262B12D1000079BA /* RestoranViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
