@@ -64,7 +64,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         guard checkInternetConnection() else { return }
         
         // check valid else return
-        guard let url = URL(string: "http://198a42af6b14.ngrok.io/main_map_restaurants_api") else {
+        guard let url = URL(string: "http://5539a0574ae2.ngrok.io/main_map_restaurants_api") else {
             return
         }
         //data - we resive with request, response - codes
@@ -91,6 +91,47 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
     }
     
+    private func loadCompanyLogo(for restoranImageString: String) {
+        guard checkInternetConnection() else { return }
+        
+        guard let url = URL(string:"http://5539a0574ae2.ngrok.io/media/\(restoranImageString)") else {
+            return
+        }
+        
+        let dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+            guard let data = data, (response as? HTTPURLResponse)?.statusCode == 200, error == nil else {
+                print("Network Error!")
+                return
+            }
+            
+            do {
+                let jsonObject = try JSONSerialization.jsonObject(with: data)
+                guard
+                    let json = jsonObject as? [String: Any?],
+                    let urlString = json["url"] as? String,
+                    let RestoranLogoURL = URL(string: urlString) else { return print("invalid JSON")}
+                
+                DispatchQueue.main.async { [weak self] in
+                    self?.displayStockLogo(restoranLogoURL: RestoranLogoURL)
+                }
+                
+            } catch {
+                print("JSON parsing error: " + error.localizedDescription)
+            }
+        }
+        dataTask.resume()
+    }
+    
+    private func displayStockLogo(restoranLogoURL: URL) {
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: restoranLogoURL)
+            DispatchQueue.main.async { [weak self] in
+                guard let data = data else { return }
+               // self?.logo.image = UIImage(data: data)
+            }
+        }
+    }
+    
     func collectionView(
 		_ collectionView: UICollectionView,
 		numberOfItemsInSection section: Int
@@ -115,7 +156,23 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         } else {
             cell.myLabel?.text = restoran?.restaurantName
             cell.adressLabel?.text = restoran?.location
-            cell.avarageCheckLabel?.text = "\(restoran?.averageCheckRestaurant)"
+            //cell.avarageCheckLabel?.text = "\(restoran?.averageCheckRestaurant ?? 1700)"
+            
+            if restoran?.averageCheckRestaurant ?? 1700 < 1700 {
+                cell.avarageCheckLabel?.text = "₽₽"
+            } else {
+                cell.avarageCheckLabel?.text = "₽₽₽"
+            }
+            
+            //let restoranUrlImage = restoran?.image[indexPath.item]
+           // print(restoranUrlImage)
+           // let url = NSURL(string: "http://5539a0574ae2.ngrok.io/media/\(restoranUrlImage)")
+            //print(url)
+            //let data = NSData(contentsOf: url! as URL)
+            
+            // cell.logo.image = UIImage(data: data! as Data)
+            
+            
         }
 
         cell.contentView.layer.cornerRadius = 2.0
