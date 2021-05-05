@@ -18,17 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Type something.." translatesAutoresizingMaskIntoConstraints="NO" id="z5k-Z9-mcM">
+                            <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Блюдо или ресторан..." translatesAutoresizingMaskIntoConstraints="NO" id="z5k-Z9-mcM">
                                 <rect key="frame" x="0.0" y="61" width="414" height="56"/>
                                 <color key="barTintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
+                                    <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3ds-sI-3nQ">
-                                <rect key="frame" x="20" y="129" width="378" height="779"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3ds-sI-3nQ">
+                                <rect key="frame" x="0.0" y="129" width="414" height="767"/>
                                 <color key="backgroundColor" red="0.24010059240000001" green="0.78581804040000003" blue="0.47998559470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="99R-ng-qEJ">
                                     <size key="itemSize" width="361" height="96"/>
@@ -37,12 +37,12 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="7XB-uy-hnt">
-                                    <rect key="frame" x="0.0" y="0.0" width="378" height="779"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="767"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" translatesAutoresizingMaskIntoConstraints="NO" id="vkd-NV-S84" customClass="MyCollectionViewCell" customModule="RestoranClub" customModuleProvider="target">
-                                        <rect key="frame" x="8.5" y="0.0" width="361" height="96"/>
+                                        <rect key="frame" x="26.5" y="0.0" width="361" height="96"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="h8l-cG-hRb">
                                             <rect key="frame" x="0.0" y="0.0" width="361" height="96"/>
@@ -51,8 +51,8 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ad-W4-1Tn">
                                                     <rect key="frame" x="126" y="8" width="227" height="41"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRy-L9-4LE">
@@ -114,8 +114,12 @@
                         <viewLayoutGuide key="safeArea" id="NvT-0j-Z3M"/>
                         <color key="backgroundColor" red="0.23630219699999999" green="0.77791279550000003" blue="0.47624719139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3ds-sI-3nQ" secondAttribute="bottom" id="MEY-jp-Psj"/>
                             <constraint firstItem="z5k-Z9-mcM" firstAttribute="trailing" secondItem="NvT-0j-Z3M" secondAttribute="trailing" id="PRZ-eh-aKT"/>
+                            <constraint firstItem="3ds-sI-3nQ" firstAttribute="leading" secondItem="NvT-0j-Z3M" secondAttribute="leading" id="WHK-mA-0wb"/>
+                            <constraint firstItem="3ds-sI-3nQ" firstAttribute="trailing" secondItem="NvT-0j-Z3M" secondAttribute="trailing" id="Yw6-A5-2GA"/>
                             <constraint firstItem="z5k-Z9-mcM" firstAttribute="top" secondItem="NvT-0j-Z3M" secondAttribute="top" constant="17" id="c3P-GL-3O4"/>
+                            <constraint firstItem="3ds-sI-3nQ" firstAttribute="top" secondItem="z5k-Z9-mcM" secondAttribute="bottom" constant="12" id="pDr-Tu-m4f"/>
                             <constraint firstItem="z5k-Z9-mcM" firstAttribute="leading" secondItem="NvT-0j-Z3M" secondAttribute="leading" id="x6t-Vd-ubq"/>
                         </constraints>
                     </view>
@@ -146,6 +150,7 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jtC-yw-UX5">
                                 <rect key="frame" x="0.0" y="20" width="138" height="138"/>
+                                <color key="backgroundColor" red="0.44629842040000001" green="0.47493284940000002" blue="0.45843082670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="138" id="66n-BK-svd"/>
                                     <constraint firstAttribute="height" constant="138" id="hNZ-ad-K5d"/>
