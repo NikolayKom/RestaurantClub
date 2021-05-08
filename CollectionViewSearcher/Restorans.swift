@@ -22,8 +22,9 @@ struct Restoran: Codable {
     let descriptionRestaurant: String
     let averageCheckRestaurant: Int
     let location: String
-    let image: [String]
-//    let rating: Bool
+    //let image: [String]
+    //let aboutRestaurant: String
+    let rating: Double
     
     enum CodingKeys: String,CodingKey {
         case restaurantName = "restaurant_name"
@@ -31,7 +32,9 @@ struct Restoran: Codable {
         case descriptionRestaurant = "description_restaurant"
         case averageCheckRestaurant = "average_check_restaurant"
         case location
-        case image
-//        case rating
+        //case image
+        //case aboutRestaurant = "about_restaurant"
+        case rating
     }
 }
+

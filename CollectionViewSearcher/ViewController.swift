@@ -13,7 +13,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var restorans: [Restoran]?
     
     var restoranSelected = ""
-    var descriptionRestoran = ""
+    var aboutRestoran = ""
     
     let reuseIdentifier = "cell"
     
@@ -30,6 +30,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 		super.viewDidLoad()
         activityIndicator.startAnimating()
 		citySearchBox.delegate = self
+        
+   
+        
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.hideKeyboardOnSwipeDown))
                 swipeDown.delegate = self
         swipeDown.direction =  UISwipeGestureRecognizer.Direction.down
@@ -40,6 +43,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         obtainRestorans()
+       // obtainSearch()
         
     }
     
@@ -64,7 +68,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         guard checkInternetConnection() else { return }
         
         // check valid else return
-        guard let url = URL(string: "http://5539a0574ae2.ngrok.io/main_map_restaurants_api") else {
+        guard let url = URL(string: "http://ecd74fc3e167.ngrok.io/main_map_restaurants_api") else {
             return
         }
         //data - we resive with request, response - codes
@@ -91,10 +95,39 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
     }
     
+    func obtainSearch() {
+      //"http://dbf44cc6575a.ngrok.io/search_results_view_api/?search=Паста"
+        
+        let url = URL(string: "http://ecd74fc3e167.ngrok.io/main_map_restaurants_api")
+        guard let requestUrl = url else { fatalError() }
+
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "POST"
+         
+        // Параметр который передаем в тело
+        let postString = "?search=суп";
+
+        request.httpBody = postString.data(using: String.Encoding.utf8);
+
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                
+                if let error = error {
+                    print("Error took place \(error)")
+                    return
+                }
+
+                if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                    print("Response data string:\n \(dataString)")
+                }
+        }
+        task.resume()
+    }
+    
+    
     private func loadCompanyLogo(for restoranImageString: String) {
         guard checkInternetConnection() else { return }
         
-        guard let url = URL(string:"http://5539a0574ae2.ngrok.io/media/\(restoranImageString)") else {
+        guard let url = URL(string:"http://de1ea510982d.ngrok.io/media/\(restoranImageString)") else {
             return
         }
         
@@ -132,6 +165,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
+    
     func collectionView(
 		_ collectionView: UICollectionView,
 		numberOfItemsInSection section: Int
@@ -164,15 +198,46 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 cell.avarageCheckLabel?.text = "₽₽₽"
             }
             
-            //let restoranUrlImage = restoran?.image[indexPath.item]
-           // print(restoranUrlImage)
-           // let url = NSURL(string: "http://5539a0574ae2.ngrok.io/media/\(restoranUrlImage)")
-            //print(url)
-            //let data = NSData(contentsOf: url! as URL)
+            /*let restoranUrlImage = restoran?.image[indexPath.item]
+             print(restoranUrlImage)
+            let url = NSURL(string: "http://5539a0574ae2.ngrok.io/media/\(restoranUrlImage)")
+            print(url)
+            let data = NSData(contentsOf: url as URL)
             
-            // cell.logo.image = UIImage(data: data! as Data)
+            cell.logo.image = UIImage(data: data! as Data)
+            */
             
+            func stars(rating: Double) {
+                switch rating {
+                case 0:
+                    print("Переменная равна 0")
+                    cell.starsImage.image = #imageLiteral(resourceName: "Star_rating_0_of_5")
+                case 0.1...0.5:
+                    cell.starsImage.image = #imageLiteral(resourceName: "Star_rating_0.5_of_5")
+                case 0.6...1:
+                    cell.starsImage.image = #imageLiteral(resourceName: "Star_rating_1_of_5")
+                case 1.1...1.5:
+                    cell.starsImage.image = #imageLiteral(resourceName: "Star_rating_1.5_of_5")
+                case 1.6...2:
+                    cell.starsImage.image = #imageLiteral(resourceName: "Star_rating_2_of_5")
+                case 2.1...2.5:
+                    cell.starsImage.image = #imageLiteral(resourceName: "Star_rating_2.5_of_5")
+                case 2.6...3:
+                    cell.starsImage.image = #imageLiteral(resourceName: "Star_rating_3_of_5")
+                case 3.1...3.5:
+                    cell.starsImage.image = #imageLiteral(resourceName: "Star_rating_3.5_of_5")
+                case 3.6...4:
+                    cell.starsImage.image = #imageLiteral(resourceName: "Star_rating_4_of_5")
+                case 4.1...4.5:
+                    cell.starsImage.image = #imageLiteral(resourceName: "Star_rating_4.5_of_5")
+                case 4.6...5:
+                    cell.starsImage.image = #imageLiteral(resourceName: "Star_rating_5_of_5")
+                default:
+                    print("не удалось распознать число")
+                }
+            }
             
+            stars(rating: restoran?.rating ?? 0)
         }
 
         cell.contentView.layer.cornerRadius = 2.0
@@ -200,7 +265,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 	) {
         let restoran = restorans?[indexPath.item]
         restoranSelected = restoran?.restaurantName ?? "0"
-        descriptionRestoran = restoran?.descriptionRestaurant ?? "0"
+        //aboutRestoran = restoran?.aboutRestaurant ?? "0"
 		performSegue(withIdentifier: "showViewController", sender: nil)
     }
 	
@@ -220,6 +285,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         searching = false
         searchBar.text = ""
         searchBar.resignFirstResponder()
+
         mycollectionView.reloadData()
     }
     
@@ -229,7 +295,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 	) {
         let destination: RestoranViewController = segue.destination as! RestoranViewController
         destination.restoranIndex = restoranSelected
-        destination.discriptionRestoran = descriptionRestoran
+        destination.aboutRestoran = aboutRestoran
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {

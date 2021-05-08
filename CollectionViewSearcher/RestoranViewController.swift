@@ -7,14 +7,14 @@ class RestoranViewController: UIViewController {
     
     @IBOutlet weak var typeOfKitchenLabel: UILabel!
     
-    @IBOutlet weak var discriptionRestoranLabel: UILabel!
+    @IBOutlet weak var aboutRestoranLabel: UILabel!
     
     var restoranIndex: String = ""
-    var discriptionRestoran: String = ""
+    var aboutRestoran: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 		restoranNameLabel.text = "\(restoranIndex)"
-        discriptionRestoranLabel.text = "\(discriptionRestoran)"
+        aboutRestoranLabel.text = "\(aboutRestoran)"
 	}
 }

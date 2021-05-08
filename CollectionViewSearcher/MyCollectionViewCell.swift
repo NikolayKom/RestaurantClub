@@ -8,4 +8,5 @@ class MyCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var adressLabel: UILabel!
     @IBOutlet weak var logo: UIImageView!
     
+    @IBOutlet weak var starsImage: UIImageView!
 }
