@@ -8,23 +8,24 @@
 import Foundation
 
 struct RestorantsResponse: Codable {
-    let restorants: [Restoran]
+    let restorants: [Restorant]
     
     enum CodingKeys: String,CodingKey {
         case restorants = "data"
-}
+	}
 }
 
-
-struct Restoran: Codable {
+struct Restorant: Codable {
     let restaurantName: String
 //    let reviews: [String]
     let descriptionRestaurant: String
     let averageCheckRestaurant: Int
     let location: String
-    //let image: [String]
+    let image: [String]
     //let aboutRestaurant: String
     let rating: Double
+    let restaurantId: Int
+	let dish: String?
     
     enum CodingKeys: String,CodingKey {
         case restaurantName = "restaurant_name"
@@ -32,9 +33,11 @@ struct Restoran: Codable {
         case descriptionRestaurant = "description_restaurant"
         case averageCheckRestaurant = "average_check_restaurant"
         case location
-        //case image
+        case image
         //case aboutRestaurant = "about_restaurant"
         case rating
+        case restaurantId = "restaurant_id"
+		case dish
     }
 }
 
