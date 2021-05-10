@@ -15,7 +15,6 @@
 		955A7A7C262B12D1000079BA /* RestoranViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A7A7B262B12D1000079BA /* RestoranViewController.swift */; };
 		95CCF7A226414623004E6309 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCF7A126414623004E6309 /* Reachability.swift */; };
 		E4EB4A1022E5DBF100019C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EB4A0F22E5DBF100019C8C /* AppDelegate.swift */; };
-		E4EB4A1222E5DBF100019C8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EB4A1122E5DBF100019C8C /* ViewController.swift */; };
 		E4EB4A1522E5DBF100019C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4EB4A1322E5DBF100019C8C /* Main.storyboard */; };
 		E4EB4A1722E5DC0500019C8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4EB4A1622E5DC0500019C8C /* Assets.xcassets */; };
 		E4EB4A1A22E5DC0500019C8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4EB4A1822E5DC0500019C8C /* LaunchScreen.storyboard */; };
@@ -31,7 +30,6 @@
 		95CCF7A126414623004E6309 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E4EB4A0C22E5DBF100019C8C /* RestoranClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestoranClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EB4A0F22E5DBF100019C8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4EB4A1122E5DBF100019C8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E4EB4A1422E5DBF100019C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4EB4A1622E5DC0500019C8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4EB4A1922E5DC0500019C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				87CE3B642647F02100079385 /* Cells */,
-				E4EB4A1122E5DBF100019C8C /* ViewController.swift */,
 				87CE3B5D2647EF9600079385 /* RestaurantsViewController.swift */,
 			);
 			path = View;
@@ -236,7 +233,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4EB4A1222E5DBF100019C8C /* ViewController.swift in Sources */,
 				87CE3B582647EF4F00079385 /* RestaurantsPresenter.swift in Sources */,
 				E4EB4A1022E5DBF100019C8C /* AppDelegate.swift in Sources */,
 				95CCF7A226414623004E6309 /* Reachability.swift in Sources */,

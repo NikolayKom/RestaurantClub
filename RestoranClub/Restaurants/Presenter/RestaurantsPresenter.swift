@@ -10,7 +10,7 @@ class RestaurantsPresenter {
 	weak var viewController: RestaurantsViewController?
 	
 	var restaurants: [Restorant]?
-	
+    
 	init(viewController: RestaurantsViewController) {
 		self.viewController = viewController
 	}
@@ -18,7 +18,9 @@ class RestaurantsPresenter {
     func setup() {
         viewController?.activityIndicator.hidesWhenStopped = true
         viewController?.activityIndicator.startAnimating()
+        
     }
+    
     
 	func obtainRestorans() {
 		guard Reachability.isConnectedToNetwork() else {
@@ -85,3 +87,5 @@ class RestaurantsPresenter {
 		}.resume()
 	}
 }
+
+

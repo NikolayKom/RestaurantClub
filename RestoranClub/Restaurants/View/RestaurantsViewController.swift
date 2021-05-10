@@ -12,13 +12,24 @@ class RestaurantsViewController: UIViewController {
 	@IBOutlet weak var citySearchBox: UISearchBar!
 	@IBOutlet weak var mycollectionView: UICollectionView!
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    var restoranSelected = ""
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		presenter.obtainRestorans()
-        
         presenter.setup()
+        swipeDown()
+        
+        
 	}
+    
+    func swipeDown() {
+        let swipeDown =  UISwipeGestureRecognizer(target: self, action: #selector(self.hideKeyboardOnSwipeDown))
+        swipeDown.delegate = self
+        swipeDown.direction =  UISwipeGestureRecognizer.Direction.down
+        self.mycollectionView.addGestureRecognizer(swipeDown)
+    }
 	
 	func showRestaurants() {
 		mycollectionView.reloadData()
@@ -54,7 +65,23 @@ extension RestaurantsViewController: UICollectionViewDataSource, UICollectionVie
 		}
 		
 		return cell
-	}	
+	}
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath
+    ) {
+        let restoran = presenter.restaurants?[indexPath.item]
+        restoranSelected = restoran?.restaurantName ?? "0"
+        
+        
+        performSegue(withIdentifier: "showViewController", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue,sender: Any?
+    ) {
+        let destination: RestoranViewController = segue.destination as! RestoranViewController
+        destination.restoranIndex = restoranSelected
+    }
+
 }
 
 // MARK: - UISearchBarDelegate
@@ -66,9 +93,31 @@ extension RestaurantsViewController: UISearchBarDelegate {
 		textDidChange searchText: String
 	) {
 		presenter.obtainSearch(searchText: searchText)
+        mycollectionView.reloadData()
 	}
 	
 	func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
 		presenter.obtainRestorans()
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        
+        mycollectionView.reloadData()
 	}
 }
+
+//MARK: - UIGestureRecognizerDelegate
+
+extension RestaurantsViewController: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+     }
+    
+    @objc func hideKeyboardOnSwipeDown() {
+        view.endEditing(true)
+     }
+
+}
+
+    
+
