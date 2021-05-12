@@ -10,6 +10,8 @@ class RestaurantsPresenter {
 	weak var viewController: RestaurantsViewController?
 	
 	var restaurants: [Restorant]?
+    var searching = false 
+    
     
 	init(viewController: RestaurantsViewController) {
 		self.viewController = viewController
@@ -28,7 +30,7 @@ class RestaurantsPresenter {
 			return
 		}
 		
-		guard let url = URL(string: "http://b0bafa18ee84.ngrok.io/main_map_restaurants_api") else {
+		guard let url = URL(string: "http://0528c7d3fc4c.ngrok.io/main_map_restaurants_api") else {
 			return
 		}
 		
@@ -55,7 +57,7 @@ class RestaurantsPresenter {
 			return
 		}
 		
-		guard var components = URLComponents(string: "http://b0bafa18ee84.ngrok.io/search_results_view_api") else {
+		guard var components = URLComponents(string: "http://0528c7d3fc4c.ngrok.io/search_results_view_api") else {
 			return
 		}
 		

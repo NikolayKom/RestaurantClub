@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Блюдо или ресторан..." translatesAutoresizingMaskIntoConstraints="NO" id="z5k-Z9-mcM">
+                            <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Блюдо или ресторан..." showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z5k-Z9-mcM">
                                 <rect key="frame" x="0.0" y="61" width="414" height="56"/>
                                 <color key="barTintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
@@ -107,10 +107,10 @@
                                         <color key="tintColor" red="0.96867614980000005" green="0.58312606810000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="customSize" width="361" height="96"/>
                                         <connections>
-                                            <outlet property="adressLabel" destination="jRy-L9-4LE" id="STU-qk-EFj"/>
+                                            <outlet property="adressOrDishLabel" destination="jRy-L9-4LE" id="STU-qk-EFj"/>
                                             <outlet property="avarageCheckLabel" destination="Nb1-EX-Fcb" id="6KV-0Q-mmj"/>
-                                            <outlet property="logo" destination="HSe-mE-HQz" id="Rve-0L-wvI"/>
-                                            <outlet property="myLabel" destination="4Ad-W4-1Tn" id="I4b-gl-8PQ"/>
+                                            <outlet property="logoImage" destination="HSe-mE-HQz" id="Rve-0L-wvI"/>
+                                            <outlet property="nameOfRestaurant" destination="4Ad-W4-1Tn" id="I4b-gl-8PQ"/>
                                             <outlet property="starsImage" destination="1yu-KP-fq8" id="2NE-dE-4YY"/>
                                         </connections>
                                     </collectionViewCell>
@@ -147,7 +147,7 @@
         <!--labdl-->
         <scene sceneID="3n2-bL-OJV">
             <objects>
-                <viewController title="labdl" id="EUm-Kb-dVv" customClass="RestoranViewController" customModule="RestoranClub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="labdl" id="EUm-Kb-dVv" customClass="RestaurantsDetailViewController" customModule="RestoranClub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kQW-mQ-TNW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

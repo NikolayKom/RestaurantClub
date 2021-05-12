@@ -3,10 +3,11 @@
 import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell {
-	@IBOutlet weak var myLabel: UILabel!
+    
+	@IBOutlet weak var nameOfRestaurant: UILabel!
 	@IBOutlet weak var avarageCheckLabel: UILabel!
-	@IBOutlet weak var adressLabel: UILabel!
-	@IBOutlet weak var logo: UIImageView!
+	@IBOutlet weak var adressOrDishLabel: UILabel!
+	@IBOutlet weak var logoImage: UIImageView!
 	@IBOutlet weak var starsImage: UIImageView!
 	
 	required init?(coder: NSCoder) {
@@ -31,23 +32,37 @@ class MyCollectionViewCell: UICollectionViewCell {
 	
 	override func prepareForReuse() {
 		super.prepareForReuse()
-		logo.image = nil
+		logoImage.image = nil
 	}
     
     
 	func configure(model: Restorant) {
-		myLabel.text = model.restaurantName
-		adressLabel.text = model.location
+		nameOfRestaurant.text = model.restaurantName
+		adressOrDishLabel.text = model.location
         
         stars(rating: model.rating)
         prepareAvarageCheck(averageCheckRestaurant: model.averageCheckRestaurant)
         
 		
         if let image = model.image.first {
-			let urlString = "http://b0bafa18ee84.ngrok.io/media/\(image)"
-			logo.loadImage(urlString: urlString)
+			let urlString = "http://0528c7d3fc4c.ngrok.io/media/\(image)"
+			logoImage.loadImage(urlString: urlString)
 		}
 	}
+    
+    func configureSearching(model: Restorant) {
+        nameOfRestaurant.text = model.restaurantName
+        adressOrDishLabel.text = model.dish
+        
+        stars(rating: model.rating)
+        prepareAvarageCheck(averageCheckRestaurant: model.averageCheckRestaurant)
+        
+        
+        if let image = model.image.first {
+            let urlString = "http://0528c7d3fc4c.ngrok.io/media/\(image)"
+            logoImage.loadImage(urlString: urlString)
+        }
+    }
     
     func stars(rating: Double) {
         switch rating {
@@ -75,7 +90,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         case 4.6...5:
             starsImage.image = #imageLiteral(resourceName: "Star_rating_5_of_5")
         default:
-            print("не удалось распознать число")
+            starsImage.image = #imageLiteral(resourceName: "Star_rating_0_of_5")
         }
     }
     

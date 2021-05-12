@@ -60,8 +60,16 @@ extension RestaurantsViewController: UICollectionViewDataSource, UICollectionVie
 		) as! MyCollectionViewCell
 		
         if let restaurant = presenter.restaurants?[indexPath.item] {
-			cell.configure(model: restaurant)
-            activityIndicator.stopAnimating()
+            if presenter.searching {
+                cell.configureSearching(model: restaurant)
+                activityIndicator.stopAnimating()
+                
+            } else {
+                cell.configure(model: restaurant)
+                activityIndicator.stopAnimating()
+            }
+                
+			
 		}
 		
 		return cell
@@ -78,7 +86,7 @@ extension RestaurantsViewController: UICollectionViewDataSource, UICollectionVie
     
     override func prepare(for segue: UIStoryboardSegue,sender: Any?
     ) {
-        let destination: RestoranViewController = segue.destination as! RestoranViewController
+        let destination:  RestaurantsDetailViewController = segue.destination as!  RestaurantsDetailViewController
         destination.restoranIndex = restoranSelected
     }
 
@@ -93,11 +101,13 @@ extension RestaurantsViewController: UISearchBarDelegate {
 		textDidChange searchText: String
 	) {
 		presenter.obtainSearch(searchText: searchText)
+        presenter.searching = true
         mycollectionView.reloadData()
 	}
 	
 	func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
 		presenter.obtainRestorans()
+        presenter.searching = false
         searchBar.text = ""
         searchBar.resignFirstResponder()
         
@@ -115,6 +125,8 @@ extension RestaurantsViewController: UIGestureRecognizerDelegate {
     
     @objc func hideKeyboardOnSwipeDown() {
         view.endEditing(true)
+        presenter.searching = false
+        mycollectionView.reloadData()
      }
 
 }

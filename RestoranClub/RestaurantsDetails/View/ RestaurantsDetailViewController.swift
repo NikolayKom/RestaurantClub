@@ -2,11 +2,12 @@
 
 import UIKit
 
-class RestoranViewController: UIViewController {
+class  RestaurantsDetailViewController: UIViewController {
+    
+    lazy var detailPresenter = RestaurantsDetailsPresenter(DetailViewController: self)
+    
     @IBOutlet var restoranNameLabel: UILabel!
-    
     @IBOutlet weak var typeOfKitchenLabel: UILabel!
-    
     @IBOutlet weak var aboutRestoranLabel: UILabel!
     
     var restoranIndex: String = ""
