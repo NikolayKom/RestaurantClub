@@ -18,6 +18,7 @@ class RestaurantsPresenter {
 	}
     
     func setup() {
+        
         viewController?.activityIndicator.hidesWhenStopped = true
         viewController?.activityIndicator.startAnimating()
         
@@ -26,7 +27,7 @@ class RestaurantsPresenter {
     
 	func obtainRestorans() {
 		guard Reachability.isConnectedToNetwork() else {
-			viewController?.showError(title: "Ошибка", message: "Нет интернета")
+            viewController?.showError(title: "Ошибка", message: "Нет интернета")
 			return
 		}
 		

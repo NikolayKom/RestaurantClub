@@ -17,12 +17,18 @@ class RestaurantsViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		presenter.obtainRestorans()
+		//presenter.obtainRestorans()
         presenter.setup()
         swipeDown()
         
         
 	}
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter.obtainRestorans()
+    }
+    
     
     func swipeDown() {
         let swipeDown =  UISwipeGestureRecognizer(target: self, action: #selector(self.hideKeyboardOnSwipeDown))
@@ -35,12 +41,18 @@ class RestaurantsViewController: UIViewController {
 		mycollectionView.reloadData()
 	}
 	
-	func showError(title: String, message: String) {
+    func showError(title: String, message: String) {
 		let alert = UIAlertController(
 			title: title,
 			message: message,
 			preferredStyle: .alert
-		)
+            )
+            
+            alert.addAction(.init(title: "Ок", style: .cancel, handler: nil))
+            alert.addAction(.init(title: "Обновить", style: .default, handler: { [weak self] _ in
+                self?.presenter.obtainRestorans()
+            }))
+
 		present(alert, animated: true, completion: nil)
 	}
 }
