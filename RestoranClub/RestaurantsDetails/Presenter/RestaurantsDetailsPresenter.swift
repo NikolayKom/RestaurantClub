@@ -16,6 +16,8 @@ class RestaurantsDetailsPresenter {
         self.DetailViewController = DetailViewController
     }
     
+    
+    
 }
 
 

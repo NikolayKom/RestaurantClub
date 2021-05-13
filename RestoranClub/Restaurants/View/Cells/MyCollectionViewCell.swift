@@ -13,20 +13,20 @@ class MyCollectionViewCell: UICollectionViewCell {
 	required init?(coder: NSCoder) {
 		super.init(coder: coder)
 	
-		contentView.layer.cornerRadius = 2.0
+		contentView.layer.cornerRadius = 15.0
 		contentView.layer.borderWidth = 1.0
 		contentView.layer.borderColor = UIColor.clear.cgColor
 		contentView.layer.masksToBounds = true
-		layer.shadowColor = UIColor.white.cgColor
-		layer.shadowOffset = CGSize(width: 0, height: 2.0)
-		layer.shadowRadius = 2.0
+		layer.shadowColor = UIColor.black.cgColor
+		layer.shadowOffset = CGSize(width: 3, height: 5.0)
+		layer.shadowRadius = 1.0
 		layer.shadowOpacity = 1.0
 		layer.masksToBounds = false
 		layer.shadowPath = UIBezierPath(
 			roundedRect: bounds,
 			cornerRadius: contentView.layer.cornerRadius
 		).cgPath
-		layer.cornerRadius = 10.0
+		layer.cornerRadius = 15.0
 
 	}
 	
@@ -45,7 +45,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         
 		
         if let image = model.image.first {
-			let urlString = "http://0528c7d3fc4c.ngrok.io/media/\(image)"
+			let urlString = "http://250d3b5e1072.ngrok.io/media/\(image)"
 			logoImage.loadImage(urlString: urlString)
 		}
 	}
@@ -59,7 +59,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         
         
         if let image = model.image.first {
-            let urlString = "http://0528c7d3fc4c.ngrok.io/media/\(image)"
+            let urlString = "http://250d3b5e1072.ngrok.io/media/\(image)"
             logoImage.loadImage(urlString: urlString)
         }
     }
