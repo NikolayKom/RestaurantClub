@@ -19,23 +19,15 @@ class  RestaurantsDetailViewController: UIViewController {
         super.viewDidLoad()
         detailPresenter.obtainRestoranById(id: restoranIndex)
         print(restoranIndex)
-        guard let url = URL(string: "http://f35e82e968cf.ngrok.io/create_review") else {
-            return
-        }
-        let params = ["rest_id": 10,
-                      "review": "Кормят",
-                      "user_name": "К",
-                      "stars": 2.2
-        ] as [String : Any]
         
-       ApiService.callPost(url: url, params: params, finish: detailPresenter.finishPost)
-        
+       // detailPresenter.sendReview() - отправка отзыва на ресторан
 	}
     
     func showRestaurants() {
-        guard let restaurant = detailPresenter.restaurants else { return print(self.detailPresenter.restaurants) }
         
-        configure(model: restaurant)
+        if let restaurant = detailPresenter.restaurants {
+            configure(model: restaurant)
+        }
     }
     
     func showError(title: String, message: String, restoranNumber: String) {
