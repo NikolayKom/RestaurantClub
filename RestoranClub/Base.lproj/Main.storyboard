@@ -44,7 +44,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="vkd-NV-S84" customClass="MyCollectionViewCell" customModule="RestoranClub" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" reuseIdentifier="MyCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="vkd-NV-S84" customClass="MyCollectionViewCell" customModule="RestoranClub" customModuleProvider="target">
                                         <rect key="frame" x="26.5" y="0.0" width="361" height="96"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="h8l-cG-hRb">
@@ -176,9 +176,9 @@
                                     <constraint firstAttribute="height" constant="138" id="hNZ-ad-K5d"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="О ресторане" lineBreakMode="tailTruncation" numberOfLines="200" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9Q-Iw-FaV">
-                                <rect key="frame" x="20" y="210" width="374" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="О ресторане" lineBreakMode="tailTruncation" numberOfLines="200" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9Q-Iw-FaV">
+                                <rect key="frame" x="20" y="210" width="374" height="389"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -213,6 +213,7 @@
                     <navigationItem key="navigationItem" id="mzP-cN-0Rr"/>
                     <connections>
                         <outlet property="aboutRestoranLabel" destination="e9Q-Iw-FaV" id="PZh-X0-rCv"/>
+                        <outlet property="restoranLogoImage" destination="jtC-yw-UX5" id="mkx-CH-rbe"/>
                         <outlet property="restoranNameLabel" destination="Uwd-Nx-LNW" id="pyb-s2-iYU"/>
                     </connections>
                 </viewController>

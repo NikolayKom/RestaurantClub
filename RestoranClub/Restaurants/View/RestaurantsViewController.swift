@@ -90,7 +90,7 @@ extension RestaurantsViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath
     ) {
         let restoran = presenter.restaurants?[indexPath.item]
-        restoranSelected = restoran?.restaurantName ?? "0"
+        restoranSelected = "\(restoran?.restaurantId ?? 1)" 
         
         
         performSegue(withIdentifier: "showViewController", sender: nil)
