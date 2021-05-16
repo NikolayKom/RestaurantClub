@@ -48,6 +48,7 @@ class RestaurantsDetailsPresenter {
                 DispatchQueue.main.async {
                     self.DetailViewController?.showRestaurants()
                 }
+                print(self.restaurants)
             } else {
                 self.DetailViewController?.showError(title: "Ошибка", message: "Что-то пошло не так!", restoranNumber: id)
             }

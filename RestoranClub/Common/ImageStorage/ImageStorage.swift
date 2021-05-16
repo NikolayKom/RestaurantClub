@@ -1,6 +1,5 @@
 //
-//   Created by Statnikov Eugene on 16.05.2021.
-//   Copyright (c) 2021 SEA. All rights reserved.
+//   Created by Nikolay on 16.05.2021.
 //
 
 import UIKit

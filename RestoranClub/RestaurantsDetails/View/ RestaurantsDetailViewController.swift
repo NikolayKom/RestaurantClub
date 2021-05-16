@@ -2,14 +2,9 @@
 
 import UIKit
 
-class  RestaurantsDetailViewController: UIViewController {
+class  RestaurantsDetailViewController: UITableViewController {
     
     lazy var detailPresenter = RestaurantsDetailsPresenter(DetailViewController: self)
-    
-    @IBOutlet var restoranNameLabel: UILabel!
-    @IBOutlet var typeOfKitchenLabel: UILabel!
-    @IBOutlet weak var aboutRestoranLabel: UILabel!
-    @IBOutlet weak var restoranLogoImage: UIImageView!
     
     var restoranIndex: String = ""
     var aboutRestoran: String = ""
@@ -17,19 +12,19 @@ class  RestaurantsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.registerCell()
        // detailPresenter.sendReview() - отправка отзыва на ресторан
 	}
     
     override func viewDidAppear(_ animated: Bool) {
         detailPresenter.obtainRestoranById(id: restoranIndex)
+        print(detailPresenter.restaurants?.restaurantName)
+        print(restoranIndex)
     }
     
     func showRestaurants() {
+        tableView.reloadData()
         
-        if let restaurant = detailPresenter.restaurants {
-            configure(model: restaurant)
-        }
     }
     
     func showError(title: String, message: String, restoranNumber: String) {
@@ -46,16 +41,23 @@ class  RestaurantsDetailViewController: UIViewController {
 
         present(alert, animated: true, completion: nil)
     }
-            
     
-    func configure(model: Restorant) {
-        restoranNameLabel.text = model.restaurantName
-        typeOfKitchenLabel.text = model.descriptionRestaurant
-        aboutRestoranLabel.text = model.aboutRestaurant
+    private func registerCell() {
+        let cell = UINib(nibName: "UITableViewCellHeaderTableViewCell", bundle: nil)
         
-        if let image = model.image.first {
-            let urlString = "http://2e1af2b5afff.ngrok.io/media/\(image)"
-            restoranLogoImage.loadImage(urlString: urlString)
+        self.tableView.register(cell, forCellReuseIdentifier: "CustomCell")
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as? UITableViewCellHeaderTableViewCell else {
+            return UITableViewCell()
         }
+        print(detailPresenter.restaurants?.restaurantName)
+    if let restaurant = detailPresenter.restaurants {
+        cell.configure(model: restaurant)
+        print("zzz")
+    
+    }
+        return cell
     }
 }
