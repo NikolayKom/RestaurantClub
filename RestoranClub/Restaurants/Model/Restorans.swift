@@ -28,7 +28,8 @@ struct Restorant: Codable {
     let restaurantId: Int
 	let dish: String?
     let menu: String?
-    //let reviews: [String]?
+    let aboutRestaurant: String?
+    let reviews: [Review]?
     
     enum CodingKeys: String,CodingKey {
         case restaurantName = "restaurant_name"
@@ -42,7 +43,8 @@ struct Restorant: Codable {
         case restaurantId = "restaurant_id"
 		case dish
         case menu
-        //case reviews
+        case aboutRestaurant = "about_restaurant"
+        case reviews
     }
 }
 
@@ -53,3 +55,9 @@ struct Response: Codable {
     let stars: Double
 }
 
+struct Review: Codable {
+	let review: String
+	let stars: Int
+	let user_name: String
+	let date: String
+}

@@ -7,7 +7,7 @@ class  RestaurantsDetailViewController: UIViewController {
     lazy var detailPresenter = RestaurantsDetailsPresenter(DetailViewController: self)
     
     @IBOutlet var restoranNameLabel: UILabel!
-    @IBOutlet weak var typeOfKitchenLabel: UILabel!
+    @IBOutlet var typeOfKitchenLabel: UILabel!
     @IBOutlet weak var aboutRestoranLabel: UILabel!
     @IBOutlet weak var restoranLogoImage: UIImageView!
     
@@ -17,11 +17,13 @@ class  RestaurantsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailPresenter.obtainRestoranById(id: restoranIndex)
-        print(restoranIndex)
         
        // detailPresenter.sendReview() - отправка отзыва на ресторан
 	}
+    
+    override func viewDidAppear(_ animated: Bool) {
+        detailPresenter.obtainRestoranById(id: restoranIndex)
+    }
     
     func showRestaurants() {
         
@@ -49,9 +51,10 @@ class  RestaurantsDetailViewController: UIViewController {
     func configure(model: Restorant) {
         restoranNameLabel.text = model.restaurantName
         typeOfKitchenLabel.text = model.descriptionRestaurant
+        aboutRestoranLabel.text = model.aboutRestaurant
         
         if let image = model.image.first {
-            let urlString = "http://f35e82e968cf.ngrok.io/media/\(image)"
+            let urlString = "http://2e1af2b5afff.ngrok.io/media/\(image)"
             restoranLogoImage.loadImage(urlString: urlString)
         }
     }

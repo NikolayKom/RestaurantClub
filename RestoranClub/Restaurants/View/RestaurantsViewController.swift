@@ -12,7 +12,7 @@ class RestaurantsViewController: UIViewController {
 	@IBOutlet weak var citySearchBox: UISearchBar!
 	@IBOutlet weak var mycollectionView: UICollectionView!
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
+	
     var restoranSelected = ""
 	
 	override func viewDidLoad() {

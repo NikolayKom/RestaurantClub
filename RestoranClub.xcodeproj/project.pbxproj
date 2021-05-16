@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		872B31332647FD7E0099CABD /* ImageView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872B31322647FD7E0099CABD /* ImageView+Loading.swift */; };
+		8740A73D265100B70044CB79 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740A73C265100B70044CB79 /* ImageStorage.swift */; };
 		87CE3B582647EF4F00079385 /* RestaurantsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CE3B572647EF4F00079385 /* RestaurantsPresenter.swift */; };
 		87CE3B5E2647EF9600079385 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CE3B5D2647EF9600079385 /* RestaurantsViewController.swift */; };
 		87DD0C86262C882400342664 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DD0C85262C882400342664 /* MyCollectionViewCell.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		872B31322647FD7E0099CABD /* ImageView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Loading.swift"; sourceTree = "<group>"; };
+		8740A73C265100B70044CB79 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
 		87CE3B572647EF4F00079385 /* RestaurantsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsPresenter.swift; sourceTree = "<group>"; };
 		87CE3B5D2647EF9600079385 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
 		87DD0C85262C882400342664 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -49,9 +51,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8740A7452651057E0044CB79 /* ImageStorage */ = {
+			isa = PBXGroup;
+			children = (
+				8740A73C265100B70044CB79 /* ImageStorage.swift */,
+			);
+			path = ImageStorage;
+			sourceTree = "<group>";
+		};
 		87BAB47F2647F90A001281E0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8740A7452651057E0044CB79 /* ImageStorage */,
 				95CCF7A126414623004E6309 /* Reachability.swift */,
 				872B31322647FD7E0099CABD /* ImageView+Loading.swift */,
 			);
@@ -181,6 +192,8 @@
 			dependencies = (
 			);
 			name = RestoranClub;
+			packageProductDependencies = (
+			);
 			productName = CollectionViewSearcher;
 			productReference = E4EB4A0C22E5DBF100019C8C /* RestoranClub.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +222,8 @@
 				Base,
 			);
 			mainGroup = E4EB4A0322E5DBF100019C8C;
+			packageReferences = (
+			);
 			productRefGroup = E4EB4A0D22E5DBF100019C8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -243,6 +258,7 @@
 				9550129E2640F58100E17F1C /* Restorans.swift in Sources */,
 				872B31332647FD7E0099CABD /* ImageView+Loading.swift in Sources */,
 				95268EC7264BE3830092739E /* RestaurantsDetailsPresenter.swift in Sources */,
+				8740A73D265100B70044CB79 /* ImageStorage.swift in Sources */,
 				87CE3B5E2647EF9600079385 /* RestaurantsViewController.swift in Sources */,
 				955A7A7C262B12D1000079BA /*  RestaurantsDetailViewController.swift in Sources */,
 			);
