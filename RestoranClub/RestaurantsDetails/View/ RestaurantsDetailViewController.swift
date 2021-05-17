@@ -43,19 +43,26 @@ class  RestaurantsDetailViewController: UITableViewController {
     }
     
     private func registerCell() {
-        let cell = UINib(nibName: "UITableViewCellHeaderTableViewCell", bundle: nil)
+        let cell = UINib(nibName: "TableViewCellHeaderTableViewCell", bundle: nil)
         
         self.tableView.register(cell, forCellReuseIdentifier: "CustomCell")
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as? UITableViewCellHeaderTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as? TableViewCellHeaderTableViewCell else {
             return UITableViewCell()
         }
-        print(detailPresenter.restaurants?.restaurantName)
+        guard let cellMain = tableView.dequeueReusableCell(withIdentifier: "CustomCellMain") as? TableViewMain else {
+            return UITableViewCell()
+        }
+        guard let cellReview = tableView.dequeueReusableCell(withIdentifier: "CustomCellReview") as? TableViewCellReview else {
+            return UITableViewCell()
+        }
+        
     if let restaurant = detailPresenter.restaurants {
         cell.configure(model: restaurant)
-        print("zzz")
+        cellMain.configure(model: restaurant)
+        cellReview.configure(model: restaurant)
     
     }
         return cell

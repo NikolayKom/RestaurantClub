@@ -1,6 +1,6 @@
 //
-//   Created by Statnikov Eugene on 09.05.2021.
-//   Copyright (c) 2021 SEA. All rights reserved.
+//   Created by Nikolay on 09.05.2021.
+//   Copyright (c) 2021. All rights reserved.
 //
 
 import Foundation

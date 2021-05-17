@@ -15,8 +15,12 @@
 		95268EC7264BE3830092739E /* RestaurantsDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95268EC6264BE3830092739E /* RestaurantsDetailsPresenter.swift */; };
 		9550129E2640F58100E17F1C /* Restorans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550129D2640F58100E17F1C /* Restorans.swift */; };
 		955A7A7C262B12D1000079BA /*  RestaurantsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A7A7B262B12D1000079BA /*  RestaurantsDetailViewController.swift */; };
-		959912BB265158570004C5CC /* UITableViewCellHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959912B9265158570004C5CC /* UITableViewCellHeaderTableViewCell.swift */; };
-		959912BC265158570004C5CC /* UITableViewCellHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959912BA265158570004C5CC /* UITableViewCellHeaderTableViewCell.xib */; };
+		959912BB265158570004C5CC /* TableViewCellHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959912B9265158570004C5CC /* TableViewCellHeaderTableViewCell.swift */; };
+		959912BC265158570004C5CC /* TableViewCellHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959912BA265158570004C5CC /* TableViewCellHeaderTableViewCell.xib */; };
+		959912C22652236E0004C5CC /* TableViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959912C02652236E0004C5CC /* TableViewMain.swift */; };
+		959912C32652236E0004C5CC /* TableViewMain.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959912C12652236E0004C5CC /* TableViewMain.xib */; };
+		959912C7265225E90004C5CC /* TableViewCellReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959912C5265225E90004C5CC /* TableViewCellReview.swift */; };
+		959912C8265225E90004C5CC /* TableViewCellReview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959912C6265225E90004C5CC /* TableViewCellReview.xib */; };
 		95CCF7A226414623004E6309 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCF7A126414623004E6309 /* Reachability.swift */; };
 		E4EB4A1022E5DBF100019C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EB4A0F22E5DBF100019C8C /* AppDelegate.swift */; };
 		E4EB4A1522E5DBF100019C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4EB4A1322E5DBF100019C8C /* Main.storyboard */; };
@@ -33,8 +37,12 @@
 		95268EC6264BE3830092739E /* RestaurantsDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsDetailsPresenter.swift; sourceTree = "<group>"; };
 		9550129D2640F58100E17F1C /* Restorans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restorans.swift; sourceTree = "<group>"; };
 		955A7A7B262B12D1000079BA /*  RestaurantsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " RestaurantsDetailViewController.swift"; sourceTree = "<group>"; };
-		959912B9265158570004C5CC /* UITableViewCellHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		959912BA265158570004C5CC /* UITableViewCellHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITableViewCellHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		959912B9265158570004C5CC /* TableViewCellHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		959912BA265158570004C5CC /* TableViewCellHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		959912C02652236E0004C5CC /* TableViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewMain.swift; sourceTree = "<group>"; };
+		959912C12652236E0004C5CC /* TableViewMain.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewMain.xib; sourceTree = "<group>"; };
+		959912C5265225E90004C5CC /* TableViewCellReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellReview.swift; sourceTree = "<group>"; };
+		959912C6265225E90004C5CC /* TableViewCellReview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellReview.xib; sourceTree = "<group>"; };
 		95CCF7A126414623004E6309 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E4EB4A0C22E5DBF100019C8C /* RestoranClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestoranClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EB4A0F22E5DBF100019C8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,8 +161,12 @@
 		959912B42651455A0004C5CC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				959912B9265158570004C5CC /* UITableViewCellHeaderTableViewCell.swift */,
-				959912BA265158570004C5CC /* UITableViewCellHeaderTableViewCell.xib */,
+				959912B9265158570004C5CC /* TableViewCellHeaderTableViewCell.swift */,
+				959912BA265158570004C5CC /* TableViewCellHeaderTableViewCell.xib */,
+				959912C02652236E0004C5CC /* TableViewMain.swift */,
+				959912C12652236E0004C5CC /* TableViewMain.xib */,
+				959912C5265225E90004C5CC /* TableViewCellReview.swift */,
+				959912C6265225E90004C5CC /* TableViewCellReview.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -252,8 +264,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				959912BC265158570004C5CC /* UITableViewCellHeaderTableViewCell.xib in Resources */,
+				959912BC265158570004C5CC /* TableViewCellHeaderTableViewCell.xib in Resources */,
+				959912C32652236E0004C5CC /* TableViewMain.xib in Resources */,
 				E4EB4A1A22E5DC0500019C8C /* LaunchScreen.storyboard in Resources */,
+				959912C8265225E90004C5CC /* TableViewCellReview.xib in Resources */,
 				E4EB4A1722E5DC0500019C8C /* Assets.xcassets in Resources */,
 				E4EB4A1522E5DBF100019C8C /* Main.storyboard in Resources */,
 			);
@@ -266,17 +280,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				959912BB265158570004C5CC /* UITableViewCellHeaderTableViewCell.swift in Sources */,
+				959912BB265158570004C5CC /* TableViewCellHeaderTableViewCell.swift in Sources */,
 				87CE3B582647EF4F00079385 /* RestaurantsPresenter.swift in Sources */,
 				E4EB4A1022E5DBF100019C8C /* AppDelegate.swift in Sources */,
 				95CCF7A226414623004E6309 /* Reachability.swift in Sources */,
 				87DD0C86262C882400342664 /* MyCollectionViewCell.swift in Sources */,
 				9550129E2640F58100E17F1C /* Restorans.swift in Sources */,
+				959912C22652236E0004C5CC /* TableViewMain.swift in Sources */,
 				872B31332647FD7E0099CABD /* ImageView+Loading.swift in Sources */,
 				95268EC7264BE3830092739E /* RestaurantsDetailsPresenter.swift in Sources */,
 				8740A73D265100B70044CB79 /* ImageStorage.swift in Sources */,
 				87CE3B5E2647EF9600079385 /* RestaurantsViewController.swift in Sources */,
 				955A7A7C262B12D1000079BA /*  RestaurantsDetailViewController.swift in Sources */,
+				959912C7265225E90004C5CC /* TableViewCellReview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

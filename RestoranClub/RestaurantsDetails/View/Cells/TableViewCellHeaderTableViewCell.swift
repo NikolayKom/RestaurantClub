@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UITableViewCellHeaderTableViewCell: UITableViewCell {
+class TableViewCellHeaderTableViewCell: UITableViewCell {
    // @IBOutlet var restoranNameLabel: UILabel!
    // @IBOutlet var typeOfKitchenLabel: UILabel!
     //@IBOutlet weak var aboutRestoranLabel: UILabel!
