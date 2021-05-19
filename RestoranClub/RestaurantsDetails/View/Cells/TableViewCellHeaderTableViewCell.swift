@@ -9,21 +9,21 @@
 import UIKit
 
 class TableViewCellHeaderTableViewCell: UITableViewCell {
-   // @IBOutlet var restoranNameLabel: UILabel!
-   // @IBOutlet var typeOfKitchenLabel: UILabel!
-    //@IBOutlet weak var aboutRestoranLabel: UILabel!
-   // @IBOutlet weak var restoranLogoImage: UIImageView!
     
-    @IBOutlet weak var Test: UILabel!
+    @IBOutlet weak var restaurantNameLabel: UILabel!
+    @IBOutlet weak var typeOfKitchenLabel: UILabel!
+    
+    @IBOutlet weak var restaurantLogoImage: UIImageView!
     
     func configure(model: Restorant) {
-        //restoranNameLabel.text = model.restaurantName
-       // typeOfKitchenLabel.text = model.descriptionRestaurant
+        
         //aboutRestoranLabel.text = model.aboutRestaurant
-        Test.text = "ты лох"
+        
+        restaurantNameLabel.text = model.restaurantName
+        typeOfKitchenLabel.text = model.descriptionRestaurant
         if let image = model.image.first {
-            let urlString = "http://2e1af2b5afff.ngrok.io/media/\(image)"
-           // restoranLogoImage.loadImage(urlString: urlString)
+            let urlString = "http://0b06dfb69e35.ngrok.io/media/\(image)"
+            restaurantLogoImage.loadImage(urlString: urlString)
         }
     }
     

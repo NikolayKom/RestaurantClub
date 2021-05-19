@@ -7,30 +7,62 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Black.ttf">
+            <string>Roboto-Black</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="137" id="KGk-i7-Jjw" customClass="UITableViewCellHeaderTableViewCell" customModule="RestoranClub" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="215" translatesAutoresizingMaskIntoConstraints="NO" id="KGk-i7-Jjw" customClass="TableViewCellHeaderTableViewCell" customModule="RestoranClub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="529" height="178"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
+                <rect key="frame" x="0.0" y="0.0" width="529" height="178"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grI-G3-rUq">
-                        <rect key="frame" x="27" y="55" width="42" height="21"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="jMN-Vk-mWb">
+                        <rect key="frame" x="16" y="14" width="150" height="150"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тип кухни" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oce-ej-ZLd">
+                        <rect key="frame" x="208" y="46" width="301" height="13"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название ресторана" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eou-ox-izx">
+                        <rect key="frame" x="208" y="14" width="305" height="30.5"/>
+                        <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="26"/>
+                        <color key="textColor" red="0.9016753601509262" green="0.67036975646756003" blue="0.42370939198662061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="oce-ej-ZLd" secondAttribute="bottom" constant="119" id="2wH-MB-ixY"/>
+                    <constraint firstItem="oce-ej-ZLd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="208" id="6pY-Zr-WiW"/>
+                    <constraint firstAttribute="trailing" secondItem="oce-ej-ZLd" secondAttribute="trailing" constant="20" id="9VS-QA-bPy"/>
+                    <constraint firstItem="Eou-ox-izx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="Ito-4h-9yD"/>
+                    <constraint firstItem="Eou-ox-izx" firstAttribute="leading" secondItem="jMN-Vk-mWb" secondAttribute="trailing" constant="42" id="bpa-Y2-Ofd"/>
+                    <constraint firstItem="oce-ej-ZLd" firstAttribute="top" secondItem="Eou-ox-izx" secondAttribute="bottom" constant="1.5" id="ewY-yV-OAS"/>
+                    <constraint firstItem="oce-ej-ZLd" firstAttribute="top" secondItem="Eou-ox-izx" secondAttribute="bottom" constant="1.5" id="gPO-ME-8uf"/>
+                    <constraint firstAttribute="trailing" secondItem="Eou-ox-izx" secondAttribute="trailing" constant="16" id="oNO-B9-LLt"/>
+                    <constraint firstItem="oce-ej-ZLd" firstAttribute="top" secondItem="Eou-ox-izx" secondAttribute="bottom" constant="1.5" id="oXY-m7-NPR"/>
+                    <constraint firstItem="oce-ej-ZLd" firstAttribute="top" secondItem="Eou-ox-izx" secondAttribute="bottom" constant="1.5" id="yMk-wQ-HSf"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="Test" destination="grI-G3-rUq" id="Bir-ed-9WF"/>
+                <outlet property="restaurantLogoImage" destination="jMN-Vk-mWb" id="Kl5-JV-VKm"/>
+                <outlet property="restaurantNameLabel" destination="Eou-ox-izx" id="Gde-bY-Gpc"/>
+                <outlet property="typeOfKitchenLabel" destination="oce-ej-ZLd" id="iEz-DH-Xvl"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="86.049107142857139"/>
+            <point key="canvasLocation" x="289.13043478260875" y="111.16071428571428"/>
         </tableViewCell>
     </objects>
 </document>

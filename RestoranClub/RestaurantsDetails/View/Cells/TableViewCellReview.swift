@@ -18,7 +18,7 @@ class TableViewCellReview: UITableViewCell {
     }
     func configure(model: Restorant) {
         
-        userNameLabel.text = "ты еблан"
+        userNameLabel.text = "3"
     }
 
 

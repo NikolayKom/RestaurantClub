@@ -45,7 +45,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         
 		
         if let image = model.image.first {
-			let urlString = "http://2e1af2b5afff.ngrok.io/media/\(image)"
+			let urlString = "http://0b06dfb69e35.ngrok.io/media/\(image)"
 			logoImage.loadImage(urlString: urlString)
 		}
 	}
@@ -59,7 +59,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         
         
         if let image = model.image.first {
-            let urlString = "http://2e1af2b5afff.ngrok.io/media/\(image)"
+            let urlString = "http://0b06dfb69e35.ngrok.io/media/\(image)"
             logoImage.loadImage(urlString: urlString)
         }
     }

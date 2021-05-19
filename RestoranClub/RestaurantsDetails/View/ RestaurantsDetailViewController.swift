@@ -18,8 +18,6 @@ class  RestaurantsDetailViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         detailPresenter.obtainRestoranById(id: restoranIndex)
-        print(detailPresenter.restaurants?.restaurantName)
-        print(restoranIndex)
     }
     
     func showRestaurants() {
@@ -44,14 +42,20 @@ class  RestaurantsDetailViewController: UITableViewController {
     
     private func registerCell() {
         let cell = UINib(nibName: "TableViewCellHeaderTableViewCell", bundle: nil)
+        let cellMain = UINib(nibName: "TableViewMain", bundle: nil)
+        let cellReview = UINib(nibName: "TableViewCellReview", bundle: nil)
         
         self.tableView.register(cell, forCellReuseIdentifier: "CustomCell")
+        self.tableView.register(cellMain, forCellReuseIdentifier: "CustomCellMain")
+        self.tableView.register(cellReview, forCellReuseIdentifier: "CustomCellReview")
     }
     
+   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as? TableViewCellHeaderTableViewCell else {
             return UITableViewCell()
         }
+        
         guard let cellMain = tableView.dequeueReusableCell(withIdentifier: "CustomCellMain") as? TableViewMain else {
             return UITableViewCell()
         }
@@ -59,12 +63,33 @@ class  RestaurantsDetailViewController: UITableViewController {
             return UITableViewCell()
         }
         
+        
+        
     if let restaurant = detailPresenter.restaurants {
         cell.configure(model: restaurant)
         cellMain.configure(model: restaurant)
         cellReview.configure(model: restaurant)
     
     }
-        return cell
+        switch indexPath.section {
+        case 0:
+            return cell
+        case 1:
+            cellMain.backgroundColor = .black
+        case 2:
+            return cellReview
+        default:
+            break
+        }
+        
+        return cellMain
     }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
 }

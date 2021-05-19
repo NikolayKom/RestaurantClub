@@ -31,7 +31,7 @@ class RestaurantsPresenter {
 			return
 		}
 		
-		guard let url = URL(string: "http://2e1af2b5afff.ngrok.io/main_map_restaurants_api") else {
+		guard let url = URL(string: "http://0b06dfb69e35.ngrok.io/main_map_restaurants_api") else {
 			return
 		}
 		
@@ -58,7 +58,7 @@ class RestaurantsPresenter {
 			return
 		}
 		
-		guard var components = URLComponents(string: "http://2e1af2b5afff.ngrok.io/search_results_view_api") else {
+		guard var components = URLComponents(string: "http://0b06dfb69e35.ngrok.io/search_results_view_api") else {
 			return
 		}
 		

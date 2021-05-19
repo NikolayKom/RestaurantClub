@@ -19,7 +19,7 @@ class TableViewMain: UITableViewCell {
     
     func configure(model: Restorant) {
         
-        descriptionRestoranLabel.text = "ты дебил"
+        descriptionRestoranLabel.text = model.aboutRestaurant
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
