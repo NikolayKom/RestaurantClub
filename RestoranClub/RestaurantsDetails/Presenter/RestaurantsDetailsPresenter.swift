@@ -17,6 +17,12 @@ class RestaurantsDetailsPresenter {
     
     var restaurants: Restorant?
     
+    func setup() {
+        
+
+    
+    }
+    
     func obtainRestoranById(id: String) {
         guard Reachability.isConnectedToNetwork() else {
             DetailViewController?.showError(title: "Ошибка", message: "Нет интернета", restoranNumber: id)

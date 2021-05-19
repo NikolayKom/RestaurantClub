@@ -9,6 +9,17 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Black.ttf">
+            <string>Roboto-Black</string>
+        </array>
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Restaurants View Controller-->
         <scene sceneID="3Gq-2I-0dj">
@@ -44,7 +55,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" reuseIdentifier="MyCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="vkd-NV-S84" customClass="MyCollectionViewCell" customModule="RestoranClub" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="vkd-NV-S84" customClass="MyCollectionViewCell" customModule="RestoranClub" customModuleProvider="target">
                                         <rect key="frame" x="26.5" y="0.0" width="361" height="96"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="h8l-cG-hRb">
@@ -54,13 +65,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ad-W4-1Tn">
                                                     <rect key="frame" x="126" y="8" width="227" height="41"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                    <color key="textColor" red="0.94282680750000003" green="0.70467430350000004" blue="0.40847426650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="26"/>
+                                                    <color key="textColor" red="0.90739458799999995" green="0.67303007839999995" blue="0.40274584289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRy-L9-4LE">
                                                     <rect key="frame" x="126" y="67" width="227" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
                                                     <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -72,8 +83,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1700" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nb1-EX-Fcb">
-                                                    <rect key="frame" x="260" y="39" width="92.5" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <rect key="frame" x="260" y="39" width="92.5" height="34"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                                                     <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -82,7 +93,7 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Nb1-EX-Fcb" secondAttribute="bottom" constant="39" id="01a-R9-ZdB"/>
+                                                <constraint firstAttribute="bottom" secondItem="Nb1-EX-Fcb" secondAttribute="bottom" constant="23" id="01a-R9-ZdB"/>
                                                 <constraint firstItem="HSe-mE-HQz" firstAttribute="top" secondItem="h8l-cG-hRb" secondAttribute="top" constant="14" id="4i8-tN-rfb"/>
                                                 <constraint firstAttribute="bottom" secondItem="jRy-L9-4LE" secondAttribute="bottom" constant="8" id="4wd-Ah-lUx"/>
                                                 <constraint firstItem="4Ad-W4-1Tn" firstAttribute="leading" secondItem="HSe-mE-HQz" secondAttribute="trailing" constant="34" id="6A9-De-uzG"/>
@@ -191,12 +202,13 @@
                             </tableViewSection>
                             <tableViewSection id="xq7-4N-vZ3">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCellReview" rowHeight="250" id="AWF-Go-WaW" customClass="TableViewCellReview" customModule="RestoranClub" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="640" width="414" height="250"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCellReview" rowHeight="285" id="AWF-Go-WaW" customClass="TableViewCellReview" customModule="RestoranClub" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="640" width="414" height="285"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AWF-Go-WaW" id="Bx6-j6-LPd">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="285"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
@@ -208,7 +220,9 @@
                             <outlet property="delegate" destination="Kg3-Zq-zRl" id="bZ7-Hd-jef"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="wRQ-Kc-cTo"/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="wRQ-Kc-cTo">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="B1R-ta-I2f"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufe-a7-bgq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

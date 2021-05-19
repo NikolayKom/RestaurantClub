@@ -6,6 +6,9 @@ class  RestaurantsDetailViewController: UITableViewController {
     
     lazy var detailPresenter = RestaurantsDetailsPresenter(DetailViewController: self)
     
+
+    
+    
     var restoranIndex: String = ""
     var aboutRestoran: String = ""
     
@@ -14,6 +17,7 @@ class  RestaurantsDetailViewController: UITableViewController {
         super.viewDidLoad()
         self.registerCell()
        // detailPresenter.sendReview() - отправка отзыва на ресторан
+        detailPresenter.setup()
 	}
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,6 +73,7 @@ class  RestaurantsDetailViewController: UITableViewController {
         cell.configure(model: restaurant)
         cellMain.configure(model: restaurant)
         cellReview.configure(model: restaurant)
+        
     
     }
         switch indexPath.section {
@@ -81,7 +86,6 @@ class  RestaurantsDetailViewController: UITableViewController {
         default:
             break
         }
-        
         return cellMain
     }
     
