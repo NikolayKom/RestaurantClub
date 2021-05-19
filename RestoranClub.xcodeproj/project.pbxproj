@@ -27,6 +27,8 @@
 		958BD1DE2655187500F4E02D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 958BD1D22655187400F4E02D /* Roboto-Medium.ttf */; };
 		958BD1DF2655187500F4E02D /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 958BD1D32655187400F4E02D /* Roboto-Thin.ttf */; };
 		958BD1E02655187500F4E02D /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 958BD1D42655187400F4E02D /* Roboto-Light.ttf */; };
+		958BD1E426553F0500F4E02D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958BD1E226553F0500F4E02D /* CollectionViewCell.swift */; };
+		958BD1E526553F0500F4E02D /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958BD1E326553F0500F4E02D /* CollectionViewCell.xib */; };
 		959912BB265158570004C5CC /* TableViewCellHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959912B9265158570004C5CC /* TableViewCellHeaderTableViewCell.swift */; };
 		959912BC265158570004C5CC /* TableViewCellHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959912BA265158570004C5CC /* TableViewCellHeaderTableViewCell.xib */; };
 		959912C22652236E0004C5CC /* TableViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959912C02652236E0004C5CC /* TableViewMain.swift */; };
@@ -61,6 +63,8 @@
 		958BD1D22655187400F4E02D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		958BD1D32655187400F4E02D /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../../../Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		958BD1D42655187400F4E02D /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "../../../../../Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		958BD1E226553F0500F4E02D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		958BD1E326553F0500F4E02D /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		959912B9265158570004C5CC /* TableViewCellHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		959912BA265158570004C5CC /* TableViewCellHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		959912C02652236E0004C5CC /* TableViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewMain.swift; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 				959912C12652236E0004C5CC /* TableViewMain.xib */,
 				959912C5265225E90004C5CC /* TableViewCellReview.swift */,
 				959912C6265225E90004C5CC /* TableViewCellReview.xib */,
+				958BD1E226553F0500F4E02D /* CollectionViewCell.swift */,
+				958BD1E326553F0500F4E02D /* CollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 				958BD1DD2655187500F4E02D /* Roboto-MediumItalic.ttf in Resources */,
 				958BD1DA2655187500F4E02D /* Roboto-ThinItalic.ttf in Resources */,
 				958BD1D72655187500F4E02D /* Roboto-BoldItalic.ttf in Resources */,
+				958BD1E526553F0500F4E02D /* CollectionViewCell.xib in Resources */,
 				959912BC265158570004C5CC /* TableViewCellHeaderTableViewCell.xib in Resources */,
 				958BD1D82655187500F4E02D /* Roboto-LightItalic.ttf in Resources */,
 				958BD1E02655187500F4E02D /* Roboto-Light.ttf in Resources */,
@@ -346,6 +353,7 @@
 				872B31332647FD7E0099CABD /* ImageView+Loading.swift in Sources */,
 				95268EC7264BE3830092739E /* RestaurantsDetailsPresenter.swift in Sources */,
 				8740A73D265100B70044CB79 /* ImageStorage.swift in Sources */,
+				958BD1E426553F0500F4E02D /* CollectionViewCell.swift in Sources */,
 				87CE3B5E2647EF9600079385 /* RestaurantsViewController.swift in Sources */,
 				955A7A7C262B12D1000079BA /*  RestaurantsDetailViewController.swift in Sources */,
 				959912C7265225E90004C5CC /* TableViewCellReview.swift in Sources */,
