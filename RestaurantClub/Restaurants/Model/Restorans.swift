@@ -48,16 +48,3 @@ struct Restorant: Codable {
     }
 }
 
-struct Response: Codable {
-    let rest_id: Int
-    let review: String
-    let user_name: String
-    let stars: Double
-}
-
-struct Review: Codable {
-	let review: String
-	let stars: Int
-	let user_name: String
-	let date: String
-}

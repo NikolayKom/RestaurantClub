@@ -1,2 +1,2 @@
-# RestoranClub
+# RestaurantClub
 Client - Server application

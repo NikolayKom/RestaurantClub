@@ -29,7 +29,7 @@ class RestaurantsDetailsPresenter {
             return
         }
         
-        guard var components = URLComponents(string: "http://0b06dfb69e35.ngrok.io/restaurants_card_api") else {
+        guard var components = URLComponents(string: "http://0aa8c248f5af.ngrok.io/restaurants_card_api") else {
             return
         }
         
@@ -70,7 +70,7 @@ class RestaurantsDetailsPresenter {
         ] as [String : Any]
 
             //create the url with URL
-            let url = URL(string: "http://34c4318d9c15.ngrok.io/create_review/")! //change the url
+            let url = URL(string: "http://0aa8c248f5af.ngrok.io/create_review/")! //change the url
 
             //create the session object
             let session = URLSession.shared

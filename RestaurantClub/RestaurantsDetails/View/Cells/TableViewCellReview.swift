@@ -16,8 +16,8 @@ class TableViewCellReview: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
+       // self.collectionView.dataSource = self
+       // self.collectionView.delegate = self
         self.collectionView.register(UINib.init(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionViewID")
     }
     func configure(model: Restorant) {
