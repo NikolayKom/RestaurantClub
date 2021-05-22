@@ -29,7 +29,7 @@ class RestaurantsDetailsPresenter {
             return
         }
         
-        guard var components = URLComponents(string: "http://0aa8c248f5af.ngrok.io/restaurants_card_api") else {
+        guard var components = URLComponents(string: baseURL + "/restaurants_card_api") else {
             return
         }
         
@@ -54,7 +54,6 @@ class RestaurantsDetailsPresenter {
                 DispatchQueue.main.async {
                     self.DetailViewController?.showRestaurants()
                 }
-                print(self.restaurants)
             } else {
                 self.DetailViewController?.showError(title: "Ошибка", message: "Что-то пошло не так!", restoranNumber: id)
             }
@@ -70,7 +69,7 @@ class RestaurantsDetailsPresenter {
         ] as [String : Any]
 
             //create the url with URL
-            let url = URL(string: "http://0aa8c248f5af.ngrok.io/create_review/")! //change the url
+            let url = URL(string: baseURL + "/create_review/")! //change the url
 
             //create the session object
             let session = URLSession.shared

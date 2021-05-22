@@ -22,7 +22,7 @@ class TableViewCellHeaderTableViewCell: UITableViewCell {
         restaurantNameLabel.text = model.restaurantName
         typeOfKitchenLabel.text = model.descriptionRestaurant
         if let image = model.image.first {
-            let urlString = "http://0aa8c248f5af.ngrok.io/media/\(image)"
+            let urlString = baseURL + "/media/\(image)"
             restaurantLogoImage.loadImage(urlString: urlString)
         }
     }
