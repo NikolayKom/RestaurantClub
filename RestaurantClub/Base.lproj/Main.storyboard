@@ -169,10 +169,14 @@
         <scene sceneID="i0Y-2G-w0b">
             <objects>
                 <tableViewController id="Kg3-Zq-zRl" customClass="RestaurantsDetailViewController" customModule="RestaurantClub" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dEt-Aa-zI6">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dEt-Aa-zI6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="S2R-ei-vTe">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="Kg3-Zq-zRl" id="ijC-1s-n8A"/>
@@ -182,10 +186,28 @@
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="wRQ-Kc-cTo">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="B1R-ta-I2f"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="detailActivityIndicator" destination="S2R-ei-vTe" id="pUD-s4-zdS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufe-a7-bgq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1055" y="110"/>
+        </scene>
+        <!--Restaurants Review View Controller-->
+        <scene sceneID="JRl-bp-dBw">
+            <objects>
+                <viewController restorationIdentifier="ViewControllerID" storyboardIdentifier="ViewControllerID" id="24z-eR-t58" customClass="RestaurantsReviewViewController" customModule="RestaurantClub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kgN-z2-Vpr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kEj-Fv-avh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qwX-i8-05S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815" y="121"/>
         </scene>
     </scenes>
     <resources>

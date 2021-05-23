@@ -19,8 +19,9 @@ class RestaurantsDetailsPresenter {
     
     func setup() {
         
-
-    
+        DetailViewController?.detailActivityIndicator.hidesWhenStopped = true
+        DetailViewController?.detailActivityIndicator.startAnimating()
+        
     }
     
     func obtainRestoranById(id: String) {

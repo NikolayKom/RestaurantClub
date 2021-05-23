@@ -2,9 +2,21 @@
 
 import UIKit
 
-class RestaurantsDetailViewController: UITableViewController {
-	
-	lazy var detailPresenter = RestaurantsDetailsPresenter(DetailViewController: self)
+class RestaurantsDetailViewController: UITableViewController, kallProtocol {
+    
+    func didButtonPressed() {
+        print("залупа")
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+               let vc = storyBoard.instantiateViewController(withIdentifier: "ViewControllerID") as!  RestaurantsReviewViewController
+               self.present(vc,animated:true,completion: nil)
+    }
+    
+   
+    
+    
+    @IBOutlet weak var detailActivityIndicator: UIActivityIndicatorView!
+    
+    lazy var detailPresenter = RestaurantsDetailsPresenter(DetailViewController: self)
 	
 	var restoranIndex: String = ""
 	var aboutRestoran: String = ""
@@ -14,6 +26,8 @@ class RestaurantsDetailViewController: UITableViewController {
 		super.viewDidLoad()
 		self.registerCell()
 		// detailPresenter.sendReview() - отправка отзыва на ресторан
+       
+        
 		detailPresenter.setup()
 	}
 	
@@ -67,13 +81,13 @@ class RestaurantsDetailViewController: UITableViewController {
 
 		switch indexPath.row {
 		case 0:
-			guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as? TableViewCellHeaderTableViewCell
+			guard var cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as? TableViewCellHeaderTableViewCell
 			else { return UITableViewCell() }
 			
 			if let restaurant = detailPresenter.restaurants {
 				cell.configure(model: restaurant)
 			}
-			
+            cell.delegate = self
 			return cell
 		case 1:
 			guard let cellMain = tableView.dequeueReusableCell(withIdentifier: "CustomCellMain") as? TableViewMain
@@ -90,6 +104,7 @@ class RestaurantsDetailViewController: UITableViewController {
 			
 			if let restaurant = detailPresenter.restaurants {
 				cellReview.configure(model: restaurant)
+                detailActivityIndicator.stopAnimating()
 			}
 			
 			return cellReview
@@ -105,5 +120,6 @@ class RestaurantsDetailViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return UITableView.automaticDimension
 	}
-	
+
 }
+

@@ -3,20 +3,32 @@
 //  RestoranClub
 //
 //  Created by Николай on 16.05.2021.
-//  Copyright © 2021 Kreative Developer. All rights reserved.
 //
 
 import UIKit
 
+protocol kallProtocol {
+    func didButtonPressed()
+}
+
 class TableViewCellHeaderTableViewCell: UITableViewCell {
     
+    var delegate: kallProtocol?
+    
+    @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var reviewButton: UIButton!
     @IBOutlet weak var restaurantNameLabel: UILabel!
     @IBOutlet weak var typeOfKitchenLabel: UILabel!
-    
     @IBOutlet weak var restaurantLogoImage: UIImageView!
     
+    @IBAction func actionButton(_ sender: Any) {
+        delegate?.didButtonPressed()
+        print("меня нажали")
+    }
+    
+  
+
     func configure(model: Restorant) {
-        
         //aboutRestoranLabel.text = model.aboutRestaurant
         
         restaurantNameLabel.text = model.restaurantName
@@ -33,9 +45,8 @@ class TableViewCellHeaderTableViewCell: UITableViewCell {
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+      super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
+   }
 }
