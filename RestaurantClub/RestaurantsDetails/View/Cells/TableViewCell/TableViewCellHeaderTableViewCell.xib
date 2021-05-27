@@ -37,7 +37,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oce-ej-ZLd">
-                        <rect key="frame" x="28" y="242" width="507" height="0.0"/>
+                        <rect key="frame" x="29" y="242" width="506" height="0.0"/>
                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="11"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                     <constraint firstItem="jMN-Vk-mWb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HFa-fM-DSB"/>
                     <constraint firstItem="Eou-ox-izx" firstAttribute="top" secondItem="jMN-Vk-mWb" secondAttribute="bottom" constant="20" id="NNU-Am-u1I"/>
                     <constraint firstAttribute="trailingMargin" secondItem="oce-ej-ZLd" secondAttribute="trailing" constant="8" id="QYa-Oh-8wK"/>
-                    <constraint firstItem="oce-ej-ZLd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="cR1-mz-cD7"/>
+                    <constraint firstItem="oce-ej-ZLd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="cR1-mz-cD7"/>
                     <constraint firstItem="oce-ej-ZLd" firstAttribute="top" secondItem="Eou-ox-izx" secondAttribute="bottom" constant="2" id="fnQ-9l-4lw"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Eou-ox-izx" secondAttribute="bottom" constant="40" id="zLA-vF-imE"/>
                 </constraints>
