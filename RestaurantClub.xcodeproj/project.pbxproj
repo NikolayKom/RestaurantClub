@@ -30,7 +30,6 @@
 		955A7A7C262B12D1000079BA /*  RestaurantsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A7A7B262B12D1000079BA /*  RestaurantsDetailViewController.swift */; };
 		958E54D82657626C003BA670 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E54D62657626C003BA670 /* CollectionViewCell.swift */; };
 		958E54D92657626C003BA670 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958E54D72657626C003BA670 /* CollectionViewCell.xib */; };
-		958E54F026576C03003BA670 /* DetailRestaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E54EF26576C02003BA670 /* DetailRestaurants.swift */; };
 		958E54F326576C07003BA670 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E54F226576C07003BA670 /* ReviewModel.swift */; };
 		959912BB265158570004C5CC /* TableViewCellHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959912B9265158570004C5CC /* TableViewCellHeaderTableViewCell.swift */; };
 		959912BC265158570004C5CC /* TableViewCellHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959912BA265158570004C5CC /* TableViewCellHeaderTableViewCell.xib */; };
@@ -71,7 +70,6 @@
 		955A7A7B262B12D1000079BA /*  RestaurantsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " RestaurantsDetailViewController.swift"; sourceTree = "<group>"; };
 		958E54D62657626C003BA670 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		958E54D72657626C003BA670 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
-		958E54EF26576C02003BA670 /* DetailRestaurants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRestaurants.swift; sourceTree = "<group>"; };
 		958E54F226576C07003BA670 /* ReviewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
 		959912B9265158570004C5CC /* TableViewCellHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		959912BA265158570004C5CC /* TableViewCellHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -221,7 +219,6 @@
 		958E54ED26576BD9003BA670 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				958E54EF26576C02003BA670 /* DetailRestaurants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -422,7 +419,6 @@
 				95A6B8CA265A29890057CEC9 /* RestaurantsReviewPresenter.swift in Sources */,
 				87DD0C86262C882400342664 /* MyCollectionViewCell.swift in Sources */,
 				9550129E2640F58100E17F1C /* Restorans.swift in Sources */,
-				958E54F026576C03003BA670 /* DetailRestaurants.swift in Sources */,
 				959912C22652236E0004C5CC /* TableViewMain.swift in Sources */,
 				872B31332647FD7E0099CABD /* ImageView+Loading.swift in Sources */,
 				95268EC7264BE3830092739E /* RestaurantsDetailsPresenter.swift in Sources */,
