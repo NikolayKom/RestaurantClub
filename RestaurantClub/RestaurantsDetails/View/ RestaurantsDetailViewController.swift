@@ -5,13 +5,11 @@ import UIKit
 class RestaurantsDetailViewController: UITableViewController, kallProtocol {
     
     func didButtonPressed() {
-        print("залупа")
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                let vc = storyBoard.instantiateViewController(withIdentifier: "ViewControllerID") as!  RestaurantsReviewViewController
                self.present(vc,animated:true,completion: nil)
+        vc.numberOfRestoran = restoranIndex
     }
-    
-   
     
     
     @IBOutlet weak var detailActivityIndicator: UIActivityIndicatorView!
@@ -25,9 +23,6 @@ class RestaurantsDetailViewController: UITableViewController, kallProtocol {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.registerCell()
-		// detailPresenter.sendReview() - отправка отзыва на ресторан
-       
-        
 		detailPresenter.setup()
 	}
 	
@@ -105,14 +100,26 @@ class RestaurantsDetailViewController: UITableViewController, kallProtocol {
 			if let restaurant = detailPresenter.restaurants {
 				cellReview.configure(model: restaurant)
                 detailActivityIndicator.stopAnimating()
-			}
-			
+                
+                if let review = detailPresenter.restaurants?.reviews {
+                cellReview.restaurantsReview = review
+                
+                }
+                
+            }
+            
 			return cellReview
 		default:
 			break
 		}
 		return UITableViewCell()
 	}
+    
+    override func prepare(for segue: UIStoryboardSegue,sender: Any?
+    ) {
+        let destination:  TableViewCellReview = segue.destination as!  TableViewCellReview
+        destination.restaurantsReview = detailPresenter.restaurants?.reviews
+    }
 	
 	override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
 		return UITableView.automaticDimension

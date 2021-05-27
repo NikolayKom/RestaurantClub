@@ -9,7 +9,7 @@ class RestaurantsPresenter {
 	
 	weak var viewController: RestaurantsViewController?
 	
-	var restaurants: [Restorant]?
+    var restaurants: [Restorant]?
     var searching = false 
     
     
@@ -58,7 +58,7 @@ class RestaurantsPresenter {
 			return
 		}
 		
-		guard var components = URLComponents(string: baseURL + "search_results_view_api") else {
+		guard var components = URLComponents(string: "http://3598a32ff8cc.ngrok.io/search_results_view_api") else {
 			return
 		}
 		

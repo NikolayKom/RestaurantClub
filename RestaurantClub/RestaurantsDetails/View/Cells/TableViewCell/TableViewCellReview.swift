@@ -3,13 +3,13 @@
 //  RestoranClub
 //
 //  Created by Николай on 17.05.2021.
-//  Copyright © 2021 Kreative Developer. All rights reserved.
-//
 
 import UIKit
 
 class TableViewCellReview: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var restaurantsReview: [Review]?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,12 +17,12 @@ class TableViewCellReview: UITableViewCell {
         self.collectionView.delegate = self
         self.collectionView.register(
 			UINib.init(nibName: "CollectionViewCell", bundle: nil),
-			forCellWithReuseIdentifier: "collectionViewID"
-		)
+			forCellWithReuseIdentifier: "collectionViewID")
+        
     }
 	
 	func configure(model: Restorant) {
-		
+        print("\(restaurantsReview)")
 	}
 }
 
@@ -30,7 +30,7 @@ extension TableViewCellReview: UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(
 		_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return restaurantsReview?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -39,7 +39,14 @@ extension TableViewCellReview: UICollectionViewDataSource, UICollectionViewDeleg
 			for: indexPath as IndexPath
 		) as! CollectionViewCell
         
+        
+        if let restaurants = restaurantsReview?[indexPath.item] {
+            cell.configure(model: restaurants)
+           
+        }
+        
         return cell
+            
 	}
 }
 

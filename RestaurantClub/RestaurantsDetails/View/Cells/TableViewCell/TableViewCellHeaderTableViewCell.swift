@@ -23,7 +23,6 @@ class TableViewCellHeaderTableViewCell: UITableViewCell {
     
     @IBAction func actionButton(_ sender: Any) {
         delegate?.didButtonPressed()
-        print("меня нажали")
     }
     
   

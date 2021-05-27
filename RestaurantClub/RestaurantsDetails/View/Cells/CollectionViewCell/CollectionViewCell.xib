@@ -29,6 +29,9 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <size key="customSize" width="219" height="50"/>
+            <connections>
+                <outlet property="nameUserLabel" destination="ocj-F5-Qv0" id="gSD-9Z-MU6"/>
+            </connections>
             <point key="canvasLocation" x="-206.52173913043481" y="55.580357142857139"/>
         </collectionViewCell>
     </objects>
