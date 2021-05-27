@@ -2,7 +2,7 @@
 
 import UIKit
 
-class RestaurantsDetailViewController: UITableViewController, kallProtocol {
+class RestaurantsDetailViewController: UITableViewController, DataTransportByButton {
     
     func didButtonPressed() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -29,11 +29,15 @@ class RestaurantsDetailViewController: UITableViewController, kallProtocol {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		detailPresenter.obtainRestoranById(id: restoranIndex)
+        
+        
 	}
 	
 	func showRestaurants() {
 		tableView.reloadData()
+        detailPresenter.reviews = detailPresenter.restaurants?.reviews
 	}
+    
 	
 	func showError(title: String, message: String, restoranNumber: String) {
 		let alert = UIAlertController(
@@ -96,15 +100,11 @@ class RestaurantsDetailViewController: UITableViewController, kallProtocol {
 		case 2:
 			guard let cellReview = tableView.dequeueReusableCell(withIdentifier: "CustomCellReview") as? TableViewCellReview
 			else { return UITableViewCell() }
-			
-			if let restaurant = detailPresenter.restaurants {
-				cellReview.configure(model: restaurant)
+            
+            if let restaurant = detailPresenter.reviews {
                 detailActivityIndicator.stopAnimating()
-                
-                if let review = detailPresenter.restaurants?.reviews {
-                cellReview.restaurantsReview = review
-                
-                }
+                cellReview.restaurantsReview = detailPresenter.reviews
+                cellReview.configure()
                 
             }
             
@@ -115,12 +115,6 @@ class RestaurantsDetailViewController: UITableViewController, kallProtocol {
 		return UITableViewCell()
 	}
     
-    override func prepare(for segue: UIStoryboardSegue,sender: Any?
-    ) {
-        let destination:  TableViewCellReview = segue.destination as!  TableViewCellReview
-        destination.restaurantsReview = detailPresenter.restaurants?.reviews
-    }
-	
 	override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
 		return UITableView.automaticDimension
 	}

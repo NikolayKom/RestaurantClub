@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol kallProtocol {
+protocol DataTransportByButton {
     func didButtonPressed()
 }
 
 class TableViewCellHeaderTableViewCell: UITableViewCell {
     
-    var delegate: kallProtocol?
+    var delegate: DataTransportByButton?
     
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var reviewButton: UIButton!

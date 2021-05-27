@@ -16,6 +16,7 @@ class RestaurantsDetailsPresenter {
     }
     
     var restaurants: Restorant?
+    var reviews: [Review]?
     
     
     func setup() {

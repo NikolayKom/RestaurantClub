@@ -10,6 +10,7 @@ class TableViewCellReview: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var restaurantsReview: [Review]?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,11 +19,10 @@ class TableViewCellReview: UITableViewCell {
         self.collectionView.register(
 			UINib.init(nibName: "CollectionViewCell", bundle: nil),
 			forCellWithReuseIdentifier: "collectionViewID")
-        
     }
 	
-	func configure(model: Restorant) {
-        print("\(restaurantsReview)")
+	func configure() {
+        collectionView.reloadData()
 	}
 }
 
@@ -38,7 +38,6 @@ extension TableViewCellReview: UICollectionViewDataSource, UICollectionViewDeleg
 			withReuseIdentifier: "collectionViewID",
 			for: indexPath as IndexPath
 		) as! CollectionViewCell
-        
         
         if let restaurants = restaurantsReview?[indexPath.item] {
             cell.configure(model: restaurants)

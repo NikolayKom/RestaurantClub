@@ -11,10 +11,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewID" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="RestaurantClub" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="219" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="280" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="219" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="280" height="80"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocj-F5-Qv0">
@@ -28,11 +28,11 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <size key="customSize" width="219" height="50"/>
+            <size key="customSize" width="280" height="80"/>
             <connections>
                 <outlet property="nameUserLabel" destination="ocj-F5-Qv0" id="gSD-9Z-MU6"/>
             </connections>
-            <point key="canvasLocation" x="-206.52173913043481" y="55.580357142857139"/>
+            <point key="canvasLocation" x="-162.31884057971016" y="65.625"/>
         </collectionViewCell>
     </objects>
 </document>

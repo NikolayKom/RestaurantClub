@@ -8,7 +8,6 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-
     @IBOutlet weak var nameUserLabel: UILabel!
     
     override func awakeFromNib() {
@@ -20,7 +19,8 @@ class CollectionViewCell: UICollectionViewCell {
     func configure(model: Review) {
         
         nameUserLabel.text = model.user_name
-      
+     print("-------------------")
+      print("\(model.user_name)")
         }
     }
 
