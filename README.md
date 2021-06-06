@@ -1,7 +1,7 @@
 # RestaurantClub
 Client - Server application written on MVP architecture. 
 
-### Application can upload restaurant's from server api:
+### Application can download restaurant's from server api:
 
 
 <img src="https://user-images.githubusercontent.com/83255642/119868727-9ea40800-bf49-11eb-8b3c-6c55344895cf.png" width="250"> <img src="https://user-images.githubusercontent.com/83255642/119868780-b085ab00-bf49-11eb-84f7-01be49b98995.png" width="250">
