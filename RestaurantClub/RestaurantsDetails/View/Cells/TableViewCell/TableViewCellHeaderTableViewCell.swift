@@ -11,10 +11,11 @@ protocol DataTransportByButton {
     func didButtonPressed()
 }
 
-class TableViewCellHeaderTableViewCell: UITableViewCell {
+final class TableViewCellHeaderTableViewCell: UITableViewCell {
     
     var delegate: DataTransportByButton?
     
+// MARK: - Outlet
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var reviewButton: UIButton!
     @IBOutlet weak var restaurantNameLabel: UILabel!
@@ -25,11 +26,7 @@ class TableViewCellHeaderTableViewCell: UITableViewCell {
         delegate?.didButtonPressed()
     }
     
-  
-
-    func configure(model: Restorant) {
-        //aboutRestoranLabel.text = model.aboutRestaurant
-        
+    func configure(model: FakeRestorant) {
         restaurantNameLabel.text = model.restaurantName
         typeOfKitchenLabel.text = model.descriptionRestaurant
         if let image = model.image.first {
@@ -40,12 +37,9 @@ class TableViewCellHeaderTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
       super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
    }
 }

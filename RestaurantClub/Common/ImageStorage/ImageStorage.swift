@@ -6,7 +6,6 @@ import UIKit
 
 final class ImageStorage {
 	
-	// Почитай почему плох Singleton
 	static let shared = ImageStorage()
 	
 	private var storage = [String: Data]()

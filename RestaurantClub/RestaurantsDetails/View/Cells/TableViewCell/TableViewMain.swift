@@ -7,24 +7,21 @@
 
 import UIKit
 
-class TableViewMain: UITableViewCell {
+final class TableViewMain: UITableViewCell {
 
-    @IBOutlet var descriptionRestoranLabel: UILabel!
+// MARK: - Outlet
+    @IBOutlet private var descriptionRestoranLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
-    func configure(model: Restorant) {
+    func configure(model: FakeRestorant) {
         
         descriptionRestoranLabel.text = model.aboutRestaurant
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
 }

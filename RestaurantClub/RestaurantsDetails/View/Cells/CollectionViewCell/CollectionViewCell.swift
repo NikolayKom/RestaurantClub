@@ -7,10 +7,12 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var nameUserLabel: UILabel!
-    @IBOutlet weak var reviewTextLabel: UILabel!
-    @IBOutlet weak var ratingImage: UIImageView!
+final class CollectionViewCell: UICollectionViewCell {
+
+// MARK: - Outlet
+    @IBOutlet private weak var nameUserLabel: UILabel!
+    @IBOutlet private weak var reviewTextLabel: UILabel!
+    @IBOutlet private weak var ratingImage: UIImageView!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -29,24 +31,20 @@ class CollectionViewCell: UICollectionViewCell {
             cornerRadius: contentView.layer.cornerRadius
         ).cgPath
         layer.cornerRadius = 15.0
-
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    
     }
     
-    func configure(model: Review) {
-        
+    func configure(model: FakeReview) {
         nameUserLabel.text = model.userName
         reviewTextLabel.text = model.review
         stars(rating: model.stars)
-
     }
     
-    func stars(rating: Int) {
+// MARK: - Private methods
+    private func stars(rating: Int) {
         switch rating {
         case 0:
             print("Переменная равна 0")
@@ -63,6 +61,6 @@ class CollectionViewCell: UICollectionViewCell {
             ratingImage.image = #imageLiteral(resourceName: "Star_rating_5_of_5")
         default:
             ratingImage.image = #imageLiteral(resourceName: "Star_rating_0_of_5")
+        }
     }
-}
 }

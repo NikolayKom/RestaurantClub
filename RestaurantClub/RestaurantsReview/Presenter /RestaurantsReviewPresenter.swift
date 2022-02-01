@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RestaurantsReviewPresenter {
+final class RestaurantsReviewPresenter {
     
     weak var viewController:  RestaurantsReviewViewController?
     
@@ -16,7 +16,6 @@ class RestaurantsReviewPresenter {
     }
     
     let reviewArray = ["Ужасно","Плохо","Среднего качества", "Вкусно", "Очень вкусно","Изумительно"]
-    
     
     func sendReview(NumberOfRestoran: String, textReview: String, userName: String, stars: Int) {
         let parameters = ["rest_id": NumberOfRestoran,

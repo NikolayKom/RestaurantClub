@@ -2,13 +2,13 @@
 
 import UIKit
 
-class MyCollectionViewCell: UICollectionViewCell {
+final class MyCollectionViewCell: UICollectionViewCell {
     
-	@IBOutlet weak var nameOfRestaurant: UILabel!
-	@IBOutlet weak var avarageCheckLabel: UILabel!
-	@IBOutlet weak var adressOrDishLabel: UILabel!
-	@IBOutlet weak var logoImage: UIImageView!
-	@IBOutlet weak var starsImage: UIImageView!
+	@IBOutlet private weak var nameOfRestaurant: UILabel!
+	@IBOutlet private weak var avarageCheckLabel: UILabel!
+	@IBOutlet private weak var adressOrDishLabel: UILabel!
+	@IBOutlet private weak var logoImage: UIImageView!
+	@IBOutlet private weak var starsImage: UIImageView!
 	
 	required init?(coder: NSCoder) {
 		super.init(coder: coder)
@@ -27,7 +27,6 @@ class MyCollectionViewCell: UICollectionViewCell {
 			cornerRadius: contentView.layer.cornerRadius
 		).cgPath
 		layer.cornerRadius = 15.0
-
 	}
 	
 	override func prepareForReuse() {
@@ -35,28 +34,26 @@ class MyCollectionViewCell: UICollectionViewCell {
 		logoImage.image = nil
 	}
     
-    
-	func configure(model: Restorant) {
-		nameOfRestaurant.text = model.restaurantName
-		adressOrDishLabel.text = model.location
+//MARK: - Public method
+	func configure(model: FakeRestorant) {
+        self.nameOfRestaurant.text = model.restaurantName
+        self.adressOrDishLabel.text = model.location
         
-        stars(rating: model.rating)
-        prepareAvarageCheck(averageCheckRestaurant: model.averageCheckRestaurant)
+        self.stars(rating: model.rating)
+        self.prepareAvarageCheck(averageCheckRestaurant: model.averageCheckRestaurant)
         
-		
         if let image = model.image.first {
 			let urlString = baseURL + "/media/\(image)"
 			logoImage.loadImage(urlString: urlString)
 		}
 	}
     
-    func configureSearching(model: Restorant) {
+    func configureSearching(model: FakeRestorant) {
         nameOfRestaurant.text = model.restaurantName
         adressOrDishLabel.text = model.dish
         
         stars(rating: model.rating)
         prepareAvarageCheck(averageCheckRestaurant: model.averageCheckRestaurant)
-        
         
         if let image = model.image.first {
             let urlString = baseURL + "/media/\(image)"
@@ -64,7 +61,8 @@ class MyCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func stars(rating: Double) {
+//MARK: - Private method
+    private func stars(rating: Double) {
         switch rating {
         case 0:
             print("Переменная равна 0")
@@ -94,7 +92,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func prepareAvarageCheck(averageCheckRestaurant: Int) {
+   private func prepareAvarageCheck(averageCheckRestaurant: Int) {
         if averageCheckRestaurant < 1700 {
             avarageCheckLabel?.text = "₽₽"
         } else {

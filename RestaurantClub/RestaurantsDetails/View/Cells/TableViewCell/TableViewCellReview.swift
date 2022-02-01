@@ -6,12 +6,13 @@
 
 import UIKit
 
-class TableViewCellReview: UITableViewCell {
-    @IBOutlet weak var collectionView: UICollectionView!
+final class TableViewCellReview: UITableViewCell {
     
-    var restaurantsReview: [Review]?
+// MARK: - Outlet
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
+    var restaurantsReview: [FakeReview]?
 
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.collectionView.dataSource = self
@@ -26,6 +27,7 @@ class TableViewCellReview: UITableViewCell {
 	}
 }
 
+// MARK: - UICollectionViewDataSource, UICollectionViewDelegate
 extension TableViewCellReview: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(
@@ -43,12 +45,11 @@ extension TableViewCellReview: UICollectionViewDataSource, UICollectionViewDeleg
             cell.configure(model: restaurants)
            
         }
-        
         return cell
-            
 	}
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension TableViewCellReview: UICollectionViewDelegateFlowLayout {
 	
 	func collectionView(
@@ -56,6 +57,6 @@ extension TableViewCellReview: UICollectionViewDelegateFlowLayout {
 		layout collectionViewLayout: UICollectionViewLayout,
 		sizeForItemAt indexPath: IndexPath
 	) -> CGSize {
-		bounds.size
+        CGSize(width: UIScreen.main.bounds.width - 65, height: 100)
 	}
 }

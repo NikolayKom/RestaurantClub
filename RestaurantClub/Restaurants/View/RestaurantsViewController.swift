@@ -1,43 +1,43 @@
 //
-//   Created by Statnikov Eugene on 09.05.2021.
-//   Copyright (c) 2021 SEA. All rights reserved.
+//   Created by Komissarov Nikolay on 09.05.2021.
+//   Copyright (c) 2021. All rights reserved.
 //
 
 import UIKit
 
-class RestaurantsViewController: UIViewController {
+final class RestaurantsViewController: UIViewController {
 	
 	lazy var presenter = RestaurantsPresenter(viewController: self)
 	
-	@IBOutlet weak var citySearchBox: UISearchBar!
-	@IBOutlet weak var mycollectionView: UICollectionView!
+	@IBOutlet private weak var citySearchBox: UISearchBar!
+	@IBOutlet private weak var mycollectionView: UICollectionView!
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 	
-    var restoranSelected = ""
+   private var restoranSelected = ""
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		//presenter.obtainRestorans()
         presenter.setup()
         swipeDown()
-        
-        
 	}
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presenter.obtainRestorans()
+        //presenter.obtainRestorans()
+        self.showRestaurants()
     }
     
-    
-    func swipeDown() {
+//MARK: - Private methods
+    private func swipeDown() {
         let swipeDown =  UISwipeGestureRecognizer(target: self, action: #selector(self.hideKeyboardOnSwipeDown))
         swipeDown.delegate = self
         swipeDown.direction =  UISwipeGestureRecognizer.Direction.down
         self.mycollectionView.addGestureRecognizer(swipeDown)
     }
-	
-	func showRestaurants() {
+    
+//MARK: - Public methods
+    
+    func showRestaurants() {
 		mycollectionView.reloadData()
 	}
 	
@@ -50,7 +50,7 @@ class RestaurantsViewController: UIViewController {
             
             alert.addAction(.init(title: "Ок", style: .cancel, handler: nil))
             alert.addAction(.init(title: "Обновить", style: .default, handler: { [weak self] _ in
-                self?.presenter.obtainRestorans()
+               // self?.presenter.obtainRestorans()
             }))
 
 		present(alert, animated: true, completion: nil)
@@ -62,7 +62,7 @@ class RestaurantsViewController: UIViewController {
 extension RestaurantsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		presenter.restaurants?.count ?? 0
+        presenter.restaurants.count ?? 0
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -71,15 +71,15 @@ extension RestaurantsViewController: UICollectionViewDataSource, UICollectionVie
 			for: indexPath
 		) as! MyCollectionViewCell
 		
-        if let restaurant = presenter.restaurants?[indexPath.item] {
+        //if let restaurant = presenter.restaurants[indexPath.item] {
             if presenter.searching {
-                cell.configureSearching(model: restaurant)
+                cell.configureSearching(model: presenter.restaurants[indexPath.item])
                 activityIndicator.stopAnimating()
                 
             } else {
-                cell.configure(model: restaurant)
+                cell.configure(model: presenter.restaurants[indexPath.item])
                 activityIndicator.stopAnimating()
-            }
+            //}
                 
 			
 		}
@@ -89,9 +89,8 @@ extension RestaurantsViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath
     ) {
-        let restoran = presenter.restaurants?[indexPath.item]
-        restoranSelected = "\(restoran?.restaurantId ?? 1)" 
-        
+        let restoran = presenter.restaurants[indexPath.item]
+        restoranSelected = "\(restoran.restaurantId ?? 1)"
         
         performSegue(withIdentifier: "showViewController", sender: nil)
     }
@@ -101,24 +100,22 @@ extension RestaurantsViewController: UICollectionViewDataSource, UICollectionVie
         let destination:  RestaurantsDetailViewController = segue.destination as!  RestaurantsDetailViewController
         destination.restoranIndex = restoranSelected
     }
-
 }
 
 // MARK: - UISearchBarDelegate
-
 extension RestaurantsViewController: UISearchBarDelegate {
 	
 	func searchBar(
 		_ searchBar: UISearchBar,
 		textDidChange searchText: String
 	) {
-		presenter.obtainSearch(searchText: searchText)
+		//presenter.obtainSearch(searchText: searchText)
         presenter.searching = true
         mycollectionView.reloadData()
 	}
 	
 	func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-		presenter.obtainRestorans()
+		//presenter.obtainRestorans()
         presenter.searching = false
         searchBar.text = ""
         searchBar.resignFirstResponder()
@@ -128,7 +125,6 @@ extension RestaurantsViewController: UISearchBarDelegate {
 }
 
 //MARK: - UIGestureRecognizerDelegate
-
 extension RestaurantsViewController: UIGestureRecognizerDelegate {
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -140,7 +136,6 @@ extension RestaurantsViewController: UIGestureRecognizerDelegate {
         presenter.searching = false
         mycollectionView.reloadData()
      }
-
 }
 
     
