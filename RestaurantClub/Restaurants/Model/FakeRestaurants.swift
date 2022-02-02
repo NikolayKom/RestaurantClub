@@ -75,7 +75,7 @@ extension FakeRestorant {
                       aboutRestaurant: "Каждый автомобилист знает, как важно в наше время найти своевременную и профессиональную помощь в ремонте автомобиля. Опытные автовладельцы отмечают, лучший вариант - ремонтировать и обслуживать авто в одном автосервисе.",
                       reviews: allFakeReview
                      ),
-        FakeRestorant(restaurantName: "Сервис не у Ашота",
+        FakeRestorant(restaurantName: "Сервис не у Ашота ненеенненененне",
                       descriptionRestaurant: "Мерседес до 200 наш клиент!",
                       averageCheckRestaurant: 15000,
                       location: "Петухова, 14",
