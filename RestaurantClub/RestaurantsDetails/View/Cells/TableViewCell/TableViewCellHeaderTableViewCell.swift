@@ -8,7 +8,8 @@
 import UIKit
 
 protocol DataTransportByButton {
-    func didButtonPressed()
+    func didReviewButtonPressed()
+    func didMenuButtonPressed()
 }
 
 final class TableViewCellHeaderTableViewCell: UITableViewCell {
@@ -16,14 +17,19 @@ final class TableViewCellHeaderTableViewCell: UITableViewCell {
     var delegate: DataTransportByButton?
     
 // MARK: - Outlet
-    @IBOutlet weak var menuButton: UIButton!
-    @IBOutlet weak var reviewButton: UIButton!
-    @IBOutlet weak var restaurantNameLabel: UILabel!
-    @IBOutlet weak var typeOfKitchenLabel: UILabel!
-    @IBOutlet weak var restaurantLogoImage: UIImageView!
+    @IBOutlet private weak var menuButton: UIButton!
+    @IBOutlet private weak var reviewButton: UIButton!
+    @IBOutlet private weak var restaurantNameLabel: UILabel!
+    @IBOutlet private weak var typeOfKitchenLabel: UILabel!
+    @IBOutlet private weak var restaurantLogoImage: UIImageView!
+
+// MARK: - Action
+    @IBAction private func reviewButtonPressed(_ sender: Any) {
+        self.delegate?.didReviewButtonPressed()
+    }
     
-    @IBAction func actionButton(_ sender: Any) {
-        delegate?.didButtonPressed()
+    @IBAction private func menuButtonPressed(_ sender: Any) {
+        self.delegate?.didMenuButtonPressed()
     }
     
     func configure(model: FakeRestorant) {

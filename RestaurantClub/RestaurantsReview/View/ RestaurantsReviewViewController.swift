@@ -11,43 +11,48 @@ import TinyConstraints
 
 final class RestaurantsReviewViewController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var reviewTextField: UITextView!
-    @IBOutlet weak var sendReviewButton: UIButton!
+//MARK: - Outlet
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var reviewTextField: UITextView!
+    @IBOutlet private weak var sendReviewButton: UIButton!
     
-    lazy var cosmosView: CosmosView = {
+    private lazy var cosmosView: CosmosView = {
         var view = CosmosView()
         view.settings.starSize = 35
         return view
     }()
     
     var numberOfRestoran = String()
-    var name = ""
-    var text = ""
+    private var name = String()
+    private var text = String()
 
+//MARK: - MVP
     lazy var reviewPresenter = RestaurantsReviewPresenter(viewController: self)
-    
-    @IBAction func sendReview(_ sender: Any) {
+
+//MARK: - Action
+    @IBAction private func sendReview(_ sender: Any) {
         text = reviewTextField.text
         name = nameTextField.text ?? "Username"
         reviewPresenter.sendReview(NumberOfRestoran: "\(numberOfRestoran)", textReview: text, userName: name, stars: Int(self.cosmosView.rating))
         showThanks(title: "Отзыв отправлен", message: "Спасибо за оценку")
     }
     
+//MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUISettings()
         swipeDown()
     }
-    
-    func setupUISettings() {
+
+//MARK: - Private Methods
+    private func setupUISettings() {
         self.view.addSubview(cosmosView)
         cosmosView.top(to: self.reviewTextField, offset: -50)
         cosmosView.right(to: self.view, offset: -23)
         self.reviewTextField.layer.cornerRadius = 10
     }
     
-    func showThanks(title: String, message: String) {
+    private func showThanks(title: String, message: String) {
         let alert = UIAlertController(
             title: title,
             message: message,
@@ -58,11 +63,11 @@ final class RestaurantsReviewViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    func hideReview(_ alertAction: UIAlertAction) {
+    private func hideReview(_ alertAction: UIAlertAction) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func swipeDown() {
+    private func swipeDown() {
         let swipeDown =  UISwipeGestureRecognizer(target: self, action: #selector(self.hideKeyboardOnSwipeUp))
         swipeDown.delegate = self
         swipeDown.direction =  UISwipeGestureRecognizer.Direction.up

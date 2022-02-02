@@ -52,27 +52,39 @@ class FakeRestorant {
 // MARK: - Restorant Sample Data
 extension FakeRestorant {
   static let allFakeReview = [
-    FakeReview(review: "Хожу каждый день ем одно и тоже",
-              stars: 5,
-              userName: "Настя",
+    FakeReview(review: "Жигу сделали пару раз пнув",
+              stars: 1,
+              userName: "Рамен",
               date: "02.01.22"),
-    FakeReview(review: "Хожу каждый день ем одно и тоже Хожу каждый день ем одно и тоже Хожу каждый день ем одно и тожеХожу каждый день ем одно и тожеХожу каждый день ем одно и тоже Хожу каждый день ем одно и тоже ",
+    FakeReview(review: "Люблю этот сервис, качественно и быстро",
               stars: 5,
-              userName: "Настя Настя НастяНастя Настя Настя",
+              userName: "Алексей",
               date: "02.01.22")
   ]
     
     static let allFakeRestorant = [
-        FakeRestorant(restaurantName: "Том ям БАР",
-                      descriptionRestaurant: "Лучше места не найти",
-                      averageCheckRestaurant: 1500,
-                      location: "Сердце Романовой, 5",
-                      image: ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png"],
-                      rating: 5.0,
+        FakeRestorant(restaurantName: "Сервис у Ашота",
+                      descriptionRestaurant: "Мерседес до 200 наш клиент!",
+                      averageCheckRestaurant: 15000,
+                      location: "Петухова, 14",
+                      image: ["https://d1miefefncnroz.cloudfront.net/advt_photo/877150/1423139737_bebdcofceaad9mn.jpg"],
+                      rating: 4.2,
                       restaurantId: 1,
-                      dish: "Том ям",
-                      menu: "Том ям",
-                      aboutRestaurant: "Хаванина на каждый день",
+                      dish: "Замена поршня",
+                      menu: "https://online.fliphtml5.com/ofedn/evdl/#p=1",
+                      aboutRestaurant: "Каждый автомобилист знает, как важно в наше время найти своевременную и профессиональную помощь в ремонте автомобиля. Опытные автовладельцы отмечают, лучший вариант - ремонтировать и обслуживать авто в одном автосервисе.",
+                      reviews: allFakeReview
+                     ),
+        FakeRestorant(restaurantName: "Сервис не у Ашота",
+                      descriptionRestaurant: "Мерседес до 200 наш клиент!",
+                      averageCheckRestaurant: 15000,
+                      location: "Петухова, 14",
+                      image: ["https://d1miefefncnroz.cloudfront.net/advt_photo/877150/1423139737_bebdcofceaad9mn.jpg"],
+                      rating: 4.2,
+                      restaurantId: 2,
+                      dish: "Замена поршня",
+                      menu: "https://online.fliphtml5.com/ofedn/evdl/#p=1",
+                      aboutRestaurant: "Каждый автомобилист знает, как важно в наше время найти своевременную и профессиональную помощь в ремонте автомобиля. Опытные автовладельцы отмечают, лучший вариант - ремонтировать и обслуживать авто в одном автосервисе.",
                       reviews: allFakeReview
                      )
     ]

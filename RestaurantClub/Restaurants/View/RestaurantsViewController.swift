@@ -6,19 +6,29 @@
 import UIKit
 
 final class RestaurantsViewController: UIViewController {
-	
+
+//MARK: - MVP
 	lazy var presenter = RestaurantsPresenter(viewController: self)
-	
+    
+//MARK: - Outlet
 	@IBOutlet private weak var citySearchBox: UISearchBar!
 	@IBOutlet private weak var mycollectionView: UICollectionView!
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-	
-   private var restoranSelected = ""
-	
+    
+//MARK: - Action
+    @IBAction func sosButtonClicked(_ sender: Any) {
+        self.presenter.onSosButtonClicked()
+    }
+    
+//MARK: - Params
+    private var restoranSelected = ""
+    private var restaurantMenu = ""
+    
+//MARK: - LifeStyle
 	override func viewDidLoad() {
 		super.viewDidLoad()
         presenter.setup()
-        swipeDown()
+        self.swipeDown()
 	}
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,7 +44,7 @@ final class RestaurantsViewController: UIViewController {
         swipeDown.direction =  UISwipeGestureRecognizer.Direction.down
         self.mycollectionView.addGestureRecognizer(swipeDown)
     }
-    
+
 //MARK: - Public methods
     
     func showRestaurants() {
@@ -75,22 +85,22 @@ extension RestaurantsViewController: UICollectionViewDataSource, UICollectionVie
             if presenter.searching {
                 cell.configureSearching(model: presenter.restaurants[indexPath.item])
                 activityIndicator.stopAnimating()
-                
             } else {
                 cell.configure(model: presenter.restaurants[indexPath.item])
                 activityIndicator.stopAnimating()
             //}
-                
-			
 		}
-		
 		return cell
 	}
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath
     ) {
         let restoran = presenter.restaurants[indexPath.item]
-        restoranSelected = "\(restoran.restaurantId ?? 1)"
+        self.restoranSelected = "\(restoran.restaurantId ?? 1)"
+        
+        if let menu = restoran.menu {
+            self.restaurantMenu = menu
+        }
         
         performSegue(withIdentifier: "showViewController", sender: nil)
     }
@@ -98,7 +108,8 @@ extension RestaurantsViewController: UICollectionViewDataSource, UICollectionVie
     override func prepare(for segue: UIStoryboardSegue,sender: Any?
     ) {
         let destination:  RestaurantsDetailViewController = segue.destination as!  RestaurantsDetailViewController
-        destination.restoranIndex = restoranSelected
+        destination.restoranIndex = self.restoranSelected
+        destination.restoranMenu = self.restaurantMenu
     }
 }
 

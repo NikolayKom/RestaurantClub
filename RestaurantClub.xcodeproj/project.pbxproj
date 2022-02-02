@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,6 +41,16 @@
 		959912C8265225E90004C5CC /* TableViewCellReview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959912C6265225E90004C5CC /* TableViewCellReview.xib */; };
 		95A6B8CA265A29890057CEC9 /* RestaurantsReviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A6B8C9265A29890057CEC9 /* RestaurantsReviewPresenter.swift */; };
 		95A6B8DE265A32F20057CEC9 /*  RestaurantsReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A6B8DD265A32F20057CEC9 /*  RestaurantsReviewViewController.swift */; };
+		95AB487227AA76E40022293B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB487127AA76E40022293B /* WebViewController.swift */; };
+		95AB487427AA76FD0022293B /* WebPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB487327AA76FD0022293B /* WebPresenter.swift */; };
+		95B1A86B27AA57A50019BD07 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1A86A27AA57A50019BD07 /* GradientButton.swift */; };
+		95B1A86D27AA58350019BD07 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1A86C27AA58350019BD07 /* UIButton.swift */; };
+		95B1A86F27AA58890019BD07 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1A86E27AA58890019BD07 /* UIImage.swift */; };
+		95B1A87127AA592D0019BD07 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1A87027AA592D0019BD07 /* UIView.swift */; };
+		95B1A87327AA5AA90019BD07 /* UIView+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1A87227AA5AA90019BD07 /* UIView+Tap.swift */; };
+		95B1A87527AA5AD80019BD07 /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1A87427AA5AD80019BD07 /* CGAffineTransform.swift */; };
+		95B1A87727AA5B2D0019BD07 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1A87627AA5B2D0019BD07 /* UIView+IBInspectable.swift */; };
+		95B1A87927AA66620019BD07 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B1A87827AA66620019BD07 /* Color.xcassets */; };
 		95CCF7A226414623004E6309 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCF7A126414623004E6309 /* Reachability.swift */; };
 		B06923D04B6939A2202ECE97 /* Pods_RestaurantClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8BCE0AAD7E931F7BE90FA1 /* Pods_RestaurantClub.framework */; };
 		E4EB4A1022E5DBF100019C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EB4A0F22E5DBF100019C8C /* AppDelegate.swift */; };
@@ -87,6 +97,16 @@
 		959912C6265225E90004C5CC /* TableViewCellReview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellReview.xib; sourceTree = "<group>"; };
 		95A6B8C9265A29890057CEC9 /* RestaurantsReviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsReviewPresenter.swift; sourceTree = "<group>"; };
 		95A6B8DD265A32F20057CEC9 /*  RestaurantsReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " RestaurantsReviewViewController.swift"; sourceTree = "<group>"; };
+		95AB487127AA76E40022293B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		95AB487327AA76FD0022293B /* WebPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPresenter.swift; sourceTree = "<group>"; };
+		95B1A86A27AA57A50019BD07 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		95B1A86C27AA58350019BD07 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		95B1A86E27AA58890019BD07 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		95B1A87027AA592D0019BD07 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		95B1A87227AA5AA90019BD07 /* UIView+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Tap.swift"; sourceTree = "<group>"; };
+		95B1A87427AA5AD80019BD07 /* CGAffineTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
+		95B1A87627AA5B2D0019BD07 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
+		95B1A87827AA66620019BD07 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		95CCF7A126414623004E6309 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E4EB4A0C22E5DBF100019C8C /* RestaurantClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EB4A0F22E5DBF100019C8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,7 +134,6 @@
 				4549439F51F2A852C5449B74 /* Pods-RestaurantClub.debug.xcconfig */,
 				5F49893D5A25A24E94F1CE1C /* Pods-RestaurantClub.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -148,9 +167,11 @@
 		87BAB47F2647F90A001281E0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				95AB486C27AA6F930022293B /* UIKit */,
+				95AB486B27AA6F770022293B /* CGAffineTransform */,
+				95AB486827AA6F3E0022293B /* ImageView */,
+				95AB486727AA6F190022293B /* Ethernet */,
 				8740A7452651057E0044CB79 /* ImageStorage */,
-				95CCF7A126414623004E6309 /* Reachability.swift */,
-				872B31322647FD7E0099CABD /* ImageView+Loading.swift */,
 				8772923D26596B2C008D5B1C /* BaseURL.swift */,
 			);
 			path = Common;
@@ -161,6 +182,7 @@
 			children = (
 				877291F826596A59008D5B1C /* Fonts */,
 				E4EB4A1622E5DC0500019C8C /* Assets.xcassets */,
+				95B1A87827AA66620019BD07 /* Color.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -286,7 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				95A6B8E1265A54B90057CEC9 /* Model */,
-				95A6B8DB265A32680057CEC9 /*  View */,
+				95A6B8DB265A32680057CEC9 /* View */,
 				95A6B8C8265A290E0057CEC9 /* Presenter  */,
 			);
 			path = RestaurantsReview;
@@ -300,12 +322,12 @@
 			path = "Presenter ";
 			sourceTree = "<group>";
 		};
-		95A6B8DB265A32680057CEC9 /*  View */ = {
+		95A6B8DB265A32680057CEC9 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				95A6B8DD265A32F20057CEC9 /*  RestaurantsReviewViewController.swift */,
 			);
-			path = " View";
+			path = View;
 			sourceTree = "<group>";
 		};
 		95A6B8E1265A54B90057CEC9 /* Model */ = {
@@ -315,6 +337,107 @@
 				9589756B27A9192A00CF444B /* FakeReviewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		95AB486627AA6F010022293B /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				95B1A87027AA592D0019BD07 /* UIView.swift */,
+				95B1A87227AA5AA90019BD07 /* UIView+Tap.swift */,
+				95B1A87627AA5B2D0019BD07 /* UIView+IBInspectable.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		95AB486727AA6F190022293B /* Ethernet */ = {
+			isa = PBXGroup;
+			children = (
+				95CCF7A126414623004E6309 /* Reachability.swift */,
+			);
+			path = Ethernet;
+			sourceTree = "<group>";
+		};
+		95AB486827AA6F3E0022293B /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				872B31322647FD7E0099CABD /* ImageView+Loading.swift */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
+		95AB486927AA6F4D0022293B /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				95B1A86C27AA58350019BD07 /* UIButton.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		95AB486A27AA6F610022293B /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				95B1A86E27AA58890019BD07 /* UIImage.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		95AB486B27AA6F770022293B /* CGAffineTransform */ = {
+			isa = PBXGroup;
+			children = (
+				95B1A87427AA5AD80019BD07 /* CGAffineTransform.swift */,
+			);
+			path = CGAffineTransform;
+			sourceTree = "<group>";
+		};
+		95AB486C27AA6F930022293B /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				95AB486A27AA6F610022293B /* UIImage */,
+				95AB486927AA6F4D0022293B /* UIButton */,
+				95AB486627AA6F010022293B /* UIView */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		95AB486D27AA76980022293B /* RestaurantMenu */ = {
+			isa = PBXGroup;
+			children = (
+				95AB486F27AA76BB0022293B /* Model */,
+				95AB487027AA76C10022293B /* View */,
+				95AB486E27AA76B50022293B /* Presenter */,
+			);
+			path = RestaurantMenu;
+			sourceTree = "<group>";
+		};
+		95AB486E27AA76B50022293B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				95AB487327AA76FD0022293B /* WebPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		95AB486F27AA76BB0022293B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95AB487027AA76C10022293B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95AB487127AA76E40022293B /* WebViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95B1A86927AA57900019BD07 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				95B1A86A27AA57A50019BD07 /* GradientButton.swift */,
+			);
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
 		E4EB4A0322E5DBF100019C8C = {
@@ -338,9 +461,11 @@
 		E4EB4A0E22E5DBF100019C8C /* RestaurantClub */ = {
 			isa = PBXGroup;
 			children = (
+				95B1A86927AA57900019BD07 /* CustomUI */,
 				87CE3B522647EE7D00079385 /* Restaurants */,
 				87CE3B602647EFC000079385 /* RestaurantsDetails */,
 				95A6B8C12659904A0057CEC9 /* RestaurantsReview */,
+				95AB486D27AA76980022293B /* RestaurantMenu */,
 				87BAB4802647F918001281E0 /* Resources */,
 				87BAB47F2647F90A001281E0 /* Common */,
 				E4EB4A0F22E5DBF100019C8C /* AppDelegate.swift */,
@@ -428,6 +553,7 @@
 				8772923226596AF0008D5B1C /* Roboto-Black.ttf in Resources */,
 				8772923526596AF0008D5B1C /* Roboto-Regular.ttf in Resources */,
 				8772923626596AF0008D5B1C /* Roboto-Italic.ttf in Resources */,
+				95B1A87927AA66620019BD07 /* Color.xcassets in Resources */,
 				8772923026596AF0008D5B1C /* Roboto-Bold.ttf in Resources */,
 				E4EB4A1522E5DBF100019C8C /* Main.storyboard in Resources */,
 			);
@@ -485,21 +611,30 @@
 				959912BB265158570004C5CC /* TableViewCellHeaderTableViewCell.swift in Sources */,
 				95A6B8DE265A32F20057CEC9 /*  RestaurantsReviewViewController.swift in Sources */,
 				87CE3B582647EF4F00079385 /* RestaurantsPresenter.swift in Sources */,
+				95AB487427AA76FD0022293B /* WebPresenter.swift in Sources */,
 				E4EB4A1022E5DBF100019C8C /* AppDelegate.swift in Sources */,
 				95CCF7A226414623004E6309 /* Reachability.swift in Sources */,
 				95A6B8CA265A29890057CEC9 /* RestaurantsReviewPresenter.swift in Sources */,
+				95B1A87327AA5AA90019BD07 /* UIView+Tap.swift in Sources */,
 				87DD0C86262C882400342664 /* MyCollectionViewCell.swift in Sources */,
+				95B1A86B27AA57A50019BD07 /* GradientButton.swift in Sources */,
+				95B1A87527AA5AD80019BD07 /* CGAffineTransform.swift in Sources */,
 				9550129E2640F58100E17F1C /* Restorans.swift in Sources */,
+				95AB487227AA76E40022293B /* WebViewController.swift in Sources */,
 				959912C22652236E0004C5CC /* TableViewMain.swift in Sources */,
 				872B31332647FD7E0099CABD /* ImageView+Loading.swift in Sources */,
 				9589756C27A9192A00CF444B /* FakeReviewModel.swift in Sources */,
 				95268EC7264BE3830092739E /* RestaurantsDetailsPresenter.swift in Sources */,
+				95B1A87727AA5B2D0019BD07 /* UIView+IBInspectable.swift in Sources */,
 				8740A73D265100B70044CB79 /* ImageStorage.swift in Sources */,
 				958E54D82657626C003BA670 /* CollectionViewCell.swift in Sources */,
 				87CE3B5E2647EF9600079385 /* RestaurantsViewController.swift in Sources */,
+				95B1A87127AA592D0019BD07 /* UIView.swift in Sources */,
 				955A7A7C262B12D1000079BA /*  RestaurantsDetailViewController.swift in Sources */,
 				8772923E26596B2C008D5B1C /* BaseURL.swift in Sources */,
 				959912C7265225E90004C5CC /* TableViewCellReview.swift in Sources */,
+				95B1A86F27AA58890019BD07 /* UIImage.swift in Sources */,
+				95B1A86D27AA58350019BD07 /* UIButton.swift in Sources */,
 				958E54F326576C07003BA670 /* ReviewModel.swift in Sources */,
 				9589756A27A916CD00CF444B /* FakeRestaurants.swift in Sources */,
 			);
@@ -650,7 +785,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9XMP9QNV74;
+				DEVELOPMENT_TEAM = 3A6W24RUX7;
 				INFOPLIST_FILE = RestaurantClub/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -669,7 +804,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9XMP9QNV74;
+				DEVELOPMENT_TEAM = 3A6W24RUX7;
 				INFOPLIST_FILE = RestaurantClub/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

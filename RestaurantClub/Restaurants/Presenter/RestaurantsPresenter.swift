@@ -17,13 +17,15 @@ final class RestaurantsPresenter {
 		self.viewController = viewController
 	}
     
+//MARK: - Public methods
     func setup() {
-        
-        viewController?.activityIndicator.hidesWhenStopped = true
-        viewController?.activityIndicator.startAnimating()
+        self.viewController?.activityIndicator.hidesWhenStopped = true
+        self.viewController?.activityIndicator.startAnimating()
+    }
+    
+    func onSosButtonClicked() {
         
     }
-//MARK: - Public methods
 
 //	func obtainRestorans() {
 //		guard Reachability.isConnectedToNetwork() else {

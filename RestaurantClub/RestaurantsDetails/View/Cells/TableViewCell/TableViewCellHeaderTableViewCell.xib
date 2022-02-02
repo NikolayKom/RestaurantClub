@@ -48,13 +48,16 @@
                         <rect key="frame" x="288" y="250" width="30" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" backgroundImage="MenuLogo"/>
+                        <connections>
+                            <action selector="menuButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hHV-cN-3HR"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3o-EZ-bse">
                         <rect key="frame" x="326" y="250" width="30" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" backgroundImage="reviewLogo"/>
                         <connections>
-                            <action selector="actionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="16G-nv-udL"/>
+                            <action selector="reviewButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eff-Nt-XnR"/>
                         </connections>
                     </button>
                 </subviews>

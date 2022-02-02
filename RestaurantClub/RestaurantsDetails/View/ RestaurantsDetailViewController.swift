@@ -3,14 +3,17 @@
 import UIKit
 
 final class RestaurantsDetailViewController: UITableViewController, DataTransportByButton {
-
+    
 //MARK: - Outlet
     @IBOutlet weak var detailActivityIndicator: UIActivityIndicatorView!
-    
+
+//MARK: - MVP
     lazy var detailPresenter = RestaurantsDetailsPresenter(DetailViewController: self)
-	
-	var restoranIndex: String = ""
-	var aboutRestoran: String = ""
+    
+//MARK: - Perm
+    var restoranIndex = String()
+    var restoranMenu = String()
+    private var aboutRestoran = String()
 	
 //MARK: - Lifestyle
 	override func viewDidLoad() {
@@ -47,11 +50,18 @@ final class RestaurantsDetailViewController: UITableViewController, DataTranspor
 		present(alert, animated: true, completion: nil)
 	}
     
-    func didButtonPressed() {
+    func didReviewButtonPressed() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-               let vc = storyBoard.instantiateViewController(withIdentifier: "ViewControllerID") as!  RestaurantsReviewViewController
-               self.present(vc,animated:true,completion: nil)
+               let vc = storyBoard.instantiateViewController(withIdentifier: "ViewControllerID") as! RestaurantsReviewViewController
+               self.present(vc, animated:true, completion: nil)
         vc.numberOfRestoran = restoranIndex
+    }
+    
+    func didMenuButtonPressed() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+               let vc = storyBoard.instantiateViewController(withIdentifier: "WebViewControllerID") as! WebViewCotroller
+               self.present(vc, animated:true, completion: nil)
+        vc.restaurantMenu = self.restoranMenu
     }
     
 //MARK: - Private method
