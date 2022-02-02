@@ -31,8 +31,8 @@ final class WebViewCotroller: UIViewController {
         var myURL: URL!
         myURL = URL(string: "\(self.restaurantMenu)")
         let myRequest = URLRequest(url: myURL!)
-        self.stopAnimating()
-        webView.load(myRequest)
+        self.webView.navigationDelegate = self
+        self.webView.load(myRequest)
     }
     
     private func startAnimating() {
@@ -42,4 +42,11 @@ final class WebViewCotroller: UIViewController {
     private func stopAnimating() {
         self.activityIndicator.stopAnimating()
     }
+}
+
+// MARK: - WKNavigationDelegate
+extension WebViewCotroller: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.stopAnimating()
+      }
 }
