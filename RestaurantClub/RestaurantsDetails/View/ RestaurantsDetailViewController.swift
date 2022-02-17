@@ -1,5 +1,3 @@
-
-
 import UIKit
 
 final class RestaurantsDetailViewController: UITableViewController, DataTransportByButton {
@@ -11,9 +9,10 @@ final class RestaurantsDetailViewController: UITableViewController, DataTranspor
     lazy var detailPresenter = RestaurantsDetailsPresenter(DetailViewController: self)
     
 //MARK: - Perm
-    var restoranIndex = String()
-    var restoranMenu = String()
     private var aboutRestoran = String()
+    
+    internal var restoranIndex = String()
+    internal var restoranMenu = String()
 	
 //MARK: - Lifestyle
 	override func viewDidLoad() {
@@ -62,6 +61,15 @@ final class RestaurantsDetailViewController: UITableViewController, DataTranspor
                let vc = storyBoard.instantiateViewController(withIdentifier: "WebViewControllerID") as! WebViewCotroller
                self.present(vc, animated:true, completion: nil)
         vc.restaurantMenu = self.restoranMenu
+    }
+    
+    func didRouteButtonPressed() {
+        //TODO: забрать коорды и название с api
+        OpenMapDirections.present(in: self,
+                                  sourceView: self.view,
+                                  serviceName: "Тестовый сервис",
+                                  latitude: 55.058671,
+                                  langitude: 82.939942)
     }
     
 //MARK: - Private method

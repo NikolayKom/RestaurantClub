@@ -6,30 +6,35 @@
 //
 
 import UIKit
-
+// TODO: - передалать на enum кнопки
 protocol DataTransportByButton {
     func didReviewButtonPressed()
     func didMenuButtonPressed()
+    func didRouteButtonPressed()
 }
 
 final class TableViewCellHeaderTableViewCell: UITableViewCell {
     
     var delegate: DataTransportByButton?
     
-// MARK: - Outlet
+    // MARK: - Outlet
     @IBOutlet private weak var menuButton: UIButton!
     @IBOutlet private weak var reviewButton: UIButton!
     @IBOutlet private weak var restaurantNameLabel: UILabel!
     @IBOutlet private weak var typeOfKitchenLabel: UILabel!
     @IBOutlet private weak var restaurantLogoImage: UIImageView!
-
-// MARK: - Action
+    @IBOutlet private weak var routeButton: UIButton!
+    
+    // MARK: - Action
     @IBAction private func reviewButtonPressed(_ sender: Any) {
         self.delegate?.didReviewButtonPressed()
     }
     
     @IBAction private func menuButtonPressed(_ sender: Any) {
         self.delegate?.didMenuButtonPressed()
+    }
+    @IBAction private func routeButtonPressed(_ sender: Any) {
+        self.delegate?.didRouteButtonPressed()
     }
     
     func configure(model: FakeRestorant) {

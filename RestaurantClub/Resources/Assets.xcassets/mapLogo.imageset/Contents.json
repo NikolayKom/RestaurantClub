@@ -1,15 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "towed-car-svgrepo-com.svg",
+      "filename" : "Untitled 2.svg",
       "idiom" : "universal"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "template-rendering-intent" : "template"
   }
 }

@@ -16,8 +16,10 @@ final class RestaurantsViewController: UIViewController {
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
 //MARK: - Action
-    @IBAction func sosButtonClicked(_ sender: Any) {
-        self.presenter.onSosButtonClicked()
+    @IBAction private func sosButtonClicked(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "TowTruckViewControllerID") as! TowTruckViewController
+        self.present(vc, animated:true, completion: nil)
     }
     
 //MARK: - Params
@@ -27,8 +29,10 @@ final class RestaurantsViewController: UIViewController {
 //MARK: - LifeStyle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        presenter.setup()
+        self.presenter.setup()
         self.swipeDown()
+        
+        self.mycollectionView.backgroundColor = .white
 	}
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,7 +50,6 @@ final class RestaurantsViewController: UIViewController {
     }
 
 //MARK: - Public methods
-    
     func showRestaurants() {
 		mycollectionView.reloadData()
 	}

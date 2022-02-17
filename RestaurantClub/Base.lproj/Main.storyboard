@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -47,7 +48,7 @@
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3ds-sI-3nQ">
                                 <rect key="frame" x="0.0" y="196" width="414" height="700"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="10" id="99R-ng-qEJ">
                                     <size key="itemSize" width="361" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -57,6 +58,7 @@
                                 <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="7XB-uy-hnt">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="vkd-NV-S84" customClass="MyCollectionViewCell" customModule="RestaurantClub" customModuleProvider="target">
@@ -162,13 +164,13 @@
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="sqShadowRaduis">
-                                        <real key="value" value="16"/>
+                                        <integer key="value" value="100"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="size" keyPath="sqShadowOffset">
-                                        <size key="value" width="0.0" height="8"/>
+                                        <size key="value" width="0.0" height="30"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="sqShadowColor">
-                                        <color key="value" systemColor="separatorColor"/>
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="sqShadowOpacity">
                                         <real key="value" value="1"/>
@@ -180,7 +182,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NvT-0j-Z3M"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="z5k-Z9-mcM" firstAttribute="top" secondItem="gt9-fZ-5Xr" secondAttribute="bottom" constant="3" id="BOI-DJ-uyR"/>
                             <constraint firstItem="q9o-1W-e0k" firstAttribute="leading" secondItem="NvT-0j-Z3M" secondAttribute="leading" constant="20" id="Jeo-PA-rsa"/>
@@ -214,7 +216,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dEt-Aa-zI6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="S2R-ei-vTe">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -251,7 +253,7 @@
                                     <constraint firstAttribute="height" constant="60" id="uck-FT-9LZ"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHO-ta-d0t">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHO-ta-d0t" customClass="GradientButton" customModule="RestaurantClub" customModuleProvider="target">
                                 <rect key="frame" x="122" y="782" width="170" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -264,9 +266,32 @@
                                 </state>
                                 <buttonConfiguration key="configuration" style="filled" title="Оценить" cornerStyle="large">
                                     <fontDescription key="titleFontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.91143053770000004" green="0.67713791130000001" blue="0.38062274460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" name="OrangeOne"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" name="OrangeTwo"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sqCornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sqShadowRaduis">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="sqShadowOffset">
+                                        <size key="value" width="0.0" height="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="sqShadowColor">
+                                        <color key="value" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sqShadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendReview:" destination="24z-eR-t58" eventType="touchUpInside" id="oPd-WV-iEg"/>
                                 </connections>
@@ -331,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwX-i8-05S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1821.7391304347827" y="109.82142857142857"/>
+            <point key="canvasLocation" x="1871" y="152"/>
         </scene>
         <!--Web View Cotroller-->
         <scene sceneID="ktf-YP-c7n">
@@ -373,15 +398,171 @@
             </objects>
             <point key="canvasLocation" x="2610.144927536232" y="118.52678571428571"/>
         </scene>
+        <!--Tow Truck View Controller-->
+        <scene sceneID="PLc-IP-4aS">
+            <objects>
+                <viewController restorationIdentifier="TowTruckViewControllerID" storyboardIdentifier="TowTruckViewControllerID" id="MU0-zX-iY7" customClass="TowTruckViewController" customModule="RestaurantClub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mp4-xE-Cq8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJm-b5-Cku">
+                                <rect key="frame" x="0.0" y="130" width="414" height="465"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="465" id="Ef1-NM-jcH"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="law-mn-Oj0" customClass="GradientButton" customModule="RestaurantClub" customModuleProvider="target">
+                                <rect key="frame" x="122" y="630" width="170" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="CCJ-iN-aG6"/>
+                                    <constraint firstAttribute="height" constant="45" id="r2z-CV-hgO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Оставить заявку">
+                                    <fontDescription key="titleFontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" name="OrangeOne"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" name="OrangeTwo"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sqCornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sqShadowRaduis">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="sqShadowOffset">
+                                        <size key="value" width="0.0" height="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="sqShadowColor">
+                                        <color key="value" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sqShadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendReqestButtonClicked:" destination="MU0-zX-iY7" eventType="touchUpInside" id="Yd9-pr-hUl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mX-aG-Odg" customClass="GradientButton" customModule="RestaurantClub" customModuleProvider="target">
+                                <rect key="frame" x="147" y="710" width="120" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="3TM-AX-eSD"/>
+                                    <constraint firstAttribute="width" constant="120" id="Coo-y8-4TG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Позвонить">
+                                    <fontDescription key="titleFontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" name="OrangeOne"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" name="OrangeTwo"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sqCornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sqShadowRaduis">
+                                        <integer key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="sqShadowOffset">
+                                        <size key="value" width="0.0" height="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="sqShadowColor">
+                                        <color key="value" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sqShadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="callButtonClicked:" destination="MU0-zX-iY7" eventType="touchUpInside" id="I2L-T5-Zfz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вызов эвакуатора" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1e-z7-dfp">
+                                <rect key="frame" x="20" y="49" width="269" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите точку и отправьте заявку:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJd-vg-YD3">
+                                <rect key="frame" x="20" y="90" width="296" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="0.90747684240000004" green="0.67297393080000001" blue="0.40282070640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W92-qC-jRv">
+                                <rect key="frame" x="294" y="155" width="120" height="25"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="fTm-U2-dcd"/>
+                                    <constraint firstAttribute="width" constant="120" id="oXr-lF-uyB"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="location" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Текущее">
+                                    <imageReference key="image" image="location.fill" catalog="system" symbolScale="default"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="locationButtonClicked:" destination="MU0-zX-iY7" eventType="touchUpInside" id="1dY-ul-uAm"/>
+                                    <action selector="locationButtonClicked:" destination="5yA-f5-97F" eventType="touchUpInside" id="j0m-VD-UOq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kjA-pm-fWq"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="W92-qC-jRv" firstAttribute="leading" secondItem="ZJm-b5-Cku" secondAttribute="trailing" constant="-120" id="0tc-g2-IAh"/>
+                            <constraint firstItem="rJd-vg-YD3" firstAttribute="top" secondItem="k1e-z7-dfp" secondAttribute="bottom" constant="5" id="4KT-mR-y6B"/>
+                            <constraint firstItem="law-mn-Oj0" firstAttribute="centerX" secondItem="kjA-pm-fWq" secondAttribute="centerX" id="5c7-1b-HRw"/>
+                            <constraint firstItem="ZJm-b5-Cku" firstAttribute="trailing" secondItem="kjA-pm-fWq" secondAttribute="trailing" id="Br2-eT-SJB"/>
+                            <constraint firstItem="ZJm-b5-Cku" firstAttribute="top" secondItem="rJd-vg-YD3" secondAttribute="bottom" constant="20" id="LgI-E1-goO"/>
+                            <constraint firstItem="law-mn-Oj0" firstAttribute="top" secondItem="ZJm-b5-Cku" secondAttribute="bottom" constant="35" id="PfO-dI-yvi"/>
+                            <constraint firstItem="law-mn-Oj0" firstAttribute="centerX" secondItem="3mX-aG-Odg" secondAttribute="centerX" id="S52-Wg-nRS"/>
+                            <constraint firstItem="rJd-vg-YD3" firstAttribute="leading" secondItem="kjA-pm-fWq" secondAttribute="leading" constant="20" id="Wqj-f5-ZBt"/>
+                            <constraint firstItem="ZJm-b5-Cku" firstAttribute="leading" secondItem="kjA-pm-fWq" secondAttribute="leading" id="YCM-Ff-9Fg"/>
+                            <constraint firstItem="3mX-aG-Odg" firstAttribute="top" secondItem="law-mn-Oj0" secondAttribute="bottom" constant="35" id="YwI-Qx-7LS"/>
+                            <constraint firstItem="kjA-pm-fWq" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rJd-vg-YD3" secondAttribute="trailing" constant="5" id="c2j-Rq-dIC"/>
+                            <constraint firstItem="k1e-z7-dfp" firstAttribute="leading" secondItem="kjA-pm-fWq" secondAttribute="leading" constant="20" id="rM7-Bn-tlb"/>
+                            <constraint firstItem="k1e-z7-dfp" firstAttribute="top" secondItem="kjA-pm-fWq" secondAttribute="top" constant="5" id="s7g-5l-O7P"/>
+                            <constraint firstItem="ZJm-b5-Cku" firstAttribute="top" secondItem="W92-qC-jRv" secondAttribute="bottom" constant="-50" id="tJ7-Am-PEB"/>
+                            <constraint firstItem="kjA-pm-fWq" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3mX-aG-Odg" secondAttribute="bottom" constant="15" id="wsi-UX-dnZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="rJd-vg-YD3" id="MA9-pd-TWo"/>
+                        <outlet property="mapView" destination="ZJm-b5-Cku" id="EE1-6r-N7u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbX-MS-HfQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="5yA-f5-97F" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3414.4927536231885" y="131.91964285714286"/>
+        </scene>
     </scenes>
     <resources>
         <image name="LogoInApp" width="172" height="172"/>
-        <image name="sosButton" width="64" height="64"/>
+        <image name="location" catalog="system" width="128" height="118"/>
+        <image name="location.fill" catalog="system" width="128" height="121"/>
+        <image name="sosButton" width="612" height="612"/>
         <namedColor name="OrangeOne">
-            <color red="0.23299999535083771" green="0.15199999511241913" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23299999539999999" green="0.15199999510000001" blue="0.1369999945" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="OrangeTwo">
-            <color red="0.70999997854232788" green="0.10199999809265137" blue="0.11900000274181366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.97034400700000001" green="0.39136284589999998" blue="0.38673281669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -389,8 +570,8 @@
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

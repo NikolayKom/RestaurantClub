@@ -61,7 +61,7 @@ extension FakeRestorant {
               userName: "Алексей",
               date: "02.01.22")
   ]
-    
+    // TODO: заставить рафика сделать координаты для карты 
     static let allFakeRestorant = [
         FakeRestorant(restaurantName: "Сервис у Ашота",
                       descriptionRestaurant: "Мерседес до 200 наш клиент!",
