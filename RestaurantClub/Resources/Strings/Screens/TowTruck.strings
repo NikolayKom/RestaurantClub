@@ -1,0 +1,11 @@
+/* 
+  TowTruck.strings
+  RestaurantClub
+
+  Created by Николай on 03.03.2022.
+  
+*/
+"RequestSend" = "Данные переданы водителю, он спешит к вам";
+"ChoosePickUpPoint" = "Для вызова эвакуатора нужно отметить точку";
+"CurrectLocation" = "Текущая локация";
+"Pin" = "pin";

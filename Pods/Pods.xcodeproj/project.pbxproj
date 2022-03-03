@@ -3,122 +3,183 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		230984053C6652DFF510F450F21C5CF7 /* R.swift */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6E19C8E8F0C9B49DEE9AFBA54E0A4733 /* Build configuration list for PBXAggregateTarget "R.swift" */;
+			buildPhases = (
+			);
+			dependencies = (
+				90CA64550ECB17C0C85370697FE19875 /* PBXTargetDependency */,
+			);
+			name = R.swift;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		003819A1B91F455375633418033FFEA7 /* Abstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14C2D73A3B11F9F5CF28425D0B2848C /* Abstraction.swift */; };
-		04153A1A4F64DB87C7E47C3C17AB8BE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		04F19BAD94F71268C9C48D9833863B8E /* Pods-RestaurantClub-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BB20E3A56A560ADEACB7A182B36BB6 /* Pods-RestaurantClub-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		19B625DCBF2608036A726D4F6004AE41 /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60324C50A1BCFB66CB2490D8441DE5F /* Constrainable.swift */; };
-		1C6156B7023F7F69398B4119A0AA492B /* CosmosText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E09BD5ECE8684C23D7B0721F575E1F0 /* CosmosText.swift */; };
+		0014CB8CC270CE39C7169C3AE2387E7D /* StoryboardResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF41668E72E0E386E9C8E7BC4AFF082 /* StoryboardResource.swift */; };
+		0DC54C346F19C5646D1F5FF6DA8A9158 /* UIImage+ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB5D12A524635C089F0ED32AA2C0870 /* UIImage+ImageResource.swift */; };
+		0F14402A2B58653F59237BAEC13480EE /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9521015674BFF681CB3EA0033C65C4E /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */; };
+		14698F7863602E23223D56A0844C17B9 /* Pods-RestaurantClub-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 024CDA94DF84B9363D2B27AED1E49250 /* Pods-RestaurantClub-dummy.m */; };
+		16AD045448D0DC19A04D895C26A1532E /* NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72B6D53D163F31BEDDF2E8408A33B39 /* NibResource.swift */; };
+		1C6156B7023F7F69398B4119A0AA492B /* CosmosText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECCF13AE0CD6EABD5FF166E4A9239B0 /* CosmosText.swift */; };
 		209D9DD6A82F26B8032A43B060B5D164 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		235C6BC0654C150374C6B533B9D33467 /* TinyConstraints+superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4009039F477463BF37D8A7E5F3FC7D /* TinyConstraints+superview.swift */; };
-		2FCFA7D464D486EC1E486FFF2C21B4ED /* Cosmos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C385C60CA62F08E742E17CD045C8A049 /* Cosmos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3E410558A06008A95E19C2FE1D5E014E /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E921EF5286D5F59C90C5F7E6084C12 /* CosmosRating.swift */; };
-		449B7D4D4BD118C480786A347A377054 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B204BB6B796E6D3EE5CABDF69971692 /* CosmosTouchTarget.swift */; };
-		4CDB49943F320BC1F504F6F6790448CC /* TinyConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBEFD17AA7E987A161084BF12A433327 /* TinyConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D8675E7F1C6254904557B7FB84E1C51 /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5A716734E6EEA4249E3E7D01FA029 /* CosmosSettings.swift */; };
-		4E5602E9B85B82EF1EA80ABCF76D7CC6 /* TinyConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE826CBD63B3F1C979237E45B9CA3DF0 /* TinyConstraints-dummy.m */; };
-		588EEA3FAF28A403ADD832A1496F412F /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5296991349819C392CCEC1FAA34D546 /* Constraints.swift */; };
-		5E87677262463376144E8B5F6916FCCB /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA565CD781D34A5C72F8E471A889ECD /* StarFillMode.swift */; };
-		61773DD4962BFA6D7E38DD8A9D998A8A /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BFCD684911DAA63AF17C0AE00837D2 /* CosmosDefaultSettings.swift */; };
-		64810A75CC254B76D74E3F2586AD3B47 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D84BC4C7DD56F50C0AC4D6B980980F /* Stack.swift */; };
-		67318BB3E280E0D8FB9161E5557B71E3 /* Cosmos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EBCDDBC1A6B9BCADDC0DC521315468 /* Cosmos-dummy.m */; };
-		772B7FA4384C442360975E95D12383BA /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA0C6C59D73806A9AA9D4563E4453CE /* CosmosAccessibility.swift */; };
-		7AA4F48458A149B12BCF7E8EB147E25C /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA1642A6F73BAB37C6F7C81120C41F /* CosmosTouch.swift */; };
-		7E298ECE9B23835D17446526E27D2D67 /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA737BFDD42CF9E31670017329CDE60E /* StarLayer.swift */; };
-		8322D938B4C21C24E70FBA1B95797AC9 /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9025D3EB8CF261FADC8F0DC9089C15 /* CosmosSize.swift */; };
-		9755F83E9DE9BA2CC07496C16AF80B42 /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD142AF6F1196595C10C1283791DDE /* RightToLeft.swift */; };
-		99DB653A1F70EAEC3490B69E4AC9011F /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F2956C2D074EA61BA226B3ED843407 /* CosmosLayerHelper.swift */; };
-		9FC86B0DF30483BEC772265C38AA5440 /* TinyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486F389F017B6566A783CF77559B76A6 /* TinyConstraints.swift */; };
-		ABFB9BF862F602531FE8131A350542B0 /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63C22B835F492B117E92C712A2AAEB9 /* CosmosLayers.swift */; };
-		AC246EEF46103BF64E5742F939E330FB /* Pods-RestaurantClub-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 024CDA94DF84B9363D2B27AED1E49250 /* Pods-RestaurantClub-dummy.m */; };
-		BE47E98F1CD98159890055CFCFA316B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		BF75F7C3CE5DF53FDC340EB541B30224 /* TinyEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149AB7D01F4F58552B4BA63E6AE227B /* TinyEdgeInsets.swift */; };
-		CB4D7FEF62D7943C6E236467F3C516C1 /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274789EA15833376E7B3479A512C0584 /* CosmosLocalizedRating.swift */; };
-		EC1899EF909D17F47C5C0C2064BD2533 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFF68E080E5FA9F2242F59A933AE64 /* CosmosView.swift */; };
+		264C1127D28505537C97077D057F733F /* UIViewController+StoryboardSegueIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB52B94BDA0B796EB989B156D339B4 /* UIViewController+StoryboardSegueIdentifierProtocol.swift */; };
+		2EE74F72D50A3DEDB0B370C6A8F396B0 /* UIStoryboard+StoryboardResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D72379AF7CABDF504EE019816D0DC3C /* UIStoryboard+StoryboardResource.swift */; };
+		2FCFA7D464D486EC1E486FFF2C21B4ED /* Cosmos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F11C9756EEFD6E689CD0347FB99CD8D2 /* Cosmos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E410558A06008A95E19C2FE1D5E014E /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DDAEE40D4B53C7DED41DC597BFB174 /* CosmosRating.swift */; };
+		3EA6C35032C29B3F0F437F488769DFFB /* UIStoryboard+StoryboardViewControllerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0E7C7085C481781371B2E6E5372FEA /* UIStoryboard+StoryboardViewControllerResource.swift */; };
+		412FB8A65EFD6F209074436D53B91F24 /* Bundle+FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0CFDAD81D4BA9B1F4EE8283CD58B20 /* Bundle+FileResource.swift */; };
+		449B7D4D4BD118C480786A347A377054 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFEB4AEB08E0E7838B39B8690CA872B /* CosmosTouchTarget.swift */; };
+		45A3F44DC20F37F22C016CF77BA5F733 /* UIColor+ColorResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B9794401BB363801E52C608021F79 /* UIColor+ColorResource.swift */; };
+		4C6BC240E4DB8095502E0443629FFB75 /* UICollectionView+ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EB953AE757588E6C491C858E212AE1 /* UICollectionView+ReuseIdentifierProtocol.swift */; };
+		4D8675E7F1C6254904557B7FB84E1C51 /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C124B51E60FF033FD7BD773959555119 /* CosmosSettings.swift */; };
+		50F49548F9C97EA8C4479254E546284A /* UITableView+ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E6C602C4AB6668D1C42B148FC30ECF /* UITableView+ReuseIdentifierProtocol.swift */; };
+		51D3F45FAE62C2FB518650CEED753DC9 /* FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD1369A88D319D43FD7CD88CFCBF15B /* FileResource.swift */; };
+		5208093EDADA75B7012092B3B57B2ED9 /* FontResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203517594F14119575C178A6BF1E47D /* FontResource.swift */; };
+		58DBF2229785D9FF06C13B6826EE2363 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A26CE622D05A65826197097872D1F5 /* Identifier.swift */; };
+		5E09B940141E42668B67CDB734AA7008 /* ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77EC3C490B13F8BFFCFA88D187A889F /* ImageResource.swift */; };
+		5E87677262463376144E8B5F6916FCCB /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B768E68A8B3C1F15F25340CD754135EA /* StarFillMode.swift */; };
+		5F9DAD7C26DABB14CC4C38BEC3D06147 /* R.swift.Library-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055F4761FF106F023025FAAAB86AFD8 /* R.swift.Library-dummy.m */; };
+		61773DD4962BFA6D7E38DD8A9D998A8A /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23433F9788B64B3B0CA88998E852EDA3 /* CosmosDefaultSettings.swift */; };
+		61BA14CAF70EC04C6130EC1F3B1F7CDC /* R.swift.Library-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EA5B3168455177C4A64BF1B0ECA53D1 /* R.swift.Library-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67318BB3E280E0D8FB9161E5557B71E3 /* Cosmos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9F1B3863497054A42BFEFAE8249F28 /* Cosmos-dummy.m */; };
+		76C620483B374E6616B1D3125006E790 /* StringResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA546179D2D0CDAA9D956E5E4CA20774 /* StringResource.swift */; };
+		772B7FA4384C442360975E95D12383BA /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F21BBAD5F853B48BD42B6F2C1B470 /* CosmosAccessibility.swift */; };
+		7AA4F48458A149B12BCF7E8EB147E25C /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0497C0EC667E4B30E328AD7924C7C56 /* CosmosTouch.swift */; };
+		7E298ECE9B23835D17446526E27D2D67 /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DFB49FE1534EB35ADF16CDED85B70 /* StarLayer.swift */; };
+		8322D938B4C21C24E70FBA1B95797AC9 /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A2DC7A2BAD26C69E540B6F3340342A /* CosmosSize.swift */; };
+		88D349DB0E2F45E8324ACDE5D49410F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8BAAF530746FBB5EED064A69A16E6315 /* UIViewController+NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A780EC3667BC609718CDE5876462B72 /* UIViewController+NibResource.swift */; };
+		91896F10136CF781A21AE2F76AE5C69C /* StoryboardSegueIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AE34ADED73FEE25E1500ED02DBE61A /* StoryboardSegueIdentifierProtocol.swift */; };
+		9374DABCD4494D98A3540B0C04446D7D /* Data+FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDE9C4832D3E4E9E140F889E7CDDAE /* Data+FileResource.swift */; };
+		9555712D2D3686A44C0BB3F9AAE0A8BB /* NibResource+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63DCCCC31462DEFF5CD22A9DF3CFDBB /* NibResource+UIKit.swift */; };
+		9755F83E9DE9BA2CC07496C16AF80B42 /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE430453E5274CB0933E71F70F9742B /* RightToLeft.swift */; };
+		99DB653A1F70EAEC3490B69E4AC9011F /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C3CCC347171DCAEC3EFF82EA9B2E3 /* CosmosLayerHelper.swift */; };
+		A2447C97F05989169B378738595D952E /* Pods-RestaurantClub-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BB20E3A56A560ADEACB7A182B36BB6 /* Pods-RestaurantClub-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABFB9BF862F602531FE8131A350542B0 /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BCD2B202C40B83D5CDBE41FC9C598 /* CosmosLayers.swift */; };
+		BD09E9E37C46E148FEB2363CE13E619A /* StoryboardViewControllerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55E83DB88E008C6104A0D0C89966FED /* StoryboardViewControllerResource.swift */; };
+		BEEFB776BDB7F83E2BD0591851ACAA26 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8593E7A1B0668AE0EACAFB77315EB /* ReuseIdentifierProtocol.swift */; };
+		CB4D7FEF62D7943C6E236467F3C516C1 /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F8D2170596F268FDAA589CBBCB460 /* CosmosLocalizedRating.swift */; };
+		CFAA944866501C686F8B07CEB18BD24F /* UIFont+FontResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3515DACDF84D7DF7E46FCC7D61B0E1A /* UIFont+FontResource.swift */; };
+		E0B73EF71E14178C2C4F72BE3E4C5E9B /* UINib+NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B00B5AC906111D22D9CE074658BB95 /* UINib+NibResource.swift */; };
+		E19898A977558750208E1933544B7931 /* ColorResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB9ACE6864CBF2683AD4CDF61E4053 /* ColorResource.swift */; };
+		E926764556742D0F31955C1D43ED87FB /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2937BA8F86D6236517C62F749B7FB7 /* Validatable.swift */; };
+		EC1899EF909D17F47C5C0C2064BD2533 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1E3100C8D0F6C32D9FEFEB943E2AA /* CosmosView.swift */; };
+		F0F6AE5370C46C4FAA8BF1A06D2C1D43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		FA9CBEE6F328AAD8CD39C98AB7B79440 /* StoryboardResourceWithInitialController+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA31FE90A7D1CBF06D6C28D59929469 /* StoryboardResourceWithInitialController+UIKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2DA4D292EA8942FDFD9A020810D851F5 /* PBXContainerItemProxy */ = {
+		3C76B9A3F86044881844FA796AFB849F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 45C4E325E7851DD54CC3AD44C7A71935;
-			remoteInfo = TinyConstraints;
+			remoteGlobalIDString = 230984053C6652DFF510F450F21C5CF7;
+			remoteInfo = R.swift;
 		};
-		AE5A667CDE8FC0C244BF02948EE136B3 /* PBXContainerItemProxy */ = {
+		791D25554CE6D54647B3551658E93C1F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 00F31BD5217A20974B5E9AAC6256D98E;
 			remoteInfo = Cosmos;
 		};
+		E75DA5191B1532504DD3BCF6433C8793 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B12748D8506CB48696BD90F2CA4F4E38;
+			remoteInfo = R.swift.Library;
+		};
+		ED3DB4C5ECC98D229C941843A3EE75E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B12748D8506CB48696BD90F2CA4F4E38;
+			remoteInfo = R.swift.Library;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		024CDA94DF84B9363D2B27AED1E49250 /* Pods-RestaurantClub-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RestaurantClub-dummy.m"; sourceTree = "<group>"; };
+		032DFB49FE1534EB35ADF16CDED85B70 /* StarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
 		05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cosmos; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		155E1F6EE321E98CF372C77810E40739 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cosmos.modulemap; sourceTree = "<group>"; };
-		19E5A716734E6EEA4249E3E7D01FA029 /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
-		1B204BB6B796E6D3EE5CABDF69971692 /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouchTarget.swift; path = Cosmos/Helpers/CosmosTouchTarget.swift; sourceTree = "<group>"; };
-		1CA0C6C59D73806A9AA9D4563E4453CE /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
-		2147B5B49778444453F4FBE34195D45C /* TinyConstraints-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TinyConstraints-Info.plist"; sourceTree = "<group>"; };
-		248EB203AE249596FFC55952F5590D95 /* TinyConstraints */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TinyConstraints; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2500C40165266B32D89052FE52F1FCA3 /* Cosmos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.debug.xcconfig; sourceTree = "<group>"; };
-		274789EA15833376E7B3479A512C0584 /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
-		34BFCD684911DAA63AF17C0AE00837D2 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
-		3E09BD5ECE8684C23D7B0721F575E1F0 /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
-		40F2956C2D074EA61BA226B3ED843407 /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
-		486F389F017B6566A783CF77559B76A6 /* TinyConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyConstraints.swift; path = TinyConstraints/Classes/TinyConstraints.swift; sourceTree = "<group>"; };
-		4E9025D3EB8CF261FADC8F0DC9089C15 /* CosmosSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSize.swift; path = Cosmos/CosmosSize.swift; sourceTree = "<group>"; };
+		0D72379AF7CABDF504EE019816D0DC3C /* UIStoryboard+StoryboardResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+StoryboardResource.swift"; path = "Library/UIKit/UIStoryboard+StoryboardResource.swift"; sourceTree = "<group>"; };
+		13A26CE622D05A65826197097872D1F5 /* Identifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Identifier.swift; path = Library/Core/Identifier.swift; sourceTree = "<group>"; };
+		1826D3DCA7F28F5A2AB857C290F17326 /* R.swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.release.xcconfig; sourceTree = "<group>"; };
+		1B0E7C7085C481781371B2E6E5372FEA /* UIStoryboard+StoryboardViewControllerResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+StoryboardViewControllerResource.swift"; path = "Library/UIKit/UIStoryboard+StoryboardViewControllerResource.swift"; sourceTree = "<group>"; };
+		1D789878519869246E6910A525CCC976 /* R.swift.Library.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = R.swift.Library.modulemap; sourceTree = "<group>"; };
+		1ECCF13AE0CD6EABD5FF166E4A9239B0 /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
+		2203517594F14119575C178A6BF1E47D /* FontResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontResource.swift; path = Library/Core/FontResource.swift; sourceTree = "<group>"; };
+		23433F9788B64B3B0CA88998E852EDA3 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
+		2C9F8D2170596F268FDAA589CBBCB460 /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
+		2CFB9ACE6864CBF2683AD4CDF61E4053 /* ColorResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorResource.swift; path = Library/Core/ColorResource.swift; sourceTree = "<group>"; };
+		3A7914D61BE9BDAF758365A1F2F02DF9 /* Cosmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.release.xcconfig; sourceTree = "<group>"; };
+		3AA31FE90A7D1CBF06D6C28D59929469 /* StoryboardResourceWithInitialController+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StoryboardResourceWithInitialController+UIKit.swift"; path = "Library/UIKit/StoryboardResourceWithInitialController+UIKit.swift"; sourceTree = "<group>"; };
+		3CD1E3100C8D0F6C32D9FEFEB943E2AA /* CosmosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
+		44EB953AE757588E6C491C858E212AE1 /* UICollectionView+ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+ReuseIdentifierProtocol.swift"; path = "Library/UIKit/UICollectionView+ReuseIdentifierProtocol.swift"; sourceTree = "<group>"; };
+		47DDAEE40D4B53C7DED41DC597BFB174 /* CosmosRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosRating.swift; path = Cosmos/CosmosRating.swift; sourceTree = "<group>"; };
+		4E7F21BBAD5F853B48BD42B6F2C1B470 /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
+		5055F4761FF106F023025FAAAB86AFD8 /* R.swift.Library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "R.swift.Library-dummy.m"; sourceTree = "<group>"; };
 		5122522BFD492B4D9D80AEB33430FAE5 /* Pods-RestaurantClub-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RestaurantClub-frameworks.sh"; sourceTree = "<group>"; };
-		545221B4C19DDE9A561ED6DBC5E62499 /* TinyConstraints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.debug.xcconfig; sourceTree = "<group>"; };
-		5A9CF230CF39675DF63C0C823818C85A /* TinyConstraints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.release.xcconfig; sourceTree = "<group>"; };
-		6D2CBA84F182D5E5297CF7548F418AE0 /* Cosmos-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Cosmos-Info.plist"; sourceTree = "<group>"; };
-		6EDC7495E677D4BF8D4A60BA7BA6AA8E /* Cosmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.release.xcconfig; sourceTree = "<group>"; };
+		546742ECF087CFEE0AAA6EC2F00ED49C /* R.swift.Library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "R.swift.Library-prefix.pch"; sourceTree = "<group>"; };
+		68792BBF5A7ACBBD308D4CDBB2C1EE1F /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
+		68E6C602C4AB6668D1C42B148FC30ECF /* UITableView+ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+ReuseIdentifierProtocol.swift"; path = "Library/UIKit/UITableView+ReuseIdentifierProtocol.swift"; sourceTree = "<group>"; };
+		6A780EC3667BC609718CDE5876462B72 /* UIViewController+NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+NibResource.swift"; path = "Library/UIKit/UIViewController+NibResource.swift"; sourceTree = "<group>"; };
+		6CE430453E5274CB0933E71F70F9742B /* RightToLeft.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RightToLeft.swift; path = Cosmos/Helpers/RightToLeft.swift; sourceTree = "<group>"; };
+		6EA5B3168455177C4A64BF1B0ECA53D1 /* R.swift.Library-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "R.swift.Library-umbrella.h"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		75BB20E3A56A560ADEACB7A182B36BB6 /* Pods-RestaurantClub-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RestaurantClub-umbrella.h"; sourceTree = "<group>"; };
-		8B4009039F477463BF37D8A7E5F3FC7D /* TinyConstraints+superview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TinyConstraints+superview.swift"; path = "TinyConstraints/Classes/TinyConstraints+superview.swift"; sourceTree = "<group>"; };
-		94AE18B97883518B2C97DB9626CDD3C6 /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
+		7B0CFDAD81D4BA9B1F4EE8283CD58B20 /* Bundle+FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+FileResource.swift"; path = "Library/Foundation/Bundle+FileResource.swift"; sourceTree = "<group>"; };
+		8D37711B59C4566295A453C7A45C48A3 /* Cosmos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.debug.xcconfig; sourceTree = "<group>"; };
+		8E9F1B3863497054A42BFEFAE8249F28 /* Cosmos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cosmos-dummy.m"; sourceTree = "<group>"; };
+		95A2DC7A2BAD26C69E540B6F3340342A /* CosmosSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSize.swift; path = Cosmos/CosmosSize.swift; sourceTree = "<group>"; };
 		9C45FC1FCD0BDDF848A992FD344CAF5A /* Pods-RestaurantClub-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RestaurantClub-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EF41668E72E0E386E9C8E7BC4AFF082 /* StoryboardResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardResource.swift; path = Library/Core/StoryboardResource.swift; sourceTree = "<group>"; };
+		A26FC4DFB02744CDA9F069C2F8B08C28 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cosmos.modulemap; sourceTree = "<group>"; };
 		A2894428E010E31FCEF8FAB157CFEC8C /* Pods-RestaurantClub.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RestaurantClub.modulemap"; sourceTree = "<group>"; };
+		A63DCCCC31462DEFF5CD22A9DF3CFDBB /* NibResource+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NibResource+UIKit.swift"; path = "Library/UIKit/NibResource+UIKit.swift"; sourceTree = "<group>"; };
+		A6A3063EED3EFA6FFF93BA11BF0B77B8 /* R.swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.debug.xcconfig; sourceTree = "<group>"; };
+		ACD1369A88D319D43FD7CD88CFCBF15B /* FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileResource.swift; path = Library/Core/FileResource.swift; sourceTree = "<group>"; };
 		B021B830B996AB7F06D897E1A6EDDF4D /* Pods-RestaurantClub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RestaurantClub.release.xcconfig"; sourceTree = "<group>"; };
-		B14C2D73A3B11F9F5CF28425D0B2848C /* Abstraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Abstraction.swift; path = TinyConstraints/Classes/Abstraction.swift; sourceTree = "<group>"; };
-		B1E921EF5286D5F59C90C5F7E6084C12 /* CosmosRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosRating.swift; path = Cosmos/CosmosRating.swift; sourceTree = "<group>"; };
-		B1FD142AF6F1196595C10C1283791DDE /* RightToLeft.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RightToLeft.swift; path = Cosmos/Helpers/RightToLeft.swift; sourceTree = "<group>"; };
-		B3EBCDDBC1A6B9BCADDC0DC521315468 /* Cosmos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cosmos-dummy.m"; sourceTree = "<group>"; };
-		BAEC6B78830BE370E50BD248680A6E4E /* TinyConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TinyConstraints.modulemap; sourceTree = "<group>"; };
-		BE826CBD63B3F1C979237E45B9CA3DF0 /* TinyConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TinyConstraints-dummy.m"; sourceTree = "<group>"; };
-		C0D84BC4C7DD56F50C0AC4D6B980980F /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = TinyConstraints/Classes/Stack.swift; sourceTree = "<group>"; };
-		C385C60CA62F08E742E17CD045C8A049 /* Cosmos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-umbrella.h"; sourceTree = "<group>"; };
+		B768E68A8B3C1F15F25340CD754135EA /* StarFillMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarFillMode.swift; path = Cosmos/StarFillMode.swift; sourceTree = "<group>"; };
+		B77EC3C490B13F8BFFCFA88D187A889F /* ImageResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageResource.swift; path = Library/Core/ImageResource.swift; sourceTree = "<group>"; };
+		B9521015674BFF681CB3EA0033C65C4E /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TypedStoryboardSegueInfo+UIStoryboardSegue.swift"; path = "Library/UIKit/TypedStoryboardSegueInfo+UIStoryboardSegue.swift"; sourceTree = "<group>"; };
+		BA546179D2D0CDAA9D956E5E4CA20774 /* StringResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringResource.swift; path = Library/Core/StringResource.swift; sourceTree = "<group>"; };
+		BEFEB4AEB08E0E7838B39B8690CA872B /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouchTarget.swift; path = Cosmos/Helpers/CosmosTouchTarget.swift; sourceTree = "<group>"; };
+		BFFDE9C4832D3E4E9E140F889E7CDDAE /* Data+FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+FileResource.swift"; path = "Library/Foundation/Data+FileResource.swift"; sourceTree = "<group>"; };
+		C124B51E60FF033FD7BD773959555119 /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
 		C38ACB1FC6AC3AC26A5BB0FFEBEBB373 /* Pods-RestaurantClub */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-RestaurantClub"; path = Pods_RestaurantClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EBFA5996423A3D7C0474611D6A152D /* Pods-RestaurantClub-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RestaurantClub-Info.plist"; sourceTree = "<group>"; };
-		C63C22B835F492B117E92C712A2AAEB9 /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
-		CADFF68E080E5FA9F2242F59A933AE64 /* CosmosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
+		C55E83DB88E008C6104A0D0C89966FED /* StoryboardViewControllerResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardViewControllerResource.swift; path = Library/Core/StoryboardViewControllerResource.swift; sourceTree = "<group>"; };
+		C74B9794401BB363801E52C608021F79 /* UIColor+ColorResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+ColorResource.swift"; path = "Library/UIKit/UIColor+ColorResource.swift"; sourceTree = "<group>"; };
+		C83A3FB4C371789689B118EDC8571F9E /* R.swift.Library-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "R.swift.Library-Info.plist"; sourceTree = "<group>"; };
+		CA4E3B66CE4D02048C77392B64FD0ABB /* R.swift.Library */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = R.swift.Library; path = Rswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2937BA8F86D6236517C62F749B7FB7 /* Validatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validatable.swift; path = Library/Core/Validatable.swift; sourceTree = "<group>"; };
+		D0497C0EC667E4B30E328AD7924C7C56 /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
 		D0BE23501BA3DA628175DB3B876BA378 /* Pods-RestaurantClub-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RestaurantClub-acknowledgements.plist"; sourceTree = "<group>"; };
-		D4465463177D714127BA20BAD3453B7B /* TinyConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-prefix.pch"; sourceTree = "<group>"; };
-		DEA565CD781D34A5C72F8E471A889ECD /* StarFillMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarFillMode.swift; path = Cosmos/StarFillMode.swift; sourceTree = "<group>"; };
-		DFDA1642A6F73BAB37C6F7C81120C41F /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
-		E149AB7D01F4F58552B4BA63E6AE227B /* TinyEdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyEdgeInsets.swift; path = TinyConstraints/Classes/TinyEdgeInsets.swift; sourceTree = "<group>"; };
-		EBEFD17AA7E987A161084BF12A433327 /* TinyConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-umbrella.h"; sourceTree = "<group>"; };
+		D72B6D53D163F31BEDDF2E8408A33B39 /* NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NibResource.swift; path = Library/Core/NibResource.swift; sourceTree = "<group>"; };
+		D929486A60D11AAC53592B6A35861B5B /* Cosmos-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Cosmos-Info.plist"; sourceTree = "<group>"; };
+		DAD8593E7A1B0668AE0EACAFB77315EB /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReuseIdentifierProtocol.swift; path = Library/Core/ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
+		DBDB52B94BDA0B796EB989B156D339B4 /* UIViewController+StoryboardSegueIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+StoryboardSegueIdentifierProtocol.swift"; path = "Library/UIKit/UIViewController+StoryboardSegueIdentifierProtocol.swift"; sourceTree = "<group>"; };
+		E3515DACDF84D7DF7E46FCC7D61B0E1A /* UIFont+FontResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+FontResource.swift"; path = "Library/UIKit/UIFont+FontResource.swift"; sourceTree = "<group>"; };
+		E4503E527FC79A8EB54CD2D85A68AE42 /* R.swift.Library.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.Library.debug.xcconfig; sourceTree = "<group>"; };
+		E6AE34ADED73FEE25E1500ED02DBE61A /* StoryboardSegueIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardSegueIdentifierProtocol.swift; path = Library/Core/StoryboardSegueIdentifierProtocol.swift; sourceTree = "<group>"; };
+		E98C3CCC347171DCAEC3EFF82EA9B2E3 /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
+		EEB5D12A524635C089F0ED32AA2C0870 /* UIImage+ImageResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+ImageResource.swift"; path = "Library/UIKit/UIImage+ImageResource.swift"; sourceTree = "<group>"; };
+		F0B00B5AC906111D22D9CE074658BB95 /* UINib+NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINib+NibResource.swift"; path = "Library/UIKit/UINib+NibResource.swift"; sourceTree = "<group>"; };
+		F11C9756EEFD6E689CD0347FB99CD8D2 /* Cosmos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-umbrella.h"; sourceTree = "<group>"; };
 		F3ED7F71C100F4EDB34551EDD47FFF8A /* Pods-RestaurantClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RestaurantClub.debug.xcconfig"; sourceTree = "<group>"; };
-		F5296991349819C392CCEC1FAA34D546 /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = TinyConstraints/Classes/Constraints.swift; sourceTree = "<group>"; };
-		F60324C50A1BCFB66CB2490D8441DE5F /* Constrainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrainable.swift; path = TinyConstraints/Classes/Constrainable.swift; sourceTree = "<group>"; };
-		FA737BFDD42CF9E31670017329CDE60E /* StarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
+		FCDD8B0221B0303CB48D229D4EB6CBE5 /* R.swift.Library.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.Library.release.xcconfig; sourceTree = "<group>"; };
+		FE0BCD2B202C40B83D5CDBE41FC9C598 /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3303F496118BB55DAE2ABA574563C30B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE47E98F1CD98159890055CFCFA316B9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6DEC9D66D25D7967B167DEA713C2359C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,30 +188,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99EBD1D1C4BAB2CDA5481D389C9601FD /* Frameworks */ = {
+		7E41D36B0433D17700D7096BAFC863F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04153A1A4F64DB87C7E47C3C17AB8BE2 /* Foundation.framework in Frameworks */,
+				88D349DB0E2F45E8324ACDE5D49410F8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9A8265B3361960DC209310E7BFFB793 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0F6AE5370C46C4FAA8BF1A06D2C1D43 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		378A84A1134E54E86F55C640806ADA0F /* Support Files */ = {
+		19BFFF4AA56B4D79CB175A938C4EFB2C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BAEC6B78830BE370E50BD248680A6E4E /* TinyConstraints.modulemap */,
-				BE826CBD63B3F1C979237E45B9CA3DF0 /* TinyConstraints-dummy.m */,
-				2147B5B49778444453F4FBE34195D45C /* TinyConstraints-Info.plist */,
-				D4465463177D714127BA20BAD3453B7B /* TinyConstraints-prefix.pch */,
-				EBEFD17AA7E987A161084BF12A433327 /* TinyConstraints-umbrella.h */,
-				545221B4C19DDE9A561ED6DBC5E62499 /* TinyConstraints.debug.xcconfig */,
-				5A9CF230CF39675DF63C0C823818C85A /* TinyConstraints.release.xcconfig */,
+				A26FC4DFB02744CDA9F069C2F8B08C28 /* Cosmos.modulemap */,
+				8E9F1B3863497054A42BFEFAE8249F28 /* Cosmos-dummy.m */,
+				D929486A60D11AAC53592B6A35861B5B /* Cosmos-Info.plist */,
+				68792BBF5A7ACBBD308D4CDBB2C1EE1F /* Cosmos-prefix.pch */,
+				F11C9756EEFD6E689CD0347FB99CD8D2 /* Cosmos-umbrella.h */,
+				8D37711B59C4566295A453C7A45C48A3 /* Cosmos.debug.xcconfig */,
+				3A7914D61BE9BDAF758365A1F2F02DF9 /* Cosmos.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/TinyConstraints";
+			path = "../Target Support Files/Cosmos";
+			sourceTree = "<group>";
+		};
+		2DCF09FA040FC9AB52C85324E5E415B8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6A3063EED3EFA6FFF93BA11BF0B77B8 /* R.swift.debug.xcconfig */,
+				1826D3DCA7F28F5A2AB857C290F17326 /* R.swift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/R.swift";
+			sourceTree = "<group>";
+		};
+		3DC14196C505E575B8C3127A13114F38 /* R.swift */ = {
+			isa = PBXGroup;
+			children = (
+				2DCF09FA040FC9AB52C85324E5E415B8 /* Support Files */,
+			);
+			name = R.swift;
+			path = R.swift;
+			sourceTree = "<group>";
+		};
+		4A6BFD8C0839165947F6581800B871C1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D789878519869246E6910A525CCC976 /* R.swift.Library.modulemap */,
+				5055F4761FF106F023025FAAAB86AFD8 /* R.swift.Library-dummy.m */,
+				C83A3FB4C371789689B118EDC8571F9E /* R.swift.Library-Info.plist */,
+				546742ECF087CFEE0AAA6EC2F00ED49C /* R.swift.Library-prefix.pch */,
+				6EA5B3168455177C4A64BF1B0ECA53D1 /* R.swift.Library-umbrella.h */,
+				E4503E527FC79A8EB54CD2D85A68AE42 /* R.swift.Library.debug.xcconfig */,
+				FCDD8B0221B0303CB48D229D4EB6CBE5 /* R.swift.Library.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/R.swift.Library";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -161,25 +264,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		59FF07D0526340714EA575ED2E02D809 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CDD1AD8F4559C2FFD3C7DC6E3A9BEC10 /* Cosmos */,
-				FDE64EE8BABE86FEEC099A3D80C157C8 /* TinyConstraints */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		7C80CCF188AFDA29BD79A27C0169DF05 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos */,
-				C38ACB1FC6AC3AC26A5BB0FFEBEBB373 /* Pods-RestaurantClub */,
-				248EB203AE249596FFC55952F5590D95 /* TinyConstraints */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		8CA4FB9E740D969A8181423A4F8A707D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,40 +272,61 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8F195EA4F231A28ABF9390283E21C07E /* Support Files */ = {
+		BE8E10F43AD302C0B3FDA5D5F4A3366D /* R.swift.Library */ = {
 			isa = PBXGroup;
 			children = (
-				155E1F6EE321E98CF372C77810E40739 /* Cosmos.modulemap */,
-				B3EBCDDBC1A6B9BCADDC0DC521315468 /* Cosmos-dummy.m */,
-				6D2CBA84F182D5E5297CF7548F418AE0 /* Cosmos-Info.plist */,
-				94AE18B97883518B2C97DB9626CDD3C6 /* Cosmos-prefix.pch */,
-				C385C60CA62F08E742E17CD045C8A049 /* Cosmos-umbrella.h */,
-				2500C40165266B32D89052FE52F1FCA3 /* Cosmos.debug.xcconfig */,
-				6EDC7495E677D4BF8D4A60BA7BA6AA8E /* Cosmos.release.xcconfig */,
+				7B0CFDAD81D4BA9B1F4EE8283CD58B20 /* Bundle+FileResource.swift */,
+				2CFB9ACE6864CBF2683AD4CDF61E4053 /* ColorResource.swift */,
+				BFFDE9C4832D3E4E9E140F889E7CDDAE /* Data+FileResource.swift */,
+				ACD1369A88D319D43FD7CD88CFCBF15B /* FileResource.swift */,
+				2203517594F14119575C178A6BF1E47D /* FontResource.swift */,
+				13A26CE622D05A65826197097872D1F5 /* Identifier.swift */,
+				B77EC3C490B13F8BFFCFA88D187A889F /* ImageResource.swift */,
+				D72B6D53D163F31BEDDF2E8408A33B39 /* NibResource.swift */,
+				A63DCCCC31462DEFF5CD22A9DF3CFDBB /* NibResource+UIKit.swift */,
+				DAD8593E7A1B0668AE0EACAFB77315EB /* ReuseIdentifierProtocol.swift */,
+				9EF41668E72E0E386E9C8E7BC4AFF082 /* StoryboardResource.swift */,
+				3AA31FE90A7D1CBF06D6C28D59929469 /* StoryboardResourceWithInitialController+UIKit.swift */,
+				E6AE34ADED73FEE25E1500ED02DBE61A /* StoryboardSegueIdentifierProtocol.swift */,
+				C55E83DB88E008C6104A0D0C89966FED /* StoryboardViewControllerResource.swift */,
+				BA546179D2D0CDAA9D956E5E4CA20774 /* StringResource.swift */,
+				B9521015674BFF681CB3EA0033C65C4E /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */,
+				44EB953AE757588E6C491C858E212AE1 /* UICollectionView+ReuseIdentifierProtocol.swift */,
+				C74B9794401BB363801E52C608021F79 /* UIColor+ColorResource.swift */,
+				E3515DACDF84D7DF7E46FCC7D61B0E1A /* UIFont+FontResource.swift */,
+				EEB5D12A524635C089F0ED32AA2C0870 /* UIImage+ImageResource.swift */,
+				F0B00B5AC906111D22D9CE074658BB95 /* UINib+NibResource.swift */,
+				0D72379AF7CABDF504EE019816D0DC3C /* UIStoryboard+StoryboardResource.swift */,
+				1B0E7C7085C481781371B2E6E5372FEA /* UIStoryboard+StoryboardViewControllerResource.swift */,
+				68E6C602C4AB6668D1C42B148FC30ECF /* UITableView+ReuseIdentifierProtocol.swift */,
+				6A780EC3667BC609718CDE5876462B72 /* UIViewController+NibResource.swift */,
+				DBDB52B94BDA0B796EB989B156D339B4 /* UIViewController+StoryboardSegueIdentifierProtocol.swift */,
+				CE2937BA8F86D6236517C62F749B7FB7 /* Validatable.swift */,
+				4A6BFD8C0839165947F6581800B871C1 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Cosmos";
+			name = R.swift.Library;
+			path = R.swift.Library;
 			sourceTree = "<group>";
 		};
-		CDD1AD8F4559C2FFD3C7DC6E3A9BEC10 /* Cosmos */ = {
+		BF59E16AD8251B3012A6A59924A53B8C /* Cosmos */ = {
 			isa = PBXGroup;
 			children = (
-				1CA0C6C59D73806A9AA9D4563E4453CE /* CosmosAccessibility.swift */,
-				34BFCD684911DAA63AF17C0AE00837D2 /* CosmosDefaultSettings.swift */,
-				40F2956C2D074EA61BA226B3ED843407 /* CosmosLayerHelper.swift */,
-				C63C22B835F492B117E92C712A2AAEB9 /* CosmosLayers.swift */,
-				274789EA15833376E7B3479A512C0584 /* CosmosLocalizedRating.swift */,
-				B1E921EF5286D5F59C90C5F7E6084C12 /* CosmosRating.swift */,
-				19E5A716734E6EEA4249E3E7D01FA029 /* CosmosSettings.swift */,
-				4E9025D3EB8CF261FADC8F0DC9089C15 /* CosmosSize.swift */,
-				3E09BD5ECE8684C23D7B0721F575E1F0 /* CosmosText.swift */,
-				DFDA1642A6F73BAB37C6F7C81120C41F /* CosmosTouch.swift */,
-				1B204BB6B796E6D3EE5CABDF69971692 /* CosmosTouchTarget.swift */,
-				CADFF68E080E5FA9F2242F59A933AE64 /* CosmosView.swift */,
-				B1FD142AF6F1196595C10C1283791DDE /* RightToLeft.swift */,
-				DEA565CD781D34A5C72F8E471A889ECD /* StarFillMode.swift */,
-				FA737BFDD42CF9E31670017329CDE60E /* StarLayer.swift */,
-				8F195EA4F231A28ABF9390283E21C07E /* Support Files */,
+				4E7F21BBAD5F853B48BD42B6F2C1B470 /* CosmosAccessibility.swift */,
+				23433F9788B64B3B0CA88998E852EDA3 /* CosmosDefaultSettings.swift */,
+				E98C3CCC347171DCAEC3EFF82EA9B2E3 /* CosmosLayerHelper.swift */,
+				FE0BCD2B202C40B83D5CDBE41FC9C598 /* CosmosLayers.swift */,
+				2C9F8D2170596F268FDAA589CBBCB460 /* CosmosLocalizedRating.swift */,
+				47DDAEE40D4B53C7DED41DC597BFB174 /* CosmosRating.swift */,
+				C124B51E60FF033FD7BD773959555119 /* CosmosSettings.swift */,
+				95A2DC7A2BAD26C69E540B6F3340342A /* CosmosSize.swift */,
+				1ECCF13AE0CD6EABD5FF166E4A9239B0 /* CosmosText.swift */,
+				D0497C0EC667E4B30E328AD7924C7C56 /* CosmosTouch.swift */,
+				BEFEB4AEB08E0E7838B39B8690CA872B /* CosmosTouchTarget.swift */,
+				3CD1E3100C8D0F6C32D9FEFEB943E2AA /* CosmosView.swift */,
+				6CE430453E5274CB0933E71F70F9742B /* RightToLeft.swift */,
+				B768E68A8B3C1F15F25340CD754135EA /* StarFillMode.swift */,
+				032DFB49FE1534EB35ADF16CDED85B70 /* StarLayer.swift */,
+				19BFFF4AA56B4D79CB175A938C4EFB2C /* Support Files */,
 			);
 			name = Cosmos;
 			path = Cosmos;
@@ -232,8 +337,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				59FF07D0526340714EA575ED2E02D809 /* Pods */,
-				7C80CCF188AFDA29BD79A27C0169DF05 /* Products */,
+				EEAE8C8661B22A99681373BC2FC643B1 /* Pods */,
+				F6FC6FFBFB966A92EB382CDAC02802C7 /* Products */,
 				8CA4FB9E740D969A8181423A4F8A707D /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -244,6 +349,16 @@
 				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEAE8C8661B22A99681373BC2FC643B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF59E16AD8251B3012A6A59924A53B8C /* Cosmos */,
+				3DC14196C505E575B8C3127A13114F38 /* R.swift */,
+				BE8E10F43AD302C0B3FDA5D5F4A3366D /* R.swift.Library */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		EF153709B4FC324FA514522962CB2D77 /* Pods-RestaurantClub */ = {
@@ -263,30 +378,24 @@
 			path = "Target Support Files/Pods-RestaurantClub";
 			sourceTree = "<group>";
 		};
-		FDE64EE8BABE86FEEC099A3D80C157C8 /* TinyConstraints */ = {
+		F6FC6FFBFB966A92EB382CDAC02802C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B14C2D73A3B11F9F5CF28425D0B2848C /* Abstraction.swift */,
-				F60324C50A1BCFB66CB2490D8441DE5F /* Constrainable.swift */,
-				F5296991349819C392CCEC1FAA34D546 /* Constraints.swift */,
-				C0D84BC4C7DD56F50C0AC4D6B980980F /* Stack.swift */,
-				486F389F017B6566A783CF77559B76A6 /* TinyConstraints.swift */,
-				8B4009039F477463BF37D8A7E5F3FC7D /* TinyConstraints+superview.swift */,
-				E149AB7D01F4F58552B4BA63E6AE227B /* TinyEdgeInsets.swift */,
-				378A84A1134E54E86F55C640806ADA0F /* Support Files */,
+				05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos */,
+				C38ACB1FC6AC3AC26A5BB0FFEBEBB373 /* Pods-RestaurantClub */,
+				CA4E3B66CE4D02048C77392B64FD0ABB /* R.swift.Library */,
 			);
-			name = TinyConstraints;
-			path = TinyConstraints;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2D1DDEB51F64F1BCA73FA9EEC343BE5B /* Headers */ = {
+		3E690D8B86366E9E74FF6A7FEDD6B59D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04F19BAD94F71268C9C48D9833863B8E /* Pods-RestaurantClub-umbrella.h in Headers */,
+				61BA14CAF70EC04C6130EC1F3B1F7CDC /* R.swift.Library-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,11 +407,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAC758A0C4E8F07560F9836B2EB0FD93 /* Headers */ = {
+		F501E279BB4CD60DBB1518D8A8247115 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CDB49943F320BC1F504F6F6790448CC /* TinyConstraints-umbrella.h in Headers */,
+				A2447C97F05989169B378738595D952E /* Pods-RestaurantClub-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,40 +438,41 @@
 		};
 		2FDEF8D909A611FAD91B23B14B9ABFFD /* Pods-RestaurantClub */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 309ADB29F9B8B502E53AE95BB6D0477A /* Build configuration list for PBXNativeTarget "Pods-RestaurantClub" */;
+			buildConfigurationList = 6F1B69C5E056C0F211CBB6EE7E86AEC3 /* Build configuration list for PBXNativeTarget "Pods-RestaurantClub" */;
 			buildPhases = (
-				2D1DDEB51F64F1BCA73FA9EEC343BE5B /* Headers */,
-				0A9DFEC90185BD0C6059A726A012BBD5 /* Sources */,
-				3303F496118BB55DAE2ABA574563C30B /* Frameworks */,
-				6B74D3B0ADE42C4CE06DF79F66AE0906 /* Resources */,
+				F501E279BB4CD60DBB1518D8A8247115 /* Headers */,
+				70D0C959B4A61604E32EADA40BAD23CE /* Sources */,
+				7E41D36B0433D17700D7096BAFC863F9 /* Frameworks */,
+				D24A6A43322424C831B4C98558DA8E0E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B5DC563F7A5165A08B47D2F89987609B /* PBXTargetDependency */,
-				0B4836E167E9B34BBB9F1FF32DEEBB34 /* PBXTargetDependency */,
+				FDEE790D450BBF6A90FC0EDAB1AAEFA9 /* PBXTargetDependency */,
+				A0F88ADF5FF3F477867158EAFB4428FC /* PBXTargetDependency */,
+				3A8E9EFDA9F8714CFCB8A13DCAF5F0FA /* PBXTargetDependency */,
 			);
 			name = "Pods-RestaurantClub";
 			productName = Pods_RestaurantClub;
 			productReference = C38ACB1FC6AC3AC26A5BB0FFEBEBB373 /* Pods-RestaurantClub */;
 			productType = "com.apple.product-type.framework";
 		};
-		45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */ = {
+		B12748D8506CB48696BD90F2CA4F4E38 /* R.swift.Library */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F82ADE11EFCEC2B3A42D3D0BAB73E091 /* Build configuration list for PBXNativeTarget "TinyConstraints" */;
+			buildConfigurationList = 2F3A7F0FF0EA26B9A0F55B9C26F95CF2 /* Build configuration list for PBXNativeTarget "R.swift.Library" */;
 			buildPhases = (
-				BAC758A0C4E8F07560F9836B2EB0FD93 /* Headers */,
-				DF92459D9FB5B70A4EA19E240046CFE6 /* Sources */,
-				99EBD1D1C4BAB2CDA5481D389C9601FD /* Frameworks */,
-				E8FDB45C583F6ED4A6E0F0B0B67108EA /* Resources */,
+				3E690D8B86366E9E74FF6A7FEDD6B59D /* Headers */,
+				4F4364A6728ABEF9F0739DC4CCB661C4 /* Sources */,
+				B9A8265B3361960DC209310E7BFFB793 /* Frameworks */,
+				1DEF51FB0DE1DCD6BD2250FD668D75A5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TinyConstraints;
-			productName = TinyConstraints;
-			productReference = 248EB203AE249596FFC55952F5590D95 /* TinyConstraints */;
+			name = R.swift.Library;
+			productName = Rswift;
+			productReference = CA4E3B66CE4D02048C77392B64FD0ABB /* R.swift.Library */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -375,7 +485,7 @@
 				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -383,19 +493,20 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 7C80CCF188AFDA29BD79A27C0169DF05 /* Products */;
+			productRefGroup = F6FC6FFBFB966A92EB382CDAC02802C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				00F31BD5217A20974B5E9AAC6256D98E /* Cosmos */,
 				2FDEF8D909A611FAD91B23B14B9ABFFD /* Pods-RestaurantClub */,
-				45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */,
+				230984053C6652DFF510F450F21C5CF7 /* R.swift */,
+				B12748D8506CB48696BD90F2CA4F4E38 /* R.swift.Library */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6B74D3B0ADE42C4CE06DF79F66AE0906 /* Resources */ = {
+		1DEF51FB0DE1DCD6BD2250FD668D75A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -409,7 +520,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8FDB45C583F6ED4A6E0F0B0B67108EA /* Resources */ = {
+		D24A6A43322424C831B4C98558DA8E0E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,11 +530,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0A9DFEC90185BD0C6059A726A012BBD5 /* Sources */ = {
+		4F4364A6728ABEF9F0739DC4CCB661C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC246EEF46103BF64E5742F939E330FB /* Pods-RestaurantClub-dummy.m in Sources */,
+				412FB8A65EFD6F209074436D53B91F24 /* Bundle+FileResource.swift in Sources */,
+				E19898A977558750208E1933544B7931 /* ColorResource.swift in Sources */,
+				9374DABCD4494D98A3540B0C04446D7D /* Data+FileResource.swift in Sources */,
+				51D3F45FAE62C2FB518650CEED753DC9 /* FileResource.swift in Sources */,
+				5208093EDADA75B7012092B3B57B2ED9 /* FontResource.swift in Sources */,
+				58DBF2229785D9FF06C13B6826EE2363 /* Identifier.swift in Sources */,
+				5E09B940141E42668B67CDB734AA7008 /* ImageResource.swift in Sources */,
+				16AD045448D0DC19A04D895C26A1532E /* NibResource.swift in Sources */,
+				9555712D2D3686A44C0BB3F9AAE0A8BB /* NibResource+UIKit.swift in Sources */,
+				5F9DAD7C26DABB14CC4C38BEC3D06147 /* R.swift.Library-dummy.m in Sources */,
+				BEEFB776BDB7F83E2BD0591851ACAA26 /* ReuseIdentifierProtocol.swift in Sources */,
+				0014CB8CC270CE39C7169C3AE2387E7D /* StoryboardResource.swift in Sources */,
+				FA9CBEE6F328AAD8CD39C98AB7B79440 /* StoryboardResourceWithInitialController+UIKit.swift in Sources */,
+				91896F10136CF781A21AE2F76AE5C69C /* StoryboardSegueIdentifierProtocol.swift in Sources */,
+				BD09E9E37C46E148FEB2363CE13E619A /* StoryboardViewControllerResource.swift in Sources */,
+				76C620483B374E6616B1D3125006E790 /* StringResource.swift in Sources */,
+				0F14402A2B58653F59237BAEC13480EE /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift in Sources */,
+				4C6BC240E4DB8095502E0443629FFB75 /* UICollectionView+ReuseIdentifierProtocol.swift in Sources */,
+				45A3F44DC20F37F22C016CF77BA5F733 /* UIColor+ColorResource.swift in Sources */,
+				CFAA944866501C686F8B07CEB18BD24F /* UIFont+FontResource.swift in Sources */,
+				0DC54C346F19C5646D1F5FF6DA8A9158 /* UIImage+ImageResource.swift in Sources */,
+				E0B73EF71E14178C2C4F72BE3E4C5E9B /* UINib+NibResource.swift in Sources */,
+				2EE74F72D50A3DEDB0B370C6A8F396B0 /* UIStoryboard+StoryboardResource.swift in Sources */,
+				3EA6C35032C29B3F0F437F488769DFFB /* UIStoryboard+StoryboardViewControllerResource.swift in Sources */,
+				50F49548F9C97EA8C4479254E546284A /* UITableView+ReuseIdentifierProtocol.swift in Sources */,
+				8BAAF530746FBB5EED064A69A16E6315 /* UIViewController+NibResource.swift in Sources */,
+				264C1127D28505537C97077D057F733F /* UIViewController+StoryboardSegueIdentifierProtocol.swift in Sources */,
+				E926764556742D0F31955C1D43ED87FB /* Validatable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70D0C959B4A61604E32EADA40BAD23CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14698F7863602E23223D56A0844C17B9 /* Pods-RestaurantClub-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,40 +596,123 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF92459D9FB5B70A4EA19E240046CFE6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				003819A1B91F455375633418033FFEA7 /* Abstraction.swift in Sources */,
-				19B625DCBF2608036A726D4F6004AE41 /* Constrainable.swift in Sources */,
-				588EEA3FAF28A403ADD832A1496F412F /* Constraints.swift in Sources */,
-				64810A75CC254B76D74E3F2586AD3B47 /* Stack.swift in Sources */,
-				9FC86B0DF30483BEC772265C38AA5440 /* TinyConstraints.swift in Sources */,
-				235C6BC0654C150374C6B533B9D33467 /* TinyConstraints+superview.swift in Sources */,
-				4E5602E9B85B82EF1EA80ABCF76D7CC6 /* TinyConstraints-dummy.m in Sources */,
-				BF75F7C3CE5DF53FDC340EB541B30224 /* TinyEdgeInsets.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0B4836E167E9B34BBB9F1FF32DEEBB34 /* PBXTargetDependency */ = {
+		3A8E9EFDA9F8714CFCB8A13DCAF5F0FA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = TinyConstraints;
-			target = 45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */;
-			targetProxy = 2DA4D292EA8942FDFD9A020810D851F5 /* PBXContainerItemProxy */;
+			name = R.swift.Library;
+			target = B12748D8506CB48696BD90F2CA4F4E38 /* R.swift.Library */;
+			targetProxy = E75DA5191B1532504DD3BCF6433C8793 /* PBXContainerItemProxy */;
 		};
-		B5DC563F7A5165A08B47D2F89987609B /* PBXTargetDependency */ = {
+		90CA64550ECB17C0C85370697FE19875 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = R.swift.Library;
+			target = B12748D8506CB48696BD90F2CA4F4E38 /* R.swift.Library */;
+			targetProxy = ED3DB4C5ECC98D229C941843A3EE75E5 /* PBXContainerItemProxy */;
+		};
+		A0F88ADF5FF3F477867158EAFB4428FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = R.swift;
+			target = 230984053C6652DFF510F450F21C5CF7 /* R.swift */;
+			targetProxy = 3C76B9A3F86044881844FA796AFB849F /* PBXContainerItemProxy */;
+		};
+		FDEE790D450BBF6A90FC0EDAB1AAEFA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Cosmos;
 			target = 00F31BD5217A20974B5E9AAC6256D98E /* Cosmos */;
-			targetProxy = AE5A667CDE8FC0C244BF02948EE136B3 /* PBXContainerItemProxy */;
+			targetProxy = 791D25554CE6D54647B3551658E93C1F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+		596C7CD76E5020DC4473D8F1BC48C225 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCDD8B0221B0303CB48D229D4EB6CBE5 /* R.swift.Library.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/R.swift.Library/R.swift.Library-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/R.swift.Library/R.swift.Library-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/R.swift.Library/R.swift.Library.modulemap";
+				PRODUCT_MODULE_NAME = Rswift;
+				PRODUCT_NAME = Rswift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6EC69149E28F5E27C4706FFEAF8B58F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D37711B59C4566295A453C7A45C48A3 /* Cosmos.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cosmos/Cosmos-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
+				PRODUCT_MODULE_NAME = Cosmos;
+				PRODUCT_NAME = Cosmos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		78348A99DBE5E833006A6ABF8D54B8A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1826D3DCA7F28F5A2AB857C290F17326 /* R.swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -536,7 +765,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -549,151 +778,12 @@
 			};
 			name = Debug;
 		};
-		501B1AB6BD6781E5C49BB481501E221B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A9CF230CF39675DF63C0C823818C85A /* TinyConstraints.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TinyConstraints/TinyConstraints-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/TinyConstraints/TinyConstraints.modulemap";
-				PRODUCT_MODULE_NAME = TinyConstraints;
-				PRODUCT_NAME = TinyConstraints;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6EC69149E28F5E27C4706FFEAF8B58F4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2500C40165266B32D89052FE52F1FCA3 /* Cosmos.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cosmos/Cosmos-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
-				PRODUCT_MODULE_NAME = Cosmos;
-				PRODUCT_NAME = Cosmos;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		750230676C923D16D2BD871B573B1E59 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 545221B4C19DDE9A561ED6DBC5E62499 /* TinyConstraints.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TinyConstraints/TinyConstraints-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/TinyConstraints/TinyConstraints.modulemap";
-				PRODUCT_MODULE_NAME = TinyConstraints;
-				PRODUCT_NAME = TinyConstraints;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		75587A65D8963C8E06B212F17747B87E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B021B830B996AB7F06D897E1A6EDDF4D /* Pods-RestaurantClub.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RestaurantClub/Pods-RestaurantClub-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-RestaurantClub/Pods-RestaurantClub.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B73B2F53C7937A0058BB5B2DC9C5A61C /* Debug */ = {
+		900A4518187E2CEBA5D36A7B9B3A7706 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F3ED7F71C100F4EDB34551EDD47FFF8A /* Pods-RestaurantClub.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -704,7 +794,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-RestaurantClub/Pods-RestaurantClub-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -725,42 +815,7 @@
 			};
 			name = Debug;
 		};
-		C78C1BA85703BCE69743B7C85B847990 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EDC7495E677D4BF8D4A60BA7BA6AA8E /* Cosmos.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cosmos/Cosmos-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
-				PRODUCT_MODULE_NAME = Cosmos;
-				PRODUCT_NAME = Cosmos;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -810,7 +865,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -822,14 +877,137 @@
 			};
 			name = Release;
 		};
+		9FBF57E834F0C1BD11EC78CEF34D7140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B021B830B996AB7F06D897E1A6EDDF4D /* Pods-RestaurantClub.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RestaurantClub/Pods-RestaurantClub-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RestaurantClub/Pods-RestaurantClub.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A02BEF2E3EF461EBC173E09B9BCD1380 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4503E527FC79A8EB54CD2D85A68AE42 /* R.swift.Library.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/R.swift.Library/R.swift.Library-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/R.swift.Library/R.swift.Library-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/R.swift.Library/R.swift.Library.modulemap";
+				PRODUCT_MODULE_NAME = Rswift;
+				PRODUCT_NAME = Rswift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C78C1BA85703BCE69743B7C85B847990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A7914D61BE9BDAF758365A1F2F02DF9 /* Cosmos.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cosmos/Cosmos-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
+				PRODUCT_MODULE_NAME = Cosmos;
+				PRODUCT_NAME = Cosmos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CD17B93CF7ADE75483B704E6E4A5692A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6A3063EED3EFA6FFF93BA11BF0B77B8 /* R.swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		309ADB29F9B8B502E53AE95BB6D0477A /* Build configuration list for PBXNativeTarget "Pods-RestaurantClub" */ = {
+		2F3A7F0FF0EA26B9A0F55B9C26F95CF2 /* Build configuration list for PBXNativeTarget "R.swift.Library" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B73B2F53C7937A0058BB5B2DC9C5A61C /* Debug */,
-				75587A65D8963C8E06B212F17747B87E /* Release */,
+				A02BEF2E3EF461EBC173E09B9BCD1380 /* Debug */,
+				596C7CD76E5020DC4473D8F1BC48C225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -837,8 +1015,26 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
-				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E19C8E8F0C9B49DEE9AFBA54E0A4733 /* Build configuration list for PBXAggregateTarget "R.swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD17B93CF7ADE75483B704E6E4A5692A /* Debug */,
+				78348A99DBE5E833006A6ABF8D54B8A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F1B69C5E056C0F211CBB6EE7E86AEC3 /* Build configuration list for PBXNativeTarget "Pods-RestaurantClub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				900A4518187E2CEBA5D36A7B9B3A7706 /* Debug */,
+				9FBF57E834F0C1BD11EC78CEF34D7140 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -848,15 +1044,6 @@
 			buildConfigurations = (
 				6EC69149E28F5E27C4706FFEAF8B58F4 /* Debug */,
 				C78C1BA85703BCE69743B7C85B847990 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F82ADE11EFCEC2B3A42D3D0BAB73E091 /* Build configuration list for PBXNativeTarget "TinyConstraints" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				750230676C923D16D2BD871B573B1E59 /* Debug */,
-				501B1AB6BD6781E5C49BB481501E221B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

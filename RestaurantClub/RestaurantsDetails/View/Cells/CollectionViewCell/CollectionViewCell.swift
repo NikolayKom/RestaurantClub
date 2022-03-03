@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import Cosmos
 
 final class CollectionViewCell: UICollectionViewCell {
 
 // MARK: - Outlet
     @IBOutlet private weak var nameUserLabel: UILabel!
     @IBOutlet private weak var reviewTextLabel: UILabel!
-    @IBOutlet private weak var ratingImage: UIImageView!
+    @IBOutlet private weak var starsView: CosmosView!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -38,29 +39,13 @@ final class CollectionViewCell: UICollectionViewCell {
     }
     
     func configure(model: FakeReview) {
-        nameUserLabel.text = model.userName
-        reviewTextLabel.text = model.review
-        stars(rating: model.stars)
+        self.nameUserLabel.text = model.userName
+        self.reviewTextLabel.text = model.review
+        self.setupStars(rating: model.stars)
     }
     
 // MARK: - Private methods
-    private func stars(rating: Int) {
-        switch rating {
-        case 0:
-            print("Переменная равна 0")
-            ratingImage.image = #imageLiteral(resourceName: "Star_rating_0_of_5")
-        case 1:
-            ratingImage.image = #imageLiteral(resourceName: "Star_rating_1_of_5")
-        case 2:
-            ratingImage.image = #imageLiteral(resourceName: "Star_rating_2_of_5")
-        case 3:
-            ratingImage.image = #imageLiteral(resourceName: "Star_rating_3_of_5")
-        case 4:
-            ratingImage.image = #imageLiteral(resourceName: "Star_rating_4_of_5")
-        case 5:
-            ratingImage.image = #imageLiteral(resourceName: "Star_rating_5_of_5")
-        default:
-            ratingImage.image = #imageLiteral(resourceName: "Star_rating_0_of_5")
-        }
+    private func setupStars(rating: Int) {
+        self.starsView.rating = Double(rating)
     }
 }

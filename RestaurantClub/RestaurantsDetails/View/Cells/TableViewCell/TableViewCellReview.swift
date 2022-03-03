@@ -31,11 +31,16 @@ final class TableViewCellReview: UITableViewCell {
 extension TableViewCellReview: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(
-		_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		_ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
         return restaurantsReview?.count ?? 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(
 			withReuseIdentifier: "collectionViewID",
 			for: indexPath as IndexPath

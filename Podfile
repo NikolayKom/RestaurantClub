@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-  platform :ios, '9.0'
+# platform :ios, '9.0'
 
 target 'RestaurantClub' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,6 +7,6 @@ target 'RestaurantClub' do
 
   # Pods for RestaurantClub
 	pod 'Cosmos'
-	pod 'TinyConstraints'
+	pod 'R.swift'
 
 end

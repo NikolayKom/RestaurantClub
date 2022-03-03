@@ -61,8 +61,9 @@ final class RestaurantsViewController: UIViewController {
 			preferredStyle: .alert
             )
             
-            alert.addAction(.init(title: "Ок", style: .cancel, handler: nil))
-            alert.addAction(.init(title: "Обновить", style: .default, handler: { [weak self] _ in
+        alert.addAction(.init(title: R.string.alerts.ok(),
+                              style: .cancel, handler: nil))
+        alert.addAction(.init(title: R.string.alerts.update(), style: .default, handler: { [weak self] _ in
                // self?.presenter.obtainRestorans()
             }))
 
@@ -74,16 +75,22 @@ final class RestaurantsViewController: UIViewController {
 
 extension RestaurantsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 	
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+	func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int)
+    -> Int {
         presenter.restaurants.count ?? 0
 	}
 	
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+	func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath)
+    -> UICollectionViewCell {
+        
 		let cell = collectionView.dequeueReusableCell(
 			withReuseIdentifier: "MyCollectionViewCell",
 			for: indexPath
 		) as! MyCollectionViewCell
-		
         //if let restaurant = presenter.restaurants[indexPath.item] {
             if presenter.searching {
                 cell.configureSearching(model: presenter.restaurants[indexPath.item])
@@ -96,7 +103,9 @@ extension RestaurantsViewController: UICollectionViewDataSource, UICollectionVie
 		return cell
 	}
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
     ) {
         let restoran = presenter.restaurants[indexPath.item]
         self.restoranSelected = "\(restoran.restaurantId ?? 1)"
@@ -108,7 +117,9 @@ extension RestaurantsViewController: UICollectionViewDataSource, UICollectionVie
         performSegue(withIdentifier: "showViewController", sender: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue,sender: Any?
+    override func prepare(
+        for segue: UIStoryboardSegue,
+        sender: Any?
     ) {
         let destination:  RestaurantsDetailViewController = segue.destination as!  RestaurantsDetailViewController
         destination.restoranIndex = self.restoranSelected
@@ -141,7 +152,10 @@ extension RestaurantsViewController: UISearchBarDelegate {
 //MARK: - UIGestureRecognizerDelegate
 extension RestaurantsViewController: UIGestureRecognizerDelegate {
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizer(
+        _ gestureRecognizer: UIGestureRecognizer,
+        shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer)
+    -> Bool {
         return true
      }
     

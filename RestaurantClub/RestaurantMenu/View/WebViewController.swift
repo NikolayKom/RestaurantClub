@@ -14,11 +14,18 @@ final class WebViewCotroller: UIViewController {
     @IBOutlet private weak var webView: WKWebView!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
-    // MARK: - MVP
+// MARK: - Actions
+    @IBAction private func closeButtonPressed(_ sender: Any) {
+        guard let topMostController = UIWindow.sqTopMostViewController else { return }
+
+        topMostController.dismiss(animated: true)
+    }
+    
+// MARK: - MVP
     lazy var webPresenter = WebPresenter(viewController: self)
     
 // MARK: - Params
-    var restaurantMenu = String()
+    internal var restaurantMenu = String()
     
 // MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
@@ -28,11 +35,16 @@ final class WebViewCotroller: UIViewController {
 // MARK: - Private Methods
     private func openRestaurantMenu() {
         self.startAnimating()
-        var myURL: URL!
-        myURL = URL(string: "\(self.restaurantMenu)")
-        let myRequest = URLRequest(url: myURL!)
+        
         self.webView.navigationDelegate = self
-        self.webView.load(myRequest)
+        self.webView.load(self.createRequest())
+    }
+    
+    private func createRequest() -> URLRequest {
+        var serviceURL: URL!
+        serviceURL = URL(string: "\(self.restaurantMenu)")
+        let serviceRequest = URLRequest(url: serviceURL!)
+        return serviceRequest
     }
     
     private func startAnimating() {
@@ -46,7 +58,10 @@ final class WebViewCotroller: UIViewController {
 
 // MARK: - WKNavigationDelegate
 extension WebViewCotroller: WKNavigationDelegate {
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    func webView(
+        _ webView: WKWebView,
+        didFinish navigation: WKNavigation!
+    ) {
         self.stopAnimating()
       }
 }

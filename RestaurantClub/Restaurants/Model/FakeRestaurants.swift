@@ -65,7 +65,7 @@ extension FakeRestorant {
     static let allFakeRestorant = [
         FakeRestorant(restaurantName: "Сервис у Ашота",
                       descriptionRestaurant: "Мерседес до 200 наш клиент!",
-                      averageCheckRestaurant: 15000,
+                      averageCheckRestaurant: 900,
                       location: "Петухова, 14",
                       image: ["https://d1miefefncnroz.cloudfront.net/advt_photo/877150/1423139737_bebdcofceaad9mn.jpg"],
                       rating: 4.2,
@@ -77,7 +77,7 @@ extension FakeRestorant {
                      ),
         FakeRestorant(restaurantName: "Сервис не у Ашота ненеенненененне",
                       descriptionRestaurant: "Мерседес до 200 наш клиент!",
-                      averageCheckRestaurant: 15000,
+                      averageCheckRestaurant: 1500,
                       location: "Петухова, 14",
                       image: ["https://d1miefefncnroz.cloudfront.net/advt_photo/877150/1423139737_bebdcofceaad9mn.jpg"],
                       rating: 4.2,

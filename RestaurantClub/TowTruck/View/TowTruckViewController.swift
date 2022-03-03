@@ -12,7 +12,7 @@ import CoreLocation
 final class TowTruckViewController: UIViewController {
     
 // MARK: - MVP
-    lazy var towTruckPresenter = TowTruckPresenter(viewController: self)
+   lazy var towTruckPresenter = TowTruckPresenter(viewController: self)
 
 // MARK: - Perm
    private let feedBackMediumGenerator = UIImpactFeedbackGenerator(style: .medium)
@@ -32,10 +32,15 @@ final class TowTruckViewController: UIViewController {
     @IBAction private func sendReqestButtonClicked(_ sender: Any) {
         // TODO: исправить анотации
         if !self.mapView.annotations.isEmpty {
-            self.showInfo(message: "Данные переданы водителю, он спешит к вам")
+            self.showInfo(message: R.string.towTruck.requestSend())
         } else {
-            self.showInfo(message: "Для вызова эвакуатора нужно отметить точку")
+            self.showInfo(message: R.string.towTruck.choosePickUpPoint())
         }
+    }
+    @IBAction private func closeButtonClicked(_ sender: Any) {
+        guard let topMostController = UIWindow.sqTopMostViewController else { return }
+
+        topMostController.dismiss(animated: true)
     }
     
     @IBAction private func callButtonClicked(_ sender: Any) {
@@ -84,25 +89,26 @@ final class TowTruckViewController: UIViewController {
     
     private func showInfo(message: String ) {
         let alert = UIAlertController(
-            title: "Cлужба эвакуации",
+            title: R.string.alerts.evacuationService(),
             message: message,
             preferredStyle: .alert
             )
             
-            alert.addAction(.init(title: "Ок", style: .cancel, handler: nil))
+        alert.addAction(.init(title: R.string.alerts.ok(), style: .cancel, handler: nil))
 
         present(alert, animated: true, completion: nil)
     }
     
     private func setDeviceLocationAnnotation() {
+        guard let locations = self.userLocationCoordinate else { return }
+        
         let allAnnotations = self.mapView.annotations
         self.mapView.removeAnnotations(allAnnotations)
         self.locationManager.startUpdatingLocation()
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = self.userLocationCoordinate
-        annotation.title = "Текущая локация"
-        annotation.subtitle = "Current location"
+        annotation.title = R.string.towTruck.currectLocation()
         
         self.mapView.addAnnotation(annotation)
         self.feedBackMediumGenerator.impactOccurred()
@@ -113,39 +119,41 @@ final class TowTruckViewController: UIViewController {
         self.mapView.delegate = self
     }
     
+    private func registerLongTapGesture() {
+        let longTap = UILongPressGestureRecognizer(target: self, action: #selector(self.createNewAnnotation))
+        longTap.minimumPressDuration = 0.15
+        self.mapView.addGestureRecognizer(longTap)
+    }
+    
     @objc private func createNewAnnotation(_ sender: UIGestureRecognizer) {
         let touchPoint = sender.location(in: self.mapView)
         let coordinates = mapView.convert(touchPoint, toCoordinateFrom: self.mapView)
         let heldPoint = MKPointAnnotation()
         heldPoint.coordinate = coordinates
         if (sender.state == .began) {
-            heldPoint.title = "Точка погрузки"
+            heldPoint.title = R.string.towTruck.choosePickUpPoint()
             heldPoint.subtitle = String(format: "%.4f", coordinates.latitude) + "," + String(format: "%.4f", coordinates.longitude)
             self.mapView.addAnnotation(heldPoint)
             self.feedBackMediumGenerator.impactOccurred()
         }
         sender.state = .cancelled
     }
-    
-    private func registerLongTapGesture() {
-        let longTap = UILongPressGestureRecognizer(target: self,
-                                                   action: #selector(self.createNewAnnotation))
-        longTap.minimumPressDuration = 0.15
-        self.mapView.addGestureRecognizer(longTap)
-    }
 }
 
 //MARK: - MKMapViewDelegate
 extension TowTruckViewController: MKMapViewDelegate {
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(
+        _ mapView: MKMapView,
+        viewFor annotation: MKAnnotation
+    ) -> MKAnnotationView? {
         guard !(annotation is MKUserLocation) else { return MKAnnotationView() }
         
         let allAnnotations = self.mapView.annotations
         self.mapView.removeAnnotations(allAnnotations)
         
         let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "annotationView") ?? MKAnnotationView()
-        annotationView.image = UIImage(named: "pin")
+        annotationView.image = UIImage(named: R.string.towTruck.pin())
         annotationView.canShowCallout = true
         return annotationView
     }
@@ -154,7 +162,10 @@ extension TowTruckViewController: MKMapViewDelegate {
 //MARK: - CLLocationManagerDelegate
 extension TowTruckViewController: CLLocationManagerDelegate {
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(
+        _ manager: CLLocationManager,
+        didUpdateLocations locations: [CLLocation]
+    ) {
         let userLocation: CLLocation = locations[0] as CLLocation
         self.userLocationCoordinate = manager.location!.coordinate
         

@@ -60,7 +60,7 @@ class GradientButton: UIButton {
     
 // MARK: - Initial setup
     private func setup() {
-        self.sqSetBackgroundColor(UIColor(named: "sosButtonBackground"), forState: .disabled)
+        self.sqSetBackgroundColor(UIColor(named: R.string.colors.sosButtonBackground()), forState: .disabled)
         self.adjustsImageWhenHighlighted = false
         self.showsTouchWhenHighlighted = false
         self.textColor = self.titleLabel?.textColor

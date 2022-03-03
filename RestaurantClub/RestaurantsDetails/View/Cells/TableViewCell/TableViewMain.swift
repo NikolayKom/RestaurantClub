@@ -17,8 +17,7 @@ final class TableViewMain: UITableViewCell {
     }
     
     func configure(model: FakeRestorant) {
-        
-        descriptionRestoranLabel.text = model.aboutRestaurant
+        self.descriptionRestoranLabel.text = model.aboutRestaurant
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -9,10 +9,10 @@ final class RestaurantsDetailViewController: UITableViewController, DataTranspor
     lazy var detailPresenter = RestaurantsDetailsPresenter(DetailViewController: self)
     
 //MARK: - Perm
-    private var aboutRestoran = String()
-    
     internal var restoranIndex = String()
     internal var restoranMenu = String()
+    
+    private var aboutRestoran = String()
 	
 //MARK: - Lifestyle
 	override func viewDidLoad() {
@@ -133,10 +133,17 @@ final class RestaurantsDetailViewController: UITableViewController, DataTranspor
 		return UITableViewCell()
 	}
     
-	override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+	override func tableView(
+        _ tableView: UITableView,
+        estimatedHeightForRowAt indexPath: IndexPath
+    ) -> CGFloat {
 		return UITableView.automaticDimension
 	}
-	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    
+	override func tableView(
+        _ tableView: UITableView,
+        heightForRowAt indexPath: IndexPath
+    ) -> CGFloat {
 		return UITableView.automaticDimension
 	}
 }

@@ -1,20 +1,24 @@
 PODS:
   - Cosmos (23.0.0)
-  - TinyConstraints (4.0.2)
+  - R.swift (6.1.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
 
 DEPENDENCIES:
   - Cosmos
-  - TinyConstraints
+  - R.swift
 
 SPEC REPOS:
   trunk:
     - Cosmos
-    - TinyConstraints
+    - R.swift
+    - R.swift.Library
 
 SPEC CHECKSUMS:
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
-  TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
+  R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
 
-PODFILE CHECKSUM: 9f275380d5ded48600d67219afe6b8acd2478bcd
+PODFILE CHECKSUM: ad9dd4839b3a3b064ad0175808d7b73264ba5d6d
 
 COCOAPODS: 1.11.2

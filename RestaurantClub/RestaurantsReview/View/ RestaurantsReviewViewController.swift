@@ -7,59 +7,62 @@
 
 import UIKit
 import Cosmos
-import TinyConstraints
 
 final class RestaurantsReviewViewController: UIViewController {
 
-//MARK: - Outlet
+// MARK: - Outlet
     @IBOutlet private weak var nameTextField: UITextField!
     @IBOutlet private weak var reviewTextField: UITextView!
     @IBOutlet private weak var sendReviewButton: UIButton!
+    @IBOutlet private weak var starsView: CosmosView!
     
-    private lazy var cosmosView: CosmosView = {
-        var view = CosmosView()
-        view.settings.starSize = 35
-        return view
-    }()
-    
-    var numberOfRestoran = String()
     private var name = String()
     private var text = String()
+    
+    internal var numberOfRestoran = String()
 
-//MARK: - MVP
+// MARK: - MVP
     lazy var reviewPresenter = RestaurantsReviewPresenter(viewController: self)
 
-//MARK: - Action
+// MARK: - Action
     @IBAction private func sendReview(_ sender: Any) {
-        text = reviewTextField.text
-        name = nameTextField.text ?? "Username"
-        reviewPresenter.sendReview(NumberOfRestoran: "\(numberOfRestoran)", textReview: text, userName: name, stars: Int(self.cosmosView.rating))
-        showThanks(title: "Отзыв отправлен", message: "Спасибо за оценку")
+        guard !self.reviewTextField.text.isEmpty && !(self.nameTextField.text?.isEmpty ?? false) && !(starsView.rating == Double(0)) else
+        { return self.showAlert(title: R.string.alerts.ok(),                                                     message: R.string.alerts.ok(),
+                                error: true
+        )}
+        
+        self.text = reviewTextField.text
+        self.name = nameTextField.text ?? R.string.restaurantsReview.username()
+        self.reviewPresenter.sendReview(NumberOfRestoran: "\(numberOfRestoran)", textReview: text, userName: name, stars: Int(self.starsView.rating))
+        
+        self.showAlert(title: R.string.alerts.reviewSend(),
+                       message: R.string.alerts.thanksForReview(),
+                       error: false
+        )
     }
     
-//MARK: - LifeCycle
+    @IBAction private func closeButtonPressed(_ sender: Any) {
+        guard let topMostController = UIWindow.sqTopMostViewController else { return }
+
+        topMostController.dismiss(animated: true)
+    }
+    
+// MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupUISettings()
-        swipeDown()
+        
+        self.swipeDown()
     }
 
-//MARK: - Private Methods
-    private func setupUISettings() {
-        self.view.addSubview(cosmosView)
-        cosmosView.top(to: self.reviewTextField, offset: -50)
-        cosmosView.right(to: self.view, offset: -23)
-        self.reviewTextField.layer.cornerRadius = 10
-    }
-    
-    private func showThanks(title: String, message: String) {
+// MARK: - Private Methods
+    private func showAlert(title: String, message: String, error: Bool) {
         let alert = UIAlertController(
             title: title,
             message: message,
             preferredStyle: .alert
         )
         
-        alert.addAction(.init(title: "Ок", style: .cancel, handler: self.hideReview))
+        alert.addAction(.init(title: R.string.alerts.ok(), style: .cancel, handler: error ? nil : self.hideReview))
         present(alert, animated: true, completion: nil)
     }
     
@@ -75,15 +78,18 @@ final class RestaurantsReviewViewController: UIViewController {
     }
 }
 
-//MARK: - UIGestureRecognizerDelegate
+// MARK: - UIGestureRecognizerDelegate
 extension RestaurantsReviewViewController: UIGestureRecognizerDelegate {
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizer(
+        _ gestureRecognizer: UIGestureRecognizer,
+        shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer
+    ) -> Bool {
         return true
      }
     
     @objc func hideKeyboardOnSwipeUp() {
-        view.endEditing(true)
-        view.reloadInputViews()
+        self.view.endEditing(true)
+        self.view.reloadInputViews()
      }
 }

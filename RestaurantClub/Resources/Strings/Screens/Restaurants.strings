@@ -1,0 +1,10 @@
+/* 
+  Restaurants.strings
+  RestaurantClub
+
+  Created by Николай on 03.03.2022.
+  
+*/
+"avarageCheckLow" = "₽";
+"avarageCheckMedium" = "₽₽";
+"avarageCheckHigh" = "₽₽₽";

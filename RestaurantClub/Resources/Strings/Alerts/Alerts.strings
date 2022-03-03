@@ -1,0 +1,13 @@
+/* 
+  Alerts.strings
+  RestaurantClub
+
+  Created by Николай on 03.03.2022.
+  
+*/
+"Ok" = "Ок";
+"Update" = "Обновить";
+"ReviewSend" = "Отзыв отправлен";
+"ThanksForReview" = "Спасибо за оценку";
+"EvacuationService" = "Cлужба эвакуации";
+"PickUpPoint" = "Точка погрузки";
