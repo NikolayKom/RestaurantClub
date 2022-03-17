@@ -22,18 +22,13 @@ final class RestaurantsReviewPresenter {
                           "stars": stars
         ] as [String : Any]
 
-            //create the url with URL
-            let url = URL(string: baseURL + "/create_review/")! //change the url
-
-            //create the session object
+            let url = URL(string: baseURL + "/create_review/")!
             let session = URLSession.shared
-
-            //now create the URLRequest object using the url object
             var request = URLRequest(url: url)
-            request.httpMethod = "POST" //set http method as POST
+            request.httpMethod = "POST"
 
             do {
-                request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted) // pass dictionary to nsdata object and set it as request body
+                request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
             } catch let error {
                 print(error.localizedDescription)
             }
@@ -41,7 +36,6 @@ final class RestaurantsReviewPresenter {
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.addValue("application/json", forHTTPHeaderField: "Accept")
 
-            //create dataTask using the session object to send data to the server
             let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
 
                 guard error == nil else {
@@ -53,10 +47,7 @@ final class RestaurantsReviewPresenter {
                 }
 
                 do {
-                    //create json object from data
                     if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
-                        print(json)
-                        // handle json...
                     }
                 } catch let error {
                     print(error.localizedDescription)

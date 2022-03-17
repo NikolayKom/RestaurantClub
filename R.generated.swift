@@ -898,10 +898,10 @@ struct R: Rswift.Validatable {
 
   /// This `R.reuseIdentifier` struct is generated, and contains static references to 5 reuse identifiers.
   struct reuseIdentifier {
-    /// Reuse identifier `MyCollectionViewCell`.
-    static let myCollectionViewCell: Rswift.ReuseIdentifier<MyCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "MyCollectionViewCell")
     /// Reuse identifier `OrderCell`.
     static let orderCell: Rswift.ReuseIdentifier<OrderCell> = Rswift.ReuseIdentifier(identifier: "OrderCell")
+    /// Reuse identifier `StoCollectionViewCell`.
+    static let stoCollectionViewCell: Rswift.ReuseIdentifier<StoCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "StoCollectionViewCell")
     /// Reuse identifier `TableViewCellServices`.
     static let tableViewCellServices: Rswift.ReuseIdentifier<TableViewCellServices> = Rswift.ReuseIdentifier(identifier: "TableViewCellServices")
     /// Reuse identifier `collectionViewID`.
@@ -1548,7 +1548,6 @@ struct _R: Rswift.Validatable {
           if UIKit.UIColor(named: "darkGray", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'darkGray' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "lightGray", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'lightGray' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "lightPurple", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'lightPurple' is used in storyboard 'Main', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "textGray", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'textGray' is used in storyboard 'Main', but couldn't be loaded.") }
         }
         if _R.storyboard.main().entryViewControllerID() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'entryViewControllerID' could not be loaded from storyboard 'Main' as 'EntryViewController'.") }
         if _R.storyboard.main().restaurantsDetailID() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'restaurantsDetailID' could not be loaded from storyboard 'Main' as 'RestaurantsDetailViewController'.") }

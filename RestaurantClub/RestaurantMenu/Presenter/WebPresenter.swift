@@ -15,4 +15,11 @@ final class WebPresenter {
     init(viewController: WebViewCotroller) {
         self.viewController = viewController
     }
+    
+    func createRequest(restaurantMenu: String) -> URLRequest {
+        var serviceURL: URL!
+        serviceURL = URL(string: "\(restaurantMenu)")
+        let serviceRequest = URLRequest(url: serviceURL!)
+        return serviceRequest
+    }
 }

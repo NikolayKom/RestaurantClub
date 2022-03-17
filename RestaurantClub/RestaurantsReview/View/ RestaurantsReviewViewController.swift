@@ -33,7 +33,11 @@ final class RestaurantsReviewViewController: UIViewController {
         
         self.text = reviewTextField.text
         self.name = nameTextField.text ?? R.string.restaurantsReview.username()
-        self.reviewPresenter.sendReview(NumberOfRestoran: "\(numberOfRestoran)", textReview: text, userName: name, stars: Int(self.starsView.rating))
+        self.reviewPresenter.sendReview(NumberOfRestoran: "\(numberOfRestoran)",
+                                        textReview: text,
+                                        userName: name,
+                                        stars: Int(self.starsView.rating)
+        )
         
         self.showAlert(title: R.string.alerts.reviewSend(),
                        message: R.string.alerts.thanksForReview(),

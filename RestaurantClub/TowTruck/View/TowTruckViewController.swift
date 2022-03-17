@@ -25,7 +25,7 @@ final class TowTruckViewController: UIViewController {
     @IBOutlet private weak var hideKeyboardButton: UIButton!
     @IBOutlet private weak var addressTextField: UITextField!
     
-    // MARK: - Actions
+// MARK: - Actions
     @IBAction private func locationButtonClicked(_ sender: Any) {
         self.setDeviceLocationAnnotation()
     }
@@ -42,7 +42,7 @@ final class TowTruckViewController: UIViewController {
     
     @IBAction private func closeButtonClicked(_ sender: Any) {
         guard let topMostController = UIWindow.sqTopMostViewController else { return }
-
+        
         topMostController.dismiss(animated: true)
     }
     
@@ -64,8 +64,6 @@ final class TowTruckViewController: UIViewController {
         self.registerTextFieldTarget()
         self.locationManagerSettings()
         self.setupUISettings()
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {

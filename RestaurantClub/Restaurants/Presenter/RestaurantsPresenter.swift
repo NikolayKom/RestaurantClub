@@ -22,6 +22,7 @@ final class RestaurantsPresenter {
         self.viewController?.activityIndicator.hidesWhenStopped = true
         self.viewController?.activityIndicator.startAnimating()
     }
+    
 
 //	func obtainRestorans() {
 //		guard Reachability.isConnectedToNetwork() else {

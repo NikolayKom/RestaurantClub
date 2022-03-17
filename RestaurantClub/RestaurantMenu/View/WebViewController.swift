@@ -37,14 +37,9 @@ final class WebViewCotroller: UIViewController {
         self.startAnimating()
         
         self.webView.navigationDelegate = self
-        self.webView.load(self.createRequest())
-    }
-    
-    private func createRequest() -> URLRequest {
-        var serviceURL: URL!
-        serviceURL = URL(string: "\(self.restaurantMenu)")
-        let serviceRequest = URLRequest(url: serviceURL!)
-        return serviceRequest
+        self.webView.load(self.webPresenter.createRequest(
+            restaurantMenu: self.restaurantMenu)
+        )
     }
     
     private func startAnimating() {
