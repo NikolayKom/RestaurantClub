@@ -52,14 +52,14 @@ final class RestaurantsDetailViewController: UITableViewController, DataTranspor
     func didReviewButtonPressed() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                let vc = storyBoard.instantiateViewController(withIdentifier: "ViewControllerID") as! RestaurantsReviewViewController
-               self.present(vc, animated:true, completion: nil)
+               self.present(vc, animated: true, completion: nil)
         vc.numberOfRestoran = restoranIndex
     }
     
     func didMenuButtonPressed() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                let vc = storyBoard.instantiateViewController(withIdentifier: "WebViewControllerID") as! WebViewCotroller
-               self.present(vc, animated:true, completion: nil)
+               self.present(vc, animated: true, completion: nil)
         vc.restaurantMenu = self.restoranMenu
     }
     
@@ -70,6 +70,13 @@ final class RestaurantsDetailViewController: UITableViewController, DataTranspor
                                   serviceName: "Тестовый сервис",
                                   latitude: 55.058671,
                                   langitude: 82.939942)
+    }
+    
+    func didEntryButtonPressed() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+               let vc = storyBoard.instantiateViewController(withIdentifier: "EntryViewControllerID") as! EntryViewController
+               self.present(vc, animated: true, completion: nil)
+        //vc.numberOfRestoran = restoranIndex закинуть по деревенски с api массив?
     }
     
 //MARK: - Private method

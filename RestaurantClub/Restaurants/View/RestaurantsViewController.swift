@@ -5,15 +5,18 @@
 
 import UIKit
 
-final class RestaurantsViewController: UIViewController {
+final class RestaurantsViewController: UIViewController, UITableViewDelegate {
 
 //MARK: - MVP
 	lazy var presenter = RestaurantsPresenter(viewController: self)
     
 //MARK: - Outlet
 	@IBOutlet private weak var citySearchBox: UISearchBar!
-	@IBOutlet private weak var mycollectionView: UICollectionView!
+    @IBOutlet private weak var cardButton: UIButton!
+    @IBOutlet private weak var mycollectionView: UICollectionView!
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var cardView: UICollectionView!
+    @IBOutlet private weak var promoTableViewContainer: UITableView!
     
 //MARK: - Action
     @IBAction private func sosButtonClicked(_ sender: Any) {
@@ -22,17 +25,26 @@ final class RestaurantsViewController: UIViewController {
         self.present(vc, animated:true, completion: nil)
     }
     
+    @IBAction private func cardButtonClicked(_ sender: Any) {
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpVCid") as! OrdersViewController // 1
+        
+        self.addChild(popUpVC) // 2
+        popUpVC.view.frame = self.view.frame  // 3
+        self.view.addSubview(popUpVC.view) // 4
+        
+        popUpVC.didMove(toParent: self)
+    }
+    
 //MARK: - Params
-    private var restoranSelected = ""
-    private var restaurantMenu = ""
+    private var restoranSelected = String()
+    private var restaurantMenu = String()
     
 //MARK: - LifeStyle
 	override func viewDidLoad() {
 		super.viewDidLoad()
         self.presenter.setup()
         self.swipeDown()
-        
-        self.mycollectionView.backgroundColor = .white
+        self.registerCell()
 	}
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,6 +59,15 @@ final class RestaurantsViewController: UIViewController {
         swipeDown.delegate = self
         swipeDown.direction =  UISwipeGestureRecognizer.Direction.down
         self.mycollectionView.addGestureRecognizer(swipeDown)
+    }
+    
+    private func registerCell() {
+        self.promoTableViewContainer.dataSource = self
+        self.promoTableViewContainer.delegate = self
+        
+        let cell = UINib(nibName: "PromoTableViewCell", bundle: nil)
+        
+        self.promoTableViewContainer.register(cell, forCellReuseIdentifier: "PromoCustomCell")
     }
 
 //MARK: - Public methods
@@ -72,7 +93,6 @@ final class RestaurantsViewController: UIViewController {
 }
 
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegate
-
 extension RestaurantsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 	
 	func collectionView(
@@ -88,16 +108,16 @@ extension RestaurantsViewController: UICollectionViewDataSource, UICollectionVie
     -> UICollectionViewCell {
         
 		let cell = collectionView.dequeueReusableCell(
-			withReuseIdentifier: "MyCollectionViewCell",
+			withReuseIdentifier: "StoCollectionViewCell",
 			for: indexPath
-		) as! MyCollectionViewCell
+		) as! StoCollectionViewCell
         //if let restaurant = presenter.restaurants[indexPath.item] {
             if presenter.searching {
                 cell.configureSearching(model: presenter.restaurants[indexPath.item])
-                activityIndicator.stopAnimating()
+                self.activityIndicator.stopAnimating()
             } else {
                 cell.configure(model: presenter.restaurants[indexPath.item])
-                activityIndicator.stopAnimating()
+                self.activityIndicator.stopAnimating()
             //}
 		}
 		return cell
@@ -135,17 +155,17 @@ extension RestaurantsViewController: UISearchBarDelegate {
 		textDidChange searchText: String
 	) {
 		//presenter.obtainSearch(searchText: searchText)
-        presenter.searching = true
-        mycollectionView.reloadData()
+        self.presenter.searching = true
+        self.mycollectionView.reloadData()
 	}
 	
 	func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
 		//presenter.obtainRestorans()
-        presenter.searching = false
+        self.presenter.searching = false
         searchBar.text = ""
         searchBar.resignFirstResponder()
         
-        mycollectionView.reloadData()
+        self.mycollectionView.reloadData()
 	}
 }
 
@@ -161,10 +181,55 @@ extension RestaurantsViewController: UIGestureRecognizerDelegate {
     
     @objc func hideKeyboardOnSwipeDown() {
         view.endEditing(true)
-        presenter.searching = false
-        mycollectionView.reloadData()
+        self.presenter.searching = false
+        self.mycollectionView.reloadData()
      }
 }
 
+extension RestaurantsViewController: UITableViewDataSource {
     
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
+        return 1
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PromoCustomCell") as? PromoTableViewCell
+        else { return UITableViewCell() }
+        
+        cell.configure()
+        cell.delegate = self
+        return cell
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        estimatedHeightForRowAt indexPath: IndexPath
+    ) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        heightForRowAt indexPath: IndexPath
+    ) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+}
 
+// MARK: - OpenByCellClicked
+extension RestaurantsViewController: OpenByCellClicked {
+    
+    func didCellClicked(promoSto: Int) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "RestaurantsDetailID") as! RestaurantsDetailViewController
+        vc.restoranIndex = "\(promoSto)"
+        vc.restoranMenu = "any"
+        self.present(vc, animated: true)
+    }
+}

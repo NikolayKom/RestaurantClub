@@ -1,24 +1,28 @@
 PODS:
   - Cosmos (23.0.0)
+  - Kingfisher (7.2.0)
   - R.swift (6.1.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
 
 DEPENDENCIES:
   - Cosmos
+  - Kingfisher
   - R.swift
 
 SPEC REPOS:
   trunk:
     - Cosmos
+    - Kingfisher
     - R.swift
     - R.swift.Library
 
 SPEC CHECKSUMS:
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
   R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
 
-PODFILE CHECKSUM: ad9dd4839b3a3b064ad0175808d7b73264ba5d6d
+PODFILE CHECKSUM: 12a3eeb6ccc4a1933a8ffea4335deabc33231aaf
 
 COCOAPODS: 1.11.2

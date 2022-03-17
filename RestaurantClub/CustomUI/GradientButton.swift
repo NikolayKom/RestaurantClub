@@ -11,6 +11,8 @@ class GradientButton: UIButton {
 
     public var gradientEnabled = true
     public var gradientColors: [UIColor?] = .orangeGradient
+    public var gradientDisabledColors: [UIColor?] = .grayGradient
+    public var gradientPurple: [UIColor?] = .purpleGradient
 
     public var highlightEnabled = false
 
@@ -71,7 +73,7 @@ class GradientButton: UIButton {
         super.draw(rect)
         
         if self.gradientEnabled {
-            self.sqSetGradient(with: self.gradientColors, direction: .topBottom)
+            self.sqSetGradient(with: self.gradientPurple, direction: .topBottom)
         } else {
             self.removeGradientLayer()
         }
@@ -95,7 +97,7 @@ class GradientButton: UIButton {
         self.isEnabled = enabled
         
         if enabled && self.gradientEnabled {
-            self.sqSetGradient(with: self.gradientColors, direction: .topBottom)
+            self.sqSetGradient(with: self.gradientPurple, direction: .topBottom)
         } else {
             self.removeGradientLayer()
         }

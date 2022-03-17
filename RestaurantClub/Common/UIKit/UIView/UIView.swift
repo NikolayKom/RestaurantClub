@@ -12,6 +12,16 @@ public extension Array where Element == UIColor? {
         UIColor(named: "OrangeOne"),
         UIColor(named: "OrangeTwo")
     ]
+    
+    static var grayGradient = [
+        UIColor(named: "GrayOne"),
+        UIColor(named: "GrayTwo")
+    ]
+    
+    static var purpleGradient = [
+        UIColor(named: "PurpleTwo"),
+        UIColor(named: "PurpleOne")
+    ]
 }
 
 public enum GradientDirection {

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="138" id="zbS-66-ec1" customClass="PromoTableViewCell" customModule="RestaurantClub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="379" height="138"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="zbS-66-ec1" id="t0r-Ro-Y1m">
+                <rect key="frame" x="0.0" y="0.0" width="379" height="138"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" id="kbg-L5-3XZ">
+                        <rect key="frame" x="0.0" y="7" width="378" height="126"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" name="darkGray"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="15" id="wYf-Yy-Z5x">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" name="darkGray"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="kbg-L5-3XZ" secondAttribute="trailing" id="8Qs-MR-2ej"/>
+                    <constraint firstAttribute="bottom" secondItem="kbg-L5-3XZ" secondAttribute="bottom" constant="10" id="O21-Zn-eo0"/>
+                    <constraint firstItem="kbg-L5-3XZ" firstAttribute="top" secondItem="t0r-Ro-Y1m" secondAttribute="top" id="T57-BS-77D"/>
+                    <constraint firstItem="kbg-L5-3XZ" firstAttribute="leading" secondItem="t0r-Ro-Y1m" secondAttribute="leading" id="pdC-Ym-rvw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="bXl-Ne-dej"/>
+            <color key="backgroundColor" name="darkGray"/>
+            <connections>
+                <outlet property="promoCollectionView" destination="kbg-L5-3XZ" id="iYk-YB-Ent"/>
+            </connections>
+            <point key="canvasLocation" x="-206.52173913043481" y="-226.33928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="darkGray">
+            <color red="0.10599999874830246" green="0.10599999874830246" blue="0.10599999874830246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

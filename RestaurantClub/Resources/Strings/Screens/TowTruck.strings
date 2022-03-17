@@ -9,3 +9,5 @@
 "ChoosePickUpPoint" = "Для вызова эвакуатора нужно отметить точку";
 "CurrectLocation" = "Текущая локация";
 "Pin" = "pin";
+"CurrectLocation" = "Текущая геопозиция";
+"ChoosedLocation" = "Выбранная геопозиция";

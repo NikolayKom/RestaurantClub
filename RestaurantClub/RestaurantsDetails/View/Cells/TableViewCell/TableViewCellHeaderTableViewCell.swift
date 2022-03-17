@@ -6,18 +6,20 @@
 //
 
 import UIKit
+import Kingfisher
 // TODO: - передалать на enum кнопки
 protocol DataTransportByButton {
     func didReviewButtonPressed()
     func didMenuButtonPressed()
     func didRouteButtonPressed()
+    func didEntryButtonPressed()
 }
 
 final class TableViewCellHeaderTableViewCell: UITableViewCell {
     
     var delegate: DataTransportByButton?
     
-    // MARK: - Outlet
+// MARK: - Outlet
     @IBOutlet private weak var menuButton: UIButton!
     @IBOutlet private weak var reviewButton: UIButton!
     @IBOutlet private weak var restaurantNameLabel: UILabel!
@@ -25,7 +27,7 @@ final class TableViewCellHeaderTableViewCell: UITableViewCell {
     @IBOutlet private weak var restaurantLogoImage: UIImageView!
     @IBOutlet private weak var routeButton: UIButton!
     
-    // MARK: - Action
+// MARK: - Action
     @IBAction private func reviewButtonPressed(_ sender: Any) {
         self.delegate?.didReviewButtonPressed()
     }
@@ -37,12 +39,17 @@ final class TableViewCellHeaderTableViewCell: UITableViewCell {
         self.delegate?.didRouteButtonPressed()
     }
     
+    @IBAction private func entryButtonPressed(_ sender: Any) {
+        self.delegate?.didEntryButtonPressed()
+    }
+    
     func configure(model: FakeRestorant) {
-        restaurantNameLabel.text = model.restaurantName
-        typeOfKitchenLabel.text = model.descriptionRestaurant
-        if let image = model.image.first {
-            let urlString = baseURL + "/media/\(image)"
-            restaurantLogoImage.loadImage(urlString: urlString)
+        self.restaurantNameLabel.text = model.restaurantName
+        self.typeOfKitchenLabel.text = model.descriptionRestaurant
+        if let image = model.profileImage.first {
+            //let urlString = baseURL + "/media/\(image)"
+            let urlString = URL(string: "\(image)")
+            self.restaurantLogoImage.kf.setImage(with: urlString)
         }
     }
     

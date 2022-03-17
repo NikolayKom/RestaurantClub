@@ -27,7 +27,7 @@ final class RestaurantsReviewViewController: UIViewController {
 // MARK: - Action
     @IBAction private func sendReview(_ sender: Any) {
         guard !self.reviewTextField.text.isEmpty && !(self.nameTextField.text?.isEmpty ?? false) && !(starsView.rating == Double(0)) else
-        { return self.showAlert(title: R.string.alerts.ok(),                                                     message: R.string.alerts.ok(),
+        { return self.showAlert(title: R.string.alerts.error(),                                                     message: R.string.alerts.needData(),
                                 error: true
         )}
         
@@ -39,6 +39,8 @@ final class RestaurantsReviewViewController: UIViewController {
                        message: R.string.alerts.thanksForReview(),
                        error: false
         )
+        
+        UIDevice.addFeedback(style: .carPointChoosed)
     }
     
     @IBAction private func closeButtonPressed(_ sender: Any) {
@@ -62,7 +64,11 @@ final class RestaurantsReviewViewController: UIViewController {
             preferredStyle: .alert
         )
         
-        alert.addAction(.init(title: R.string.alerts.ok(), style: .cancel, handler: error ? nil : self.hideReview))
+        alert.addAction(.init(title: R.string.alerts.ok(),
+                              style: .cancel,
+                              handler: error ? nil : self.hideReview
+                             )
+        )
         present(alert, animated: true, completion: nil)
     }
     

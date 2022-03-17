@@ -8,5 +8,6 @@ target 'RestaurantClub' do
   # Pods for RestaurantClub
 	pod 'Cosmos'
 	pod 'R.swift'
+	pod 'Kingfisher'
 
 end

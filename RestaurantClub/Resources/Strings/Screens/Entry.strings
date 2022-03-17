@@ -1,0 +1,8 @@
+/* 
+  Entry.strings
+  RestaurantClub
+
+  Created by Николай on 10.03.2022.
+  
+*/
+"CostOfServices" = "Расчетная стоимость  %@₽";
